@@ -482,27 +482,11 @@ img{max-width:100%;display:block}
            &#10003; Current buyer demand for your street<br>
            &#10003; Smart pricing strategy to maximize your sale</p>
       </div>
-      <form class="valuation-form" id="valForm" onsubmit="return submitValuation(event)">
+      <div class="valuation-form">
         <h3>Request Your Valuation</h3>
-        <p class="sub">Takes 30 seconds. We reply within 24 hours.</p>
-        <div class="field"><label>Property Address</label><input type="text" name="address" required placeholder="e.g. 412 Ocean Ave, Ship Bottom NJ"></div>
-        <div class="row">
-          <div class="field"><label>Town</label><select name="town" required>
-            <option value="">Select town</option>
-            <option>Long Beach Island</option><option>Stafford Township</option><option>Toms River</option><option>Barnegat</option><option>Waretown</option><option>Little Egg Harbor</option><option>Brick</option><option>Other Ocean County</option>
-          </select></div>
-          <div class="field"><label>Home Type</label><select name="type" required>
-            <option value="">Select type</option><option>Single Family</option><option>Condo / Townhouse</option><option>Multi-Family</option><option>Land / Lot</option>
-          </select></div>
-        </div>
-        <div class="row">
-          <div class="field"><label>Your Name</label><input type="text" name="name" required></div>
-          <div class="field"><label>Phone</label><input type="tel" name="phone" required></div>
-        </div>
-        <div class="field"><label>Email</label><input type="email" name="email" required></div>
-        <button type="submit" class="btn btn-primary">Get My Free Valuation</button>
-        <div class="form-success" id="valSuccess">Thanks! Matt will be in touch within 24 hours.</div>
-      </form>
+        <p class="sub">Get your free, expert market analysis &mdash; no obligation.</p>
+        <a href="https://matthew-dunn.weichert.com/seller/valuation/" target="_blank" rel="noopener" class="btn btn-primary" style="display:block;text-align:center;text-decoration:none;margin-top:12px">Get My Free Valuation</a>
+      </div>
     </div>
   </div>
 </section>
@@ -566,14 +550,6 @@ img{max-width:100%;display:block}
   document.querySelectorAll('.faq-item').forEach(item=>{
     item.querySelector('.faq-q').addEventListener('click',()=>item.classList.toggle('open'));
   });
-  // Valuation form
-  function submitValuation(e){
-    e.preventDefault();
-    document.getElementById('valSuccess').classList.add('show');
-    if(typeof gtag==='function'){gtag('event','valuation_request',{event_category:'lead'})}
-    e.target.reset();
-    return false;
-  }
 </script>
 
 <!-- LocalBusiness / RealEstateAgent Schema -->
