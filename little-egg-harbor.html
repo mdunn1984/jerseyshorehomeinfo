@@ -5,6 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCWZNKR60S"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZCWZNKR60S');</script>
+
+<!-- GA4 Custom Event Tracking -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof gtag !== 'function') return;
+  var SITE_HOST = 'jerseyshorehomeinfo.com';
+  var TOWN_PATHS = ['/long-beach-island','/stafford-township','/toms-river','/barnegat','/waretown','/little-egg-harbor','/brick'];
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (a) {
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('tel:') === 0) {
+        gtag('event', 'phone_click', { event_category: 'contact', event_label: href, transport_type: 'beacon' });
+        return;
+      }
+      if (/^https?:\/\//i.test(href)) {
+        var isInternal = href.indexOf(SITE_HOST) !== -1;
+        if (!isInternal) {
+          gtag('event', 'click', { event_category: 'outbound', event_label: href, transport_type: 'beacon' });
+          if (href.indexOf('weichert.com') !== -1) {
+            gtag('event', 'outbound_weichert', { event_category: 'outbound', event_label: href, transport_type: 'beacon' });
+          }
+        }
+      }
+      for (var i=0; i<TOWN_PATHS.length; i++) {
+        if (href === TOWN_PATHS[i] || href.indexOf(TOWN_PATHS[i]+'/') === 0) {
+          gtag('event', 'town_link_click', { event_category: 'navigation', event_label: TOWN_PATHS[i].replace('/','') });
+          break;
+        }
+      }
+      var li = a.closest('li.has-dropdown');
+      if (li && a.parentElement === li) {
+        gtag('event', 'towns_dropdown_click', { event_category: 'navigation', event_label: 'towns_menu' });
+      }
+      if (a.classList.contains('nav-cta') || (a.textContent || '').trim() === 'Free Valuation') {
+        gtag('event', 'free_valuation_click', { event_category: 'cta', event_label: 'free_valuation' });
+      }
+    }
+    var btn = e.target.closest('button');
+    if (btn && (btn.textContent || '').trim() === 'Search Homes') {
+      gtag('event', 'search_homes_click', { event_category: 'cta', event_label: 'search_homes' });
+    }
+  }, true);
+});
+</script>
+
 <title>Little Egg Harbor Homes For Sale | Ocean County NJ Real Estate | JerseyShoreHomeInfo.com</title>
 <meta name="description" content="Little Egg Harbor and Tuckerton NJ homes for sale. Bayfront communities at the southern edge of Ocean County with Pinelands access and a rich maritime history. Matt Dunn, Weichert Realtors.">
 <meta name="robots" content="index, follow">
