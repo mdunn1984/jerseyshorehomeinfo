@@ -228,7 +228,7 @@ img{max-width:100%;display:block}
     <a href="#" class="brand">Jersey Shore<span>HomeInfo</span></a>
     <ul>
       <li><a href="#towns">Towns</a></li>
-      <li><a href="#listings">Listings</a></li>
+      <li><a href="/search">Search</a></li>
       <li><a href="#sell">Sell</a></li>
       <li><a href="#agent">About Matt</a></li>
       <li><a href="#valuation" class="nav-cta">Free Valuation</a></li>
@@ -243,7 +243,7 @@ img{max-width:100%;display:block}
     <span class="eyebrow">Ocean County &middot; Long Beach Island &middot; Jersey Shore</span>
     <h1>Find your place by the ocean.</h1>
     <p class="lead">From Long Beach Island sunsets to year-round homes in Stafford Township, Toms River and Barnegat &mdash; explore Jersey Shore real estate with a true local expert.</p>
-    <form class="search-bar" onsubmit="event.preventDefault();document.getElementById('listings').scrollIntoView({behavior:'smooth'});">
+    <form class="search-bar" onsubmit="event.preventDefault();window.location.href='/search';">
       <input type="text" placeholder="Search by town, ZIP or address &mdash; e.g. Ship Bottom NJ" aria-label="Search homes">
       <button type="submit">Search Homes</button>
     </form>
@@ -521,7 +521,7 @@ img{max-width:100%;display:block}
       <div>
         <h4>Explore</h4>
         <ul>
-          <li><a href="#listings">Featured Listings</a></li>
+          <li><a href="/search">Search Homes</a></li>
           <li><a href="#sell">Sell Your Home</a></li>
           <li><a href="#valuation">Free Valuation</a></li>
           <li><a href="#agent">About Matt</a></li>
