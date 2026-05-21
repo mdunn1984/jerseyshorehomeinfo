@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCWZNKR60S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCWZNKR60S');
+</script>
+
+<!-- GA4 Custom Event Tracking -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof gtag !== 'function') return;
+  var SITE_HOST = 'jerseyshorehomeinfo.com';
+  var TOWN_PATHS = ['/long-beach-island','/stafford-township','/toms-river','/barnegat','/waretown','/little-egg-harbor','/brick'];
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (a) {
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('tel:') === 0) {
+        gtag('event', 'phone_click', { event_category: 'contact', event_label: href, transport_type: 'beacon' });
+        return;
+      }
+      if (/^https?:\/\//i.test(href)) {
+        var isInternal = href.indexOf(SITE_HOST) !== -1;
+        if (!isInternal) {
+          gtag('event', 'click', { event_category: 'outbound', event_label: href, transport_type: 'beacon' });
+          if (href.indexOf('weichert.com') !== -1) {
+            gtag('event', 'outbound_weichert', { event_category: 'outbound', event_label: href, transport_type: 'beacon' });
+          }
+        }
+      }
+      for (var i=0; i<TOWN_PATHS.length; i++) {
+        if (href === TOWN_PATHS[i] || href.indexOf(TOWN_PATHS[i]+'/') === 0) {
+          gtag('event', 'town_link_click', { event_category: 'navigation', event_label: TOWN_PATHS[i].replace('/','') });
+          break;
+        }
+      }
+      var li = a.closest('li.has-dropdown');
+      if (li && a.parentElement === li) {
+        gtag('event', 'towns_dropdown_click', { event_category: 'navigation', event_label: 'towns_menu' });
+      }
+      if (a.classList.contains('nav-cta') || (a.textContent || '').trim() === 'Free Valuation') {
+        gtag('event', 'free_valuation_click', { event_category: 'cta', event_label: 'free_valuation' });
+      }
+    }
+    var btn = e.target.closest('button');
+    if (btn && (btn.textContent || '').trim() === 'Search Homes') {
+      gtag('event', 'search_homes_click', { event_category: 'cta', event_label: 'search_homes' });
+    }
+  }, true);
+});
+</script>
+
+
+<!-- Bing Webmaster Verification -->
+<meta name="msvalidate.01" content="327ADF14EC8B8CDC3C75BDBEC594049C">
+
+<!-- SEO -->
+<title>Terms of Service | JerseyShoreHomeInfo.com</title>
+<meta name="description" content="Terms of Service for JerseyShoreHomeInfo.com. Listing accuracy, license disclosure, intellectual property and limitations. Matt Dunn, NJ Realtor #2442118.">
+<meta name="keywords" content="Jersey Shore homes for sale, Ocean County NJ real estate, LBI homes, Long Beach Island real estate, Stafford Township homes, Toms River real estate, Barnegat homes, buy home near LBI, sell home Ocean County, Jersey Shore realtor">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Matt Dunn, Weichert Realtors">
+<link rel="canonical" href="https://www.jerseyshorehomeinfo.com/terms-of-service">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Terms of Service | JerseyShoreHomeInfo.com">
+<meta property="og:description" content="The terms that govern use of JerseyShoreHomeInfo.com.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.jerseyshorehomeinfo.com/terms-of-service">
+<meta property="og:image" content="https://www.jerseyshorehomeinfo.com/images/og-image.jpg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --warm-white:#FDFAF5;
+  --sandy-linen:#EDE4D3;
+  --driftwood:#B8A898;
+  --navy:#1B3D5C;
+  --horizon:#4A8FA8;
+  --seaglass:#7EC8C0;
+  --coral:#E8714A;
+  --gold:#D4A85A;
+  --seafoam:#A8D8D0;
+  --shadow:0 10px 30px rgba(27,61,92,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);line-height:1.2}
+h1{font-size:clamp(2.5rem,5vw,4.5rem)}
+h2{font-size:clamp(2rem,3.5vw,3rem);margin-bottom:.5rem}
+h3{font-size:1.5rem}
+a{color:var(--horizon);text-decoration:none;transition:color .2s}
+a:hover{color:var(--coral)}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+.section{padding:90px 0}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:.8rem;color:var(--coral);font-weight:600;margin-bottom:12px;display:block}
+.section-head{text-align:center;max-width:760px;margin:0 auto 60px}
+.section-head p{color:#5a6b7a;font-size:1.1rem;margin-top:12px}
+.btn{display:inline-block;padding:14px 30px;border-radius:30px;font-weight:600;font-size:.95rem;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:#d35e38;color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(232,113,74,.35)}
+.btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+.btn-secondary:hover{background:#fff;color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:#0f2940;color:#fff;transform:translateY(-2px)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,168,152,.25)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1240px;margin:0 auto}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;color:var(--navy)}
+.brand span{color:var(--coral)}
+.nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+.nav ul a{color:var(--navy);font-weight:500;font-size:.95rem}
+.nav-cta{background:var(--coral);color:#fff !important;padding:10px 22px;border-radius:30px;font-weight:600;font-size:.9rem;transition:transform .2s,background .2s}
+.nav-cta:hover{background:#d35e38;transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
+@media(max-width:880px){
+  .nav ul{display:none}
+  .nav-toggle{display:block}
+}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(rgba(27,61,92,.55),rgba(27,61,92,.30)),url('/images/hero-barnegat-lighthouse.jpg') center/cover no-repeat;color:#fff;padding-top:80px}
+.hero-content{max-width:820px}
+.hero h1{color:#fff;margin-bottom:20px}
+.hero .eyebrow{color:var(--seafoam)}
+.hero p.lead{font-size:1.25rem;color:rgba(255,255,255,.92);margin-bottom:36px;max-width:640px}
+.search-bar{background:#fff;border-radius:60px;padding:8px;display:flex;box-shadow:var(--shadow);max-width:640px;align-items:center}
+.search-bar input{flex:1;border:0;outline:0;padding:14px 22px;font-family:inherit;font-size:1rem;color:var(--navy);background:transparent}
+.search-bar button{background:var(--coral);color:#fff;border:0;padding:14px 30px;border-radius:50px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.95rem}
+.search-bar button:hover{background:#d35e38}
+.hero-tags{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.hero-tags span{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);padding:8px 18px;border-radius:30px;font-size:.85rem;font-weight:500}
+
+/* LIFESTYLE GRID */
+.lifestyle{background:var(--sandy-linen)}
+.lifestyle-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:18px}
+.lifestyle-grid figure{position:relative;border-radius:16px;overflow:hidden;background:#ccc}
+.lifestyle-grid figure:nth-child(1){grid-row:1/3}
+.lifestyle-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.lifestyle-grid figure:hover img{transform:scale(1.06)}
+.lifestyle-grid figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(27,61,92,.85));color:#fff;padding:24px 20px 18px;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600}
+@media(max-width:880px){.lifestyle-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.lifestyle-grid figure:nth-child(1){grid-row:auto;grid-column:1/3;height:240px}}
+
+/* TOWN CARDS */
+.towns{background:var(--warm-white)}
+.town-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.town-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;cursor:pointer}
+.town-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(27,61,92,.18)}
+.town-card .img-wrap{height:180px;overflow:hidden;position:relative}
+.town-card img{width:100%;height:100%;object-fit:cover}
+.town-card .badge{position:absolute;top:14px;left:14px;background:var(--coral);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:20px;text-transform:uppercase}
+.town-card .body{padding:22px}
+.town-card h3{margin-bottom:6px}
+.town-card .meta{color:var(--driftwood);font-size:.85rem;margin-bottom:12px}
+.town-card .price{color:var(--horizon);font-weight:700;font-size:1.1rem}
+.town-card .price span{color:var(--driftwood);font-weight:400;font-size:.85rem;margin-left:6px}
+
+/* BUY / SELL PANELS */
+.action-panels{background:var(--warm-white)}
+.panels-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:880px){.panels-grid{grid-template-columns:1fr}}
+.panel{position:relative;border-radius:20px;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;padding:40px;color:#fff;background-size:cover;background-position:center}
+.panel::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(27,61,92,.85),rgba(27,61,92,.3))}
+.panel.sell::before{background:linear-gradient(135deg,rgba(232,113,74,.85),rgba(232,113,74,.3))}
+.panel-content{position:relative;z-index:2;max-width:420px}
+.panel h3{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;margin-bottom:12px}
+.panel p{margin-bottom:24px;color:rgba(255,255,255,.92)}
+
+/* STATS */
+.stats{background:var(--navy);color:#fff;padding:80px 0}
+.stats h2{color:#fff}
+.stats .eyebrow{color:var(--seafoam)}
+.stats .section-head p{color:rgba(255,255,255,.8)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+@media(max-width:880px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-item{padding:24px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--seafoam);font-weight:700;line-height:1}
+.stat-label{margin-top:10px;font-size:.95rem;color:rgba(255,255,255,.8)}
+.stat-trend{margin-top:6px;font-size:.8rem;color:var(--gold);font-weight:600}
+
+/* LISTINGS */
+.listings{background:var(--sandy-linen)}
+.listing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.listing{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s}
+.listing:hover{transform:translateY(-4px)}
+.listing .img-wrap{position:relative;height:220px}
+.listing img{width:100%;height:100%;object-fit:cover}
+.listing .status{position:absolute;top:14px;left:14px;background:var(--seaglass);color:var(--navy);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:20px;text-transform:uppercase}
+.listing .body{padding:22px}
+.listing .price{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);font-weight:700}
+.listing .addr{color:var(--driftwood);font-size:.9rem;margin:6px 0 14px}
+.listing .specs{display:flex;gap:18px;font-size:.85rem;color:#5a6b7a;border-top:1px solid var(--sandy-linen);padding-top:14px}
+.listing .specs span strong{color:var(--navy)}
+
+/* FAQ */
+.faq{background:var(--warm-white)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{background:#fff;border-radius:14px;margin-bottom:14px;box-shadow:0 4px 14px rgba(27,61,92,.06);overflow:hidden}
+.faq-q{padding:22px 26px;cursor:pointer;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;align-items:center;font-size:1.05rem}
+.faq-q::after{content:'+';font-size:1.6rem;color:var(--coral);font-weight:400;transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 26px;color:#5a6b7a}
+.faq-item.open .faq-a{max-height:400px;padding:0 26px 22px}
+
+/* AGENT */
+.agent{background:var(--sandy-linen)}
+.agent-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:center}
+@media(max-width:880px){.agent-wrap{grid-template-columns:1fr}}
+.agent-img{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:url('/images/matt-dunn-headshot.jpg') center/cover}
+.agent h2{margin-bottom:6px}
+.agent .agent-title{color:var(--coral);font-weight:600;margin-bottom:18px}
+.agent p{color:#5a6b7a;margin-bottom:14px}
+.agent-contact{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px}
+.agent-contact a{display:inline-flex;align-items:center;gap:8px;background:#fff;padding:12px 20px;border-radius:30px;color:var(--navy);font-weight:600;box-shadow:0 4px 14px rgba(27,61,92,.08)}
+.agent-contact a:hover{color:var(--coral)}
+
+/* VALUATION */
+.valuation{background:linear-gradient(135deg,var(--navy),var(--horizon));color:#fff;padding:90px 0}
+.valuation h2{color:#fff}
+.valuation .eyebrow{color:var(--seafoam)}
+.valuation-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:880px){.valuation-wrap{grid-template-columns:1fr}}
+.valuation-text p{color:rgba(255,255,255,.9);margin-bottom:14px;font-size:1.05rem}
+.valuation-form{background:#fff;border-radius:20px;padding:36px;color:var(--navy);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.valuation-form h3{margin-bottom:8px}
+.valuation-form p.sub{color:#5a6b7a;font-size:.9rem;margin-bottom:22px}
+.valuation-form .field{margin-bottom:16px}
+.valuation-form label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--navy)}
+.valuation-form input,.valuation-form select{width:100%;padding:13px 16px;border:1px solid var(--sandy-linen);border-radius:10px;font-family:inherit;font-size:.95rem;background:var(--warm-white);color:var(--navy);outline:none;transition:border-color .2s}
+.valuation-form input:focus,.valuation-form select:focus{border-color:var(--horizon)}
+.valuation-form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.valuation-form button{width:100%;margin-top:8px}
+.form-success{display:none;text-align:center;padding:20px;background:var(--seafoam);border-radius:10px;color:var(--navy);font-weight:600;margin-top:14px}
+.form-success.show{display:block}
+
+/* FOOTER */
+.footer{background:#0f2940;color:rgba(255,255,255,.8);padding:70px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+@media(max-width:880px){.footer-grid{grid-template-columns:1fr 1fr}}
+.footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:1rem;margin-bottom:18px;text-transform:uppercase;letter-spacing:1.5px}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:10px}
+.footer ul a{color:rgba(255,255,255,.7);font-size:.92rem}
+.footer ul a:hover{color:var(--seafoam)}
+.footer .brand{color:#fff;font-size:1.4rem;margin-bottom:12px;display:block}
+.footer .brand span{color:var(--coral)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;font-size:.85rem;color:rgba(255,255,255,.6)}
+.social{display:flex;gap:14px;margin-top:18px}
+.social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem}
+.social a:hover{background:var(--coral);color:#fff}
+
+/* TOWNS DROPDOWN - mega menu */
+.nav .has-dropdown{position:relative}
+.nav .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);background:#fff;border-radius:14px;box-shadow:0 18px 50px rgba(27,61,92,.18);padding:14px;list-style:none;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:120;display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:2px 6px;width:max-content;max-width:min(640px,95vw)}
+.nav .has-dropdown:hover .dropdown,.nav .has-dropdown:focus-within .dropdown,.nav .has-dropdown.open .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav .dropdown li{display:block;margin:0}
+.nav .dropdown a{display:block;padding:9px 14px;font-size:.9rem;color:var(--navy);font-weight:500;white-space:nowrap;border-radius:8px;line-height:1.2}
+.nav .dropdown a:hover{background:var(--sandy-linen);color:var(--coral)}
+.nav .has-dropdown > a::after{content:"";display:inline-block;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:6px;margin-bottom:2px;vertical-align:middle;opacity:.6}
+.nav .has-dropdown::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px}
+@media(max-width:880px){
+.nav .dropdown{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;background:transparent;padding:6px 0 6px 18px;display:block;width:auto;max-width:none}
+.nav .has-dropdown::after{display:none}
+.nav .has-dropdown:hover .dropdown,.nav .has-dropdown.open .dropdown{transform:none}
+.nav .dropdown a{padding:6px 0;color:#5a6b7a;white-space:normal}
+}
+
+
+/* MOBILE: full-screen nav overlay + responsive layout (<=768px) */
+.mobile-nav{position:fixed;inset:0;background:rgba(15,41,64,.98);color:#fff;z-index:1000;display:flex;flex-direction:column;transform:translateY(-100%);transition:transform .35s ease;overflow-y:auto;visibility:hidden}
+.mobile-nav.open{transform:translateY(0);visibility:visible}
+.mobile-nav-top{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.1)}
+.mobile-nav-top .brand{color:#fff;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700}
+.mobile-nav-top .brand span{color:var(--coral)}
+.mobile-nav-close{background:none;border:0;color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;padding:8px 12px}
+.mobile-nav ul{list-style:none;padding:8px 0;margin:0}
+.mobile-nav li{border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-nav a,.mobile-nav .m-towns-toggle{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding:14px 24px;color:#fff;font-size:1.05rem;font-weight:500;text-decoration:none;background:none;border:0;width:100%;text-align:left;font-family:inherit;cursor:pointer}
+.mobile-nav .m-towns-toggle::after{content:'+';font-size:1.6rem;color:var(--coral);font-weight:400;transition:transform .25s}
+.mobile-nav .m-towns.open .m-towns-toggle::after{transform:rotate(45deg)}
+.mobile-nav .m-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(255,255,255,.04);list-style:none;padding:0}
+.mobile-nav .m-towns.open .m-sub{max-height:600px}
+.mobile-nav .m-sub a{min-height:48px;padding:12px 40px;font-size:1rem;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-nav .m-cta{margin:24px;display:block;text-align:center;background:var(--coral);color:#fff;padding:16px 22px;border-radius:30px;font-weight:600;min-height:48px;font-size:1rem}
+@media(max-width:768px){
+  .nav ul{display:none !important}
+  .hero h1{font-size:40px;line-height:1.1}
+  .hero p.lead{font-size:1.05rem}
+  .search-bar{flex-direction:column;border-radius:18px;padding:10px;gap:10px;background:#fff}
+  .search-bar input{width:100%;padding:14px 18px;border-radius:12px;background:var(--warm-white)}
+  .search-bar button{width:100%;border-radius:12px;min-height:48px}
+  .stat-grid{grid-template-columns:repeat(2,1fr) !important}
+  .lifestyle-grid{grid-template-columns:1fr !important;grid-template-rows:auto !important;gap:14px}
+  .lifestyle-grid figure{height:220px !important}
+  .lifestyle-grid figure:nth-child(1){grid-row:auto !important;grid-column:auto !important;height:240px !important}
+  .town-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .town-card .img-wrap{height:120px}
+  .town-card .body{padding:14px}
+  .town-card h3{font-size:1rem}
+  .town-card .price{font-size:.95rem}
+  .panels-grid{grid-template-columns:1fr !important}
+  .market-grid,.market .stat-grid{grid-template-columns:repeat(2,1fr) !important}
+  .listing-grid{grid-template-columns:1fr !important}
+  .faq-list{max-width:100%}
+  .agent-wrap{grid-template-columns:1fr !important;gap:30px}
+  .agent-img{aspect-ratio:1/1;max-width:320px;margin:0 auto}
+  .valuation-wrap{grid-template-columns:1fr !important}
+  .valuation-form{padding:24px}
+  .valuation-form .row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr !important;gap:32px}
+  body.nav-open{overflow:hidden}
+}
+</style>
+<style>
+.legal-page{max-width:880px;margin:0 auto;padding:80px 24px 60px;color:#1B3D5C;line-height:1.75}
+.legal-page .kicker{color:#E8714A;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.legal-page h1{font-family:'Playfair Display',Georgia,serif;font-size:48px;line-height:1.15;margin:0 0 8px;color:#1B3D5C}
+.legal-page .last-updated{color:#6B7B8B;font-size:14px;margin-bottom:40px}
+.legal-page h2{font-family:'Playfair Display',Georgia,serif;font-size:28px;margin:48px 0 14px;color:#1B3D5C}
+.legal-page h3{font-size:18px;margin:28px 0 10px;color:#1B3D5C;font-weight:600}
+.legal-page p{margin:0 0 16px;color:#3A4A5C}
+.legal-page ul{margin:0 0 16px;padding-left:22px;color:#3A4A5C}
+.legal-page ul li{margin-bottom:8px}
+.legal-page a{color:#E8714A;text-decoration:none;border-bottom:1px solid rgba(232,113,74,.3);transition:border-color .15s}
+.legal-page a:hover{border-color:#E8714A}
+.legal-page .contact-card{background:#FDFAF5;border:1px solid #EDE4D3;border-radius:12px;padding:24px 28px;margin-top:36px}
+.legal-page .contact-card h3{margin-top:0}
+.eho-statement-badge{display:inline-flex;align-items:center;gap:10px;background:#1B3D5C;color:#fff;padding:10px 18px;border-radius:6px;font-weight:600;letter-spacing:.5px;margin:24px 0}
+.eho-statement-badge .eho-symbol{font-size:22px;line-height:1}
+@media(max-width:700px){.legal-page{padding:48px 20px 40px}.legal-page h1{font-size:34px}.legal-page h2{font-size:22px}}
+</style>
+<style>
+.breadcrumb-nav{max-width:1180px;margin:0 auto;padding:18px 24px 0;color:#6B7B8B;font-size:13px}
+.breadcrumb-nav a{color:#1B3D5C;text-decoration:none}
+.breadcrumb-nav a:hover{color:#E8714A}
+.breadcrumb-nav .sep{margin:0 8px;opacity:.5}
+</style>
+<style>
+.footer-legal{max-width:1180px;margin:0 auto;padding:20px 24px 0;text-align:center;color:#a8b8c8;font-size:13px;line-height:1.7}
+.footer-legal .mls-disclaimer{margin-bottom:10px;font-style:italic;opacity:.85}
+.footer-legal-links a{color:#a8b8c8;text-decoration:none;margin:0 6px;transition:color .15s}
+.footer-legal-links a:hover{color:#fff;text-decoration:underline}
+.footer-legal-links .sep{opacity:.5;margin:0 2px}
+.eho-badge{display:inline-block;border:1px solid #a8b8c8;padding:1px 8px;border-radius:3px;font-size:11px;letter-spacing:.5px;text-transform:uppercase;margin-left:6px}
+</style>
+<style>
+.dropdown.guides{position:relative}
+.dropdown.guides .dropdown-menu-guides{position:absolute;top:100%;right:0;min-width:240px;background:#fff;border:1px solid #EDE4D3;border-radius:8px;box-shadow:0 10px 30px rgba(27,61,92,.15);padding:14px 16px;list-style:none;margin:0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .18s ease;z-index:1000}
+.dropdown.guides:hover .dropdown-menu-guides,.dropdown.guides:focus-within .dropdown-menu-guides{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown.guides .dropdown-menu-guides::after{content:"";position:absolute;top:-12px;left:0;right:0;height:14px}
+.dropdown.guides .dropdown-menu-guides li{margin:0}
+.dropdown.guides .dropdown-menu-guides a{display:block;padding:8px 6px;color:#1B3D5C;text-decoration:none;font-weight:500;border-radius:4px;transition:background .12s}
+.dropdown.guides .dropdown-menu-guides a:hover{background:#FDFAF5;color:#E8714A}
+@media(max-width:880px){.dropdown.guides .dropdown-menu-guides{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;padding-left:18px}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="brand">Jersey Shore<span>HomeInfo</span></a>
+    <ul>
+      <li class="has-dropdown"><a href="/#towns">Towns</a>
+        <ul class="dropdown">
+          <li><a href="/long-beach-island">Long Beach Island</a></li>
+          <li><a href="/long-beach-township">Long Beach Township</a></li>
+          <li><a href="/ship-bottom">Ship Bottom</a></li>
+          <li><a href="/beach-haven">Beach Haven</a></li>
+          <li><a href="/surf-city">Surf City</a></li>
+          <li><a href="/barnegat-light">Barnegat Light</a></li>
+          <li><a href="/harvey-cedars">Harvey Cedars</a></li>
+          <li><a href="/stafford-township">Stafford Township</a></li>
+          <li><a href="/toms-river">Toms River</a></li>
+          <li><a href="/barnegat">Barnegat</a></li>
+          <li><a href="/waretown">Waretown</a></li>
+          <li><a href="/little-egg-harbor">Little Egg Harbor</a></li>
+          <li><a href="/brick">Brick</a></li>
+        </ul>
+      </li>
+            <li class="dropdown guides"><a href="#">Guides <span class="caret">▾</span></a>
+              <ul class="dropdown-menu dropdown-menu-guides">
+                <li><a href="/moving-from-staten-island">Moving from Staten Island</a></li>
+              </ul>
+            </li>
+      <li><a href="/search">Search</a></li>
+      <li><a href="/#sell">Sell</a></li>
+      <li><a href="/#agent">About Matt</a></li>
+      <li><a href="/#valuation" class="nav-cta">Free Valuation</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- MOBILE FULL-SCREEN NAV OVERLAY -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-top">
+    <a href="/" class="brand">Jersey Shore<span>HomeInfo</span></a>
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+  </div>
+  <ul>
+    <li class="m-towns" id="mTowns">
+      <button class="m-towns-toggle" aria-expanded="false">Towns</button>
+      <ul class="m-sub">
+        <li><a href="/long-beach-island" data-mclose>Long Beach Island</a></li>
+        <li><a href="/stafford-township" data-mclose>Stafford Township</a></li>
+        <li><a href="/toms-river" data-mclose>Toms River</a></li>
+        <li><a href="/barnegat" data-mclose>Barnegat</a></li>
+        <li><a href="/waretown" data-mclose>Waretown</a></li>
+        <li><a href="/little-egg-harbor" data-mclose>Little Egg Harbor</a></li>
+        <li><a href="/brick" data-mclose>Brick</a></li>
+      </ul>
+    </li>
+    <li><a href="/search" data-mclose>Search</a></li>
+    <li><a href="/#sell" data-mclose>Sell</a></li>
+    <li><a href="/#agent" data-mclose>About Matt</a></li>
+  </ul>
+  <a href="/#valuation" class="m-cta" data-mclose>Free Valuation</a>
+</div>
+
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-content">
+    <span class="eyebrow">Ocean County &middot; Long Beach Island &middot; Jersey Shore</span>
+    <h1>Find your place by the ocean.</h1>
+    <p class="lead">From Long Beach Island sunsets to year-round homes in Stafford Township, Toms River and Barnegat &mdash; explore Jersey Shore real estate with a true local expert.</p>
+    <form class="search-bar" onsubmit="event.preventDefault();window.location.href='/search';">
+      <input type="text" placeholder="Search by town, ZIP or address &mdash; e.g. Ship Bottom NJ" aria-label="Search homes">
+      <button type="submit">Search Homes</button>
+    </form>
+    <div class="hero-tags">
+      <span>&#9733; Local LBI Specialist</span>
+      <span>&#9733; Weichert Realtors</span>
+      <span>&#9733; Free Home Valuation</span>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb-nav" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span>Terms of Service</span></nav>
+
+<main>
+
+<section class="legal-page">
+  <div class="kicker">Legal</div>
+  <h1>Terms of Service</h1>
+  <div class="last-updated">Last Updated: May 2026</div>
+
+  <p>Welcome to JerseyShoreHomeInfo.com. By accessing or using this site, you agree to the terms outlined below. If anything here is unclear, contact Matt directly — we'd rather have a conversation than hide behind legalese.</p>
+
+  <h2>Accuracy of Information</h2>
+  <ul>
+    <li>All real estate listing information displayed on this site is believed to be accurate but is not guaranteed.</li>
+    <li>Listing data should always be independently verified before making any real estate decisions — prices, square footage, lot dimensions, taxes and HOA fees can change without notice.</li>
+    <li>Home valuations provided through our valuation tool are <strong>estimates only</strong> and do not constitute a formal appraisal. A licensed appraiser is required for lending, legal or insurance purposes.</li>
+    <li>Market statistics and neighborhood data are updated periodically and may not reflect the most current market conditions.</li>
+  </ul>
+
+  <h2>License Disclosure</h2>
+  <ul>
+    <li>Matt Dunn is a licensed New Jersey Real Estate Salesperson.</li>
+    <li>NJ Real Estate License <strong>#2442118</strong></li>
+    <li>Affiliated with Weichert Realtors, 326 W Ninth Street, Ship Bottom, NJ 08008</li>
+    <li>Each Weichert office is independently owned and operated.</li>
+  </ul>
+
+  <h2>Intellectual Property</h2>
+  <ul>
+    <li>All original content on JerseyShoreHomeInfo.com — including text, graphics, photographs, design, code and overall presentation — is copyright &copy; 2026 JerseyShoreHomeInfo.com.</li>
+    <li>MLS listing data remains the property of the respective MLS boards and contributing brokerages.</li>
+    <li>Unauthorized reproduction, scraping or redistribution of site content is prohibited without prior written permission.</li>
+  </ul>
+
+  <h2>No Guarantee of Results</h2>
+  <ul>
+    <li>Use of this website and its tools, calculators, guides and resources does not guarantee any specific real estate outcome — whether buying, selling or renting.</li>
+    <li>Past market performance is not a reliable indicator of future results. Real estate values can rise or fall.</li>
+    <li>Any opinions expressed on this site are Matt's personal perspective as a local agent and resident, not financial or legal advice.</li>
+  </ul>
+
+  <h2>Use of the Site</h2>
+  <ul>
+    <li>You agree to use this site only for lawful purposes related to learning about, buying, selling or renting Jersey Shore real estate.</li>
+    <li>You may not use automated tools to scrape, copy or harvest listing data, photos or contact information from this site.</li>
+    <li>You may not attempt to interfere with the site's operation or security.</li>
+  </ul>
+
+  <h2>Changes to These Terms</h2>
+  <ul>
+    <li>These terms may be updated periodically to reflect changes in our business, our services, or applicable law.</li>
+    <li>Continued use of the site after changes are posted constitutes acceptance of the updated terms.</li>
+    <li>The "Last Updated" date at the top of this page will reflect the most recent revision.</li>
+  </ul>
+
+  <h2>Limitation of Liability</h2>
+  <p>JerseyShoreHomeInfo.com and Matt Dunn are not liable for any direct or indirect damages arising from the use of this site or reliance on the information presented here. Always consult licensed professionals for legal, financial, tax, appraisal and insurance decisions.</p>
+
+  <div class="contact-card">
+    <h3>Questions About These Terms?</h3>
+    <p>Happy to clarify anything.</p>
+    <p><strong>Matt Dunn</strong><br>
+    <a href="mailto:mdunn@weichert.com">mdunn@weichert.com</a><br>
+    <a href="tel:9175245676">917-524-5676</a></p>
+  </div>
+</section>
+
+</main>
+
+
+<!-- LIFESTYLE GRID -->
+<section class="section lifestyle">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Jersey Shore Lifestyle</span>
+      <h2>Sand between your toes, year round.</h2>
+      <p>Beach mornings, bay sunsets, boardwalk evenings &mdash; this is what daily life looks like across Ocean County and LBI.</p>
+    </div>
+    <div class="lifestyle-grid">
+      <figure><img src="/images/coastal-home.jpg" alt="Jersey Shore beachfront home"><figcaption>Jersey Shore Coastal Homes</figcaption></figure>
+      <figure><img src="/images/jersey-shore-beach.jpg" alt="Jersey Shore beach with calm ocean"><figcaption>Jersey Shore Beaches</figcaption></figure>
+      <figure><img src="/images/nj-neighborhood.jpg" alt="Quiet tree-lined NJ neighborhood street"><figcaption>Quiet NJ Neighborhoods</figcaption></figure>
+      <figure><img src="/images/waterfront-aerial.jpg" alt="Aerial view of waterfront homes"><figcaption>Waterfront Living</figcaption></figure>
+      <figure><img src="/images/sunset-neighborhood.jpg" alt="Sunset over a family neighborhood"><figcaption>Family Homes</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- TOWNS -->
+<section class="section towns" id="towns">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Explore the Shore</span>
+      <h2>Towns we know inside and out.</h2>
+      <p>From the barrier island to the mainland, each town has its own personality. Tap a card to see homes for sale.</p>
+    </div>
+    <div class="town-grid">
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">LBI</span><img src="/images/hero-barnegat-lighthouse.jpg" alt="Long Beach Island"></div>
+        <div class="body"><h3>Long Beach Island</h3><div class="meta">18 miles of barrier beach &middot; oceanfront living</div><div class="price">$2.0M <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Mainland</span><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80" alt="Stafford Township"></div>
+        <div class="body"><h3>Stafford Township</h3><div class="meta">Gateway to LBI &middot; top-rated schools</div><div class="price">$520K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Family</span><img src="/images/toms-river-town.jpg" alt="Toms River"></div>
+        <div class="body"><h3>Toms River</h3><div class="meta">Largest town in Ocean County</div><div class="price">$485K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Value</span><img src="/images/barnegat-boardwalk.jpg" alt="Barnegat boardwalk"></div>
+        <div class="body"><h3>Barnegat</h3><div class="meta">Bayfront living &middot; low taxes</div><div class="price">$465K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Quiet</span><img src="/images/waretown-apartments.jpg" alt="Waretown"></div>
+        <div class="body"><h3>Waretown</h3><div class="meta">Wooded retreats &middot; bay access</div><div class="price">$435K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Coastal</span><img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?auto=format&fit=crop&w=900&q=80" alt="Little Egg Harbor"></div>
+        <div class="body"><h3>Little Egg Harbor</h3><div class="meta">Lagoon homes &middot; minutes to LBI</div><div class="price">$445K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">North</span><img src="/images/brick-waterfront.jpg" alt="Brick waterfront"></div>
+        <div class="body"><h3>Brick</h3><div class="meta">Metedeconk River &middot; commuter friendly</div><div class="price">$510K <span>median</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUY/SELL PANELS -->
+<section class="section action-panels" id="sell">
+  <div class="container">
+    <div class="panels-grid">
+      <div class="panel buy" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80')">
+        <div class="panel-content">
+          <span class="eyebrow" style="color:var(--seafoam)">Buying</span>
+          <h3>Find your Shore home</h3>
+          <p>Whether it's a year-round residence in Stafford or a beach getaway on LBI, we'll help you find the right home in the right town &mdash; without the guesswork.</p>
+          <a href="#listings" class="btn btn-secondary">Browse Homes</a>
+        </div>
+      </div>
+      <div class="panel sell" style="background-image:url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80')">
+        <div class="panel-content">
+          <span class="eyebrow" style="color:#fff">Selling</span>
+          <h3>What's your home worth?</h3>
+          <p>The market shifted &mdash; pricing it right matters more than ever. Get a free, no-obligation valuation from your local Jersey Shore specialist.</p>
+          <a href="#valuation" class="btn btn-secondary">Free Valuation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section stats">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Spring 2026 Market Snapshot</span>
+      <h2>Ocean County &amp; LBI by the numbers.</h2>
+      <p>The data behind today's Jersey Shore market &mdash; updated monthly.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-item"><div class="stat-num">$2.0M</div><div class="stat-label">LBI Median Sale Price</div><div class="stat-trend">&#9650; 11.4% YoY</div></div>
+      <div class="stat-item"><div class="stat-num">$520K</div><div class="stat-label">Stafford Township Median</div><div class="stat-trend">&#9650; 7.1% YoY</div></div>
+      <div class="stat-item"><div class="stat-num">28</div><div class="stat-label">Days on Market</div><div class="stat-trend">&#9660; 14% YoY</div></div>
+      <div class="stat-item"><div class="stat-num">97%</div><div class="stat-label">Sale-to-List Ratio</div><div class="stat-trend">&#9650; Strong Seller's Market</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section class="section listings" id="listings">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Featured Listings</span>
+      <h2>Currently on the market.</h2>
+      <p>A handpicked selection of standout homes across Ocean County and LBI from our office listings.</p>
+    </div>
+    <div class="listing-grid">
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">Entry Level</span><img src="https://cdn2.photos.sparkplatform.com/mo/20260424124205278899000000.jpg" alt="111 Pin Oak Ln Little Egg Harbor home"></div>
+          <div class="body">
+            <div class="price">$180,000</div>
+            <div class="addr">111 Pin Oak Ln &middot; Little Egg Harbor, NJ</div>
+            <div class="specs"><span><strong>2</strong> beds</span><span><strong>1.1</strong> baths</span><span><strong>1,057</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">Just Listed</span><img src="https://cdn0.photos.sparkplatform.com/mo/20260502124246370345000000.jpg" alt="933 Delta Ln Manahawkin home"></div>
+          <div class="body">
+            <div class="price">$544,500</div>
+            <div class="addr">933 Delta Ln &middot; Manahawkin (Stafford), NJ</div>
+            <div class="specs"><span><strong>4</strong> beds</span><span><strong>2.1</strong> baths</span><span><strong>1,656</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">Family</span><img src="https://cdn0.photos.sparkplatform.com/mo/20260206215112223006000000.jpg" alt="18 Raccoon Ln Barnegat home"></div>
+          <div class="body">
+            <div class="price">$645,000</div>
+            <div class="addr">18 Raccoon Ln &middot; Barnegat (Seacrest), NJ</div>
+            <div class="specs"><span><strong>3</strong> beds</span><span><strong>3</strong> baths</span><span><strong>2,434</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">North Shore</span><img src="https://cdn2.photos.sparkplatform.com/mo/20260324030247695223000000.jpg" alt="439 Adamston Rd Brick home"></div>
+          <div class="body">
+            <div class="price">$699,900</div>
+            <div class="addr">439 Adamston Rd &middot; Brick, NJ</div>
+            <div class="specs"><span><strong>3</strong> beds</span><span><strong>2</strong> baths</span><span><strong>1,815</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">LBI</span><img src="https://cdn1.photos.sparkplatform.com/mo/20260319081641506782000000.jpg" alt="108 E 27th St Ship Bottom LBI home"></div>
+          <div class="body">
+            <div class="price">$1,800,000</div>
+            <div class="addr">108 E 27th St &middot; Ship Bottom, LBI, NJ</div>
+            <div class="specs"><span><strong>3</strong> beds</span><span><strong>2.1</strong> baths</span><span><strong>1,364</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">Luxury</span><img src="https://cdn0.photos.sparkplatform.com/mo/20260507131905181975000000.jpg" alt="42 W Cape Cod Ln Long Beach Township home"></div>
+          <div class="body">
+            <div class="price">$2,100,000</div>
+            <div class="addr">42 W Cape Cod Ln &middot; Long Beach Twp, LBI, NJ</div>
+            <div class="specs"><span><strong>4</strong> beds</span><span><strong>2.1</strong> baths</span><span><strong>2,329</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:50px"><a href="mailto:mdunn@weichert.com" class="btn btn-navy">Request Full MLS Access</a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Jersey Shore real estate, answered.</h2>
+      <p>The questions buyers and sellers ask us most often.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">Is the Jersey Shore a good place to live year round?</div><div class="faq-a"><p>Yes. Communities like Stafford Township, Toms River and Barnegat are thriving year round towns with excellent schools, restaurants and amenities beyond the summer season.</p></div></div>
+      <div class="faq-item"><div class="faq-q">How far is Ocean County from Staten Island?</div><div class="faq-a"><p>Most Ocean County towns are 45 minutes to 1 hour from Staten Island via the Garden State Parkway.</p></div></div>
+      <div class="faq-item"><div class="faq-q">What is the median home price on LBI in 2026?</div><div class="faq-a"><p>The median home price on Long Beach Island is approximately $2,000,000 in Spring 2026, up 11.4% year over year.</p></div></div>
+      <div class="faq-item"><div class="faq-q">What are the best towns in Ocean County for families?</div><div class="faq-a"><p>Stafford Township, Toms River and Barnegat consistently rank among the best family friendly towns in Ocean County for schools, safety and community.</p></div></div>
+      <div class="faq-item"><div class="faq-q">How much are property taxes in Ocean County NJ?</div><div class="faq-a"><p>Property taxes in Ocean County are significantly lower than North Jersey. Stafford Township averages around $6,000 to $8,000 annually depending on home value.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Is now a good time to sell in Ocean County?</div><div class="faq-a"><p>Yes. Inventory is historically low, prices are up 11% year over year and qualified buyers are actively searching. Spring 2026 is a strong seller's market.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT -->
+<section class="section agent" id="agent">
+  <div class="container">
+    <div class="agent-wrap">
+      <div class="agent-img" aria-label="Matt Dunn, Weichert Realtors"></div>
+      <div>
+        <span class="eyebrow">Your Local Specialist</span>
+        <h2>Meet Matt Dunn.</h2>
+                <div class="agent-title">Staten Island Born &middot; Ocean Acres Resident &middot; Jersey Shore Specialist</div>
+        <p>Born and raised on Staten Island, Matt made the move to Ocean Acres in Manahawkin &mdash; right in the heart of Stafford Township &mdash; where he’s been rooted since 2017. He knows firsthand what it feels like to leave the city behind and discover the quality of life the Jersey Shore offers. That experience gives him a perspective no lifelong local can replicate &mdash; he understands exactly what buyers from Staten Island, Brooklyn and North Jersey are looking for because he made the same move himself.</p>
+        <p>Whether you’re searching for a year-round home in Ocean Acres, a waterfront retreat on LBI or your first shore investment &mdash; Matt brings honest local knowledge, direct communication and an agent who actually picks up the phone.</p>
+<div class="agent-contact">
+          <a href="tel:9175245676">&#9742; 917-524-5676</a>
+          <a href="mailto:mdunn@weichert.com">&#9993; mdunn@weichert.com</a>
+          <a href="https://www.instagram.com/lbishorehomes" target="_blank" rel="noopener">@lbishorehomes</a>
+          <a href="https://www.facebook.com/profile.php?id=61559525730592" target="_blank" rel="noopener" aria-label="Facebook">&#9786; Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUATION FORM -->
+<section class="section valuation" id="valuation">
+  <div class="container">
+    <div class="valuation-wrap">
+      <div class="valuation-text">
+        <span class="eyebrow">Free Home Valuation</span>
+        <h2>What's your Jersey Shore home worth today?</h2>
+        <p>Get a no-obligation, expert market analysis tailored to your home and your block &mdash; not an algorithm guess. We'll send your full report within 24 hours.</p>
+        <p>&#10003; True local comps from Ocean County &amp; LBI<br>
+           &#10003; Current buyer demand for your street<br>
+           &#10003; Smart pricing strategy to maximize your sale</p>
+      </div>
+      <div class="valuation-form">
+        <h3>Request Your Valuation</h3>
+        <p class="sub">Get your free, expert market analysis &mdash; no obligation.</p>
+        <a href="https://matthew-dunn.weichert.com/seller/valuation/" target="_blank" rel="noopener" class="btn btn-primary" style="display:block;text-align:center;text-decoration:none;margin-top:12px">Get My Free Valuation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="brand">Jersey Shore<span>HomeInfo</span></a>
+        <p>Your trusted Jersey Shore real estate resource. Local expertise across Ocean County and Long Beach Island.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/lbishorehomes" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/profile.php?id=61559525730592" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" aria-label="Weichert">W</a>
+        </div>
+      </div>
+      <div>
+        <h4>Towns</h4>
+        <ul>
+          <li><a href="/long-beach-island">Long Beach Island</a></li>
+          <li><a href="/long-beach-township">Long Beach Township</a></li>
+          <li><a href="/ship-bottom">Ship Bottom</a></li>
+          <li><a href="/beach-haven">Beach Haven</a></li>
+          <li><a href="/surf-city">Surf City</a></li>
+          <li><a href="/barnegat-light">Barnegat Light</a></li>
+          <li><a href="/harvey-cedars">Harvey Cedars</a></li>
+          <li><a href="/stafford-township">Stafford Township</a></li>
+          <li><a href="/toms-river">Toms River</a></li>
+          <li><a href="/barnegat">Barnegat</a></li>
+          <li><a href="/waretown">Waretown</a></li>
+          <li><a href="/little-egg-harbor">Little Egg Harbor</a></li>
+          <li><a href="/brick">Brick</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/search">Search Homes</a></li>
+          <li><a href="#sell">Sell Your Home</a></li>
+          <li><a href="#valuation">Free Valuation</a></li>
+          <li><a href="#agent">About Matt</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Matt Dunn, REALTOR&reg;</li>
+          <li>Weichert Realtors</li>
+          <li>326 W Ninth St<br>Ship Bottom, NJ 08008</li>
+          <li><a href="tel:9175245676">917-524-5676</a></li>
+          <li><a href="mailto:mdunn@weichert.com">mdunn@weichert.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom footer-legal">
+      <div class="mls-disclaimer">All listing information is believed to be accurate but is not guaranteed and should be independently verified.</div>
+      <div class="footer-legal-links">
+        <a href="/privacy-policy">Privacy Policy</a><span class="sep">|</span>
+        <a href="/terms-of-service">Terms of Service</a><span class="sep">|</span>
+        <a href="/fair-housing">Fair Housing</a><span class="sep">|</span>
+        <span>NJ License #2442118</span><span class="sep">|</span>
+        <span>Equal Housing Opportunity <span class="eho-badge">⊕ EHO</span></span>
+      </div>
+      <div style="margin-top:14px;opacity:.7">&copy; 2026 JerseyShoreHomeInfo.com &middot; Matt Dunn &middot; Weichert Realtors &middot; Each office independently owned and operated</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav toggle
+  var mNav=document.getElementById('mobileNav');var mTownsEl=document.getElementById('mTowns');function openMNav(){mNav.classList.add('open');mNav.setAttribute('aria-hidden','false');document.body.classList.add('nav-open');}function closeMNav(){mNav.classList.remove('open');mNav.setAttribute('aria-hidden','true');document.body.classList.remove('nav-open');}document.getElementById('navToggle').addEventListener('click',openMNav);document.getElementById('mobileNavClose').addEventListener('click',closeMNav);mNav.addEventListener('click',function(e){if(e.target===mNav)closeMNav();});mTownsEl.querySelector('.m-towns-toggle').addEventListener('click',function(){var open=mTownsEl.classList.toggle('open');this.setAttribute('aria-expanded',open?'true':'false');});mNav.querySelectorAll('[data-mclose]').forEach(function(a){a.addEventListener('click',closeMNav);});
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click',()=>item.classList.toggle('open'));
+  });
+</script>
+
+<!-- LocalBusiness / RealEstateAgent Schema -->
+
+
+<!-- FAQ Schema -->
+
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"RealEstateAgent",
+  "name":"Matt Dunn — JerseyShoreHomeInfo.com",
+  "image":"https://www.jerseyshorehomeinfo.com/images/matt-dunn.jpg",
+  "telephone":"+19175245676",
+  "email":"mdunn@weichert.com",
+  "url":"https://www.jerseyshorehomeinfo.com",
+  "address":{"@type":"PostalAddress","streetAddress":"326 W Ninth St","addressLocality":"Ship Bottom","addressRegion":"NJ","postalCode":"08008","addressCountry":"US"},
+  "areaServed":["Long Beach Island","Ocean County","Stafford Township","Toms River","Brick"],
+  "memberOf":{"@type":"Organization","name":"Weichert Realtors"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"Terms of Service",
+  "description":"Terms of Service for JerseyShoreHomeInfo.com.",
+  "url":"https://www.jerseyshorehomeinfo.com/terms-of-service",
+  "publisher":{"@type":"Organization","name":"JerseyShoreHomeInfo.com","url":"https://www.jerseyshorehomeinfo.com"}
+}
+</script>
+</body>
+</html>
