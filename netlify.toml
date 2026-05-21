@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# IndexNow submission runs on every successful deploy via the
+# "Deploy succeeded" outgoing webhook configured in the Netlify
+# dashboard, pointing at /.netlify/functions/indexnow
