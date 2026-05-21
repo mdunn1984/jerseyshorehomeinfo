@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCWZNKR60S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCWZNKR60S');
+</script>
+
+<!-- GA4 Custom Event Tracking -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof gtag !== 'function') return;
+  var SITE_HOST = 'jerseyshorehomeinfo.com';
+  var TOWN_PATHS = ['/long-beach-island','/stafford-township','/toms-river','/barnegat','/waretown','/little-egg-harbor','/brick'];
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (a) {
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('tel:') === 0) {
+        gtag('event', 'phone_click', { event_category: 'contact', event_label: href, transport_type: 'beacon' });
+        return;
+      }
+      if (/^https?:\/\//i.test(href)) {
+        var isInternal = href.indexOf(SITE_HOST) !== -1;
+        if (!isInternal) {
+          gtag('event', 'click', { event_category: 'outbound', event_label: href, transport_type: 'beacon' });
+          if (href.indexOf('weichert.com') !== -1) {
+            gtag('event', 'outbound_weichert', { event_category: 'outbound', event_label: href, transport_type: 'beacon' });
+          }
+        }
+      }
+      for (var i=0; i<TOWN_PATHS.length; i++) {
+        if (href === TOWN_PATHS[i] || href.indexOf(TOWN_PATHS[i]+'/') === 0) {
+          gtag('event', 'town_link_click', { event_category: 'navigation', event_label: TOWN_PATHS[i].replace('/','') });
+          break;
+        }
+      }
+      var li = a.closest('li.has-dropdown');
+      if (li && a.parentElement === li) {
+        gtag('event', 'towns_dropdown_click', { event_category: 'navigation', event_label: 'towns_menu' });
+      }
+      if (a.classList.contains('nav-cta') || (a.textContent || '').trim() === 'Free Valuation') {
+        gtag('event', 'free_valuation_click', { event_category: 'cta', event_label: 'free_valuation' });
+      }
+    }
+    var btn = e.target.closest('button');
+    if (btn && (btn.textContent || '').trim() === 'Search Homes') {
+      gtag('event', 'search_homes_click', { event_category: 'cta', event_label: 'search_homes' });
+    }
+  }, true);
+});
+</script>
+
+
+<!-- Bing Webmaster Verification -->
+<meta name="msvalidate.01" content="327ADF14EC8B8CDC3C75BDBEC594049C">
+
+<!-- SEO -->
+<title>Moving from Staten Island to the Jersey Shore | Ocean County NJ Relocation Guide 2026</title>
+<meta name="description" content="Thinking of leaving Staten Island for the Jersey Shore? Matt Dunn made the same move in 2017. Your complete guide to moving from Staten Island to Ocean County NJ — towns, schools, taxes, commute times and everything in between.">
+<meta name="keywords" content="Jersey Shore homes for sale, Ocean County NJ real estate, LBI homes, Long Beach Island real estate, Stafford Township homes, Toms River real estate, Barnegat homes, buy home near LBI, sell home Ocean County, Jersey Shore realtor">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Matt Dunn, Weichert Realtors">
+<link rel="canonical" href="https://www.jerseyshorehomeinfo.com/moving-from-staten-island">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Moving from Staten Island to the Jersey Shore | JerseyShoreHomeInfo.com">
+<meta property="og:description" content="Your complete guide to moving from Staten Island to Ocean County NJ. Written by a Staten Island native who made the move himself.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.jerseyshorehomeinfo.com/moving-from-staten-island">
+<meta property="og:image" content="https://www.jerseyshorehomeinfo.com/images/og-image.jpg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --warm-white:#FDFAF5;
+  --sandy-linen:#EDE4D3;
+  --driftwood:#B8A898;
+  --navy:#1B3D5C;
+  --horizon:#4A8FA8;
+  --seaglass:#7EC8C0;
+  --coral:#E8714A;
+  --gold:#D4A85A;
+  --seafoam:#A8D8D0;
+  --shadow:0 10px 30px rgba(27,61,92,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--warm-white);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);line-height:1.2}
+h1{font-size:clamp(2.5rem,5vw,4.5rem)}
+h2{font-size:clamp(2rem,3.5vw,3rem);margin-bottom:.5rem}
+h3{font-size:1.5rem}
+a{color:var(--horizon);text-decoration:none;transition:color .2s}
+a:hover{color:var(--coral)}
+img{max-width:100%;display:block}
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+.section{padding:90px 0}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:.8rem;color:var(--coral);font-weight:600;margin-bottom:12px;display:block}
+.section-head{text-align:center;max-width:760px;margin:0 auto 60px}
+.section-head p{color:#5a6b7a;font-size:1.1rem;margin-top:12px}
+.btn{display:inline-block;padding:14px 30px;border-radius:30px;font-weight:600;font-size:.95rem;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:#d35e38;color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(232,113,74,.35)}
+.btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+.btn-secondary:hover{background:#fff;color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:#0f2940;color:#fff;transform:translateY(-2px)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,168,152,.25)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1240px;margin:0 auto}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;color:var(--navy)}
+.brand span{color:var(--coral)}
+.nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+.nav ul a{color:var(--navy);font-weight:500;font-size:.95rem}
+.nav-cta{background:var(--coral);color:#fff !important;padding:10px 22px;border-radius:30px;font-weight:600;font-size:.9rem;transition:transform .2s,background .2s}
+.nav-cta:hover{background:#d35e38;transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.6rem;color:var(--navy);cursor:pointer}
+@media(max-width:880px){
+  .nav ul{display:none}
+  .nav-toggle{display:block}
+}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(rgba(27,61,92,.55),rgba(27,61,92,.30)),url('/images/hero-barnegat-lighthouse.jpg') center/cover no-repeat;color:#fff;padding-top:80px}
+.hero-content{max-width:820px}
+.hero h1{color:#fff;margin-bottom:20px}
+.hero .eyebrow{color:var(--seafoam)}
+.hero p.lead{font-size:1.25rem;color:rgba(255,255,255,.92);margin-bottom:36px;max-width:640px}
+.search-bar{background:#fff;border-radius:60px;padding:8px;display:flex;box-shadow:var(--shadow);max-width:640px;align-items:center}
+.search-bar input{flex:1;border:0;outline:0;padding:14px 22px;font-family:inherit;font-size:1rem;color:var(--navy);background:transparent}
+.search-bar button{background:var(--coral);color:#fff;border:0;padding:14px 30px;border-radius:50px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.95rem}
+.search-bar button:hover{background:#d35e38}
+.hero-tags{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.hero-tags span{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);padding:8px 18px;border-radius:30px;font-size:.85rem;font-weight:500}
+
+/* LIFESTYLE GRID */
+.lifestyle{background:var(--sandy-linen)}
+.lifestyle-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:18px}
+.lifestyle-grid figure{position:relative;border-radius:16px;overflow:hidden;background:#ccc}
+.lifestyle-grid figure:nth-child(1){grid-row:1/3}
+.lifestyle-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.lifestyle-grid figure:hover img{transform:scale(1.06)}
+.lifestyle-grid figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(27,61,92,.85));color:#fff;padding:24px 20px 18px;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600}
+@media(max-width:880px){.lifestyle-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.lifestyle-grid figure:nth-child(1){grid-row:auto;grid-column:1/3;height:240px}}
+
+/* TOWN CARDS */
+.towns{background:var(--warm-white)}
+.town-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.town-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;cursor:pointer}
+.town-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(27,61,92,.18)}
+.town-card .img-wrap{height:180px;overflow:hidden;position:relative}
+.town-card img{width:100%;height:100%;object-fit:cover}
+.town-card .badge{position:absolute;top:14px;left:14px;background:var(--coral);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:20px;text-transform:uppercase}
+.town-card .body{padding:22px}
+.town-card h3{margin-bottom:6px}
+.town-card .meta{color:var(--driftwood);font-size:.85rem;margin-bottom:12px}
+.town-card .price{color:var(--horizon);font-weight:700;font-size:1.1rem}
+.town-card .price span{color:var(--driftwood);font-weight:400;font-size:.85rem;margin-left:6px}
+
+/* BUY / SELL PANELS */
+.action-panels{background:var(--warm-white)}
+.panels-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:880px){.panels-grid{grid-template-columns:1fr}}
+.panel{position:relative;border-radius:20px;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;padding:40px;color:#fff;background-size:cover;background-position:center}
+.panel::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(27,61,92,.85),rgba(27,61,92,.3))}
+.panel.sell::before{background:linear-gradient(135deg,rgba(232,113,74,.85),rgba(232,113,74,.3))}
+.panel-content{position:relative;z-index:2;max-width:420px}
+.panel h3{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;margin-bottom:12px}
+.panel p{margin-bottom:24px;color:rgba(255,255,255,.92)}
+
+/* STATS */
+.stats{background:var(--navy);color:#fff;padding:80px 0}
+.stats h2{color:#fff}
+.stats .eyebrow{color:var(--seafoam)}
+.stats .section-head p{color:rgba(255,255,255,.8)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+@media(max-width:880px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-item{padding:24px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--seafoam);font-weight:700;line-height:1}
+.stat-label{margin-top:10px;font-size:.95rem;color:rgba(255,255,255,.8)}
+.stat-trend{margin-top:6px;font-size:.8rem;color:var(--gold);font-weight:600}
+
+/* LISTINGS */
+.listings{background:var(--sandy-linen)}
+.listing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.listing{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s}
+.listing:hover{transform:translateY(-4px)}
+.listing .img-wrap{position:relative;height:220px}
+.listing img{width:100%;height:100%;object-fit:cover}
+.listing .status{position:absolute;top:14px;left:14px;background:var(--seaglass);color:var(--navy);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:20px;text-transform:uppercase}
+.listing .body{padding:22px}
+.listing .price{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);font-weight:700}
+.listing .addr{color:var(--driftwood);font-size:.9rem;margin:6px 0 14px}
+.listing .specs{display:flex;gap:18px;font-size:.85rem;color:#5a6b7a;border-top:1px solid var(--sandy-linen);padding-top:14px}
+.listing .specs span strong{color:var(--navy)}
+
+/* FAQ */
+.faq{background:var(--warm-white)}
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{background:#fff;border-radius:14px;margin-bottom:14px;box-shadow:0 4px 14px rgba(27,61,92,.06);overflow:hidden}
+.faq-q{padding:22px 26px;cursor:pointer;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;align-items:center;font-size:1.05rem}
+.faq-q::after{content:'+';font-size:1.6rem;color:var(--coral);font-weight:400;transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 26px;color:#5a6b7a}
+.faq-item.open .faq-a{max-height:400px;padding:0 26px 22px}
+
+/* AGENT */
+.agent{background:var(--sandy-linen)}
+.agent-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:center}
+@media(max-width:880px){.agent-wrap{grid-template-columns:1fr}}
+.agent-img{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:url('/images/matt-dunn-headshot.jpg') center/cover}
+.agent h2{margin-bottom:6px}
+.agent .agent-title{color:var(--coral);font-weight:600;margin-bottom:18px}
+.agent p{color:#5a6b7a;margin-bottom:14px}
+.agent-contact{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px}
+.agent-contact a{display:inline-flex;align-items:center;gap:8px;background:#fff;padding:12px 20px;border-radius:30px;color:var(--navy);font-weight:600;box-shadow:0 4px 14px rgba(27,61,92,.08)}
+.agent-contact a:hover{color:var(--coral)}
+
+/* VALUATION */
+.valuation{background:linear-gradient(135deg,var(--navy),var(--horizon));color:#fff;padding:90px 0}
+.valuation h2{color:#fff}
+.valuation .eyebrow{color:var(--seafoam)}
+.valuation-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:880px){.valuation-wrap{grid-template-columns:1fr}}
+.valuation-text p{color:rgba(255,255,255,.9);margin-bottom:14px;font-size:1.05rem}
+.valuation-form{background:#fff;border-radius:20px;padding:36px;color:var(--navy);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.valuation-form h3{margin-bottom:8px}
+.valuation-form p.sub{color:#5a6b7a;font-size:.9rem;margin-bottom:22px}
+.valuation-form .field{margin-bottom:16px}
+.valuation-form label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--navy)}
+.valuation-form input,.valuation-form select{width:100%;padding:13px 16px;border:1px solid var(--sandy-linen);border-radius:10px;font-family:inherit;font-size:.95rem;background:var(--warm-white);color:var(--navy);outline:none;transition:border-color .2s}
+.valuation-form input:focus,.valuation-form select:focus{border-color:var(--horizon)}
+.valuation-form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.valuation-form button{width:100%;margin-top:8px}
+.form-success{display:none;text-align:center;padding:20px;background:var(--seafoam);border-radius:10px;color:var(--navy);font-weight:600;margin-top:14px}
+.form-success.show{display:block}
+
+/* FOOTER */
+.footer{background:#0f2940;color:rgba(255,255,255,.8);padding:70px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+@media(max-width:880px){.footer-grid{grid-template-columns:1fr 1fr}}
+.footer h4{color:#fff;font-family:'Inter',sans-serif;font-size:1rem;margin-bottom:18px;text-transform:uppercase;letter-spacing:1.5px}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:10px}
+.footer ul a{color:rgba(255,255,255,.7);font-size:.92rem}
+.footer ul a:hover{color:var(--seafoam)}
+.footer .brand{color:#fff;font-size:1.4rem;margin-bottom:12px;display:block}
+.footer .brand span{color:var(--coral)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;font-size:.85rem;color:rgba(255,255,255,.6)}
+.social{display:flex;gap:14px;margin-top:18px}
+.social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem}
+.social a:hover{background:var(--coral);color:#fff}
+
+/* TOWNS DROPDOWN - mega menu */
+.nav .has-dropdown{position:relative}
+.nav .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);background:#fff;border-radius:14px;box-shadow:0 18px 50px rgba(27,61,92,.18);padding:14px;list-style:none;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:120;display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:2px 6px;width:max-content;max-width:min(640px,95vw)}
+.nav .has-dropdown:hover .dropdown,.nav .has-dropdown:focus-within .dropdown,.nav .has-dropdown.open .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav .dropdown li{display:block;margin:0}
+.nav .dropdown a{display:block;padding:9px 14px;font-size:.9rem;color:var(--navy);font-weight:500;white-space:nowrap;border-radius:8px;line-height:1.2}
+.nav .dropdown a:hover{background:var(--sandy-linen);color:var(--coral)}
+.nav .has-dropdown > a::after{content:"";display:inline-block;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:6px;margin-bottom:2px;vertical-align:middle;opacity:.6}
+.nav .has-dropdown::after{content:"";position:absolute;top:100%;left:0;right:0;height:14px}
+@media(max-width:880px){
+.nav .dropdown{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;background:transparent;padding:6px 0 6px 18px;display:block;width:auto;max-width:none}
+.nav .has-dropdown::after{display:none}
+.nav .has-dropdown:hover .dropdown,.nav .has-dropdown.open .dropdown{transform:none}
+.nav .dropdown a{padding:6px 0;color:#5a6b7a;white-space:normal}
+}
+
+
+/* MOBILE: full-screen nav overlay + responsive layout (<=768px) */
+.mobile-nav{position:fixed;inset:0;background:rgba(15,41,64,.98);color:#fff;z-index:1000;display:flex;flex-direction:column;transform:translateY(-100%);transition:transform .35s ease;overflow-y:auto;visibility:hidden}
+.mobile-nav.open{transform:translateY(0);visibility:visible}
+.mobile-nav-top{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.1)}
+.mobile-nav-top .brand{color:#fff;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700}
+.mobile-nav-top .brand span{color:var(--coral)}
+.mobile-nav-close{background:none;border:0;color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;padding:8px 12px}
+.mobile-nav ul{list-style:none;padding:8px 0;margin:0}
+.mobile-nav li{border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-nav a,.mobile-nav .m-towns-toggle{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding:14px 24px;color:#fff;font-size:1.05rem;font-weight:500;text-decoration:none;background:none;border:0;width:100%;text-align:left;font-family:inherit;cursor:pointer}
+.mobile-nav .m-towns-toggle::after{content:'+';font-size:1.6rem;color:var(--coral);font-weight:400;transition:transform .25s}
+.mobile-nav .m-towns.open .m-towns-toggle::after{transform:rotate(45deg)}
+.mobile-nav .m-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(255,255,255,.04);list-style:none;padding:0}
+.mobile-nav .m-towns.open .m-sub{max-height:600px}
+.mobile-nav .m-sub a{min-height:48px;padding:12px 40px;font-size:1rem;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-nav .m-cta{margin:24px;display:block;text-align:center;background:var(--coral);color:#fff;padding:16px 22px;border-radius:30px;font-weight:600;min-height:48px;font-size:1rem}
+@media(max-width:768px){
+  .nav ul{display:none !important}
+  .hero h1{font-size:40px;line-height:1.1}
+  .hero p.lead{font-size:1.05rem}
+  .search-bar{flex-direction:column;border-radius:18px;padding:10px;gap:10px;background:#fff}
+  .search-bar input{width:100%;padding:14px 18px;border-radius:12px;background:var(--warm-white)}
+  .search-bar button{width:100%;border-radius:12px;min-height:48px}
+  .stat-grid{grid-template-columns:repeat(2,1fr) !important}
+  .lifestyle-grid{grid-template-columns:1fr !important;grid-template-rows:auto !important;gap:14px}
+  .lifestyle-grid figure{height:220px !important}
+  .lifestyle-grid figure:nth-child(1){grid-row:auto !important;grid-column:auto !important;height:240px !important}
+  .town-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .town-card .img-wrap{height:120px}
+  .town-card .body{padding:14px}
+  .town-card h3{font-size:1rem}
+  .town-card .price{font-size:.95rem}
+  .panels-grid{grid-template-columns:1fr !important}
+  .market-grid,.market .stat-grid{grid-template-columns:repeat(2,1fr) !important}
+  .listing-grid{grid-template-columns:1fr !important}
+  .faq-list{max-width:100%}
+  .agent-wrap{grid-template-columns:1fr !important;gap:30px}
+  .agent-img{aspect-ratio:1/1;max-width:320px;margin:0 auto}
+  .valuation-wrap{grid-template-columns:1fr !important}
+  .valuation-form{padding:24px}
+  .valuation-form .row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr !important;gap:32px}
+  body.nav-open{overflow:hidden}
+}
+</style>
+<style>
+.footer-legal{max-width:1180px;margin:0 auto;padding:20px 24px 0;text-align:center;color:#a8b8c8;font-size:13px;line-height:1.7}
+.footer-legal .mls-disclaimer{margin-bottom:10px;font-style:italic;opacity:.85}
+.footer-legal-links a{color:#a8b8c8;text-decoration:none;margin:0 6px;transition:color .15s}
+.footer-legal-links a:hover{color:#fff;text-decoration:underline}
+.footer-legal-links .sep{opacity:.5;margin:0 2px}
+.eho-badge{display:inline-block;border:1px solid #a8b8c8;padding:1px 8px;border-radius:3px;font-size:11px;letter-spacing:.5px;text-transform:uppercase;margin-left:6px}
+</style>
+<style>
+.dropdown-guides{grid-template-columns:1fr!important;min-width:220px}
+.guides-parent .dropdown-guides{width:auto}
+</style>
+<style>
+.si-hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;overflow:hidden;background:#0F2235}
+.si-hero .si-bg{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+.si-hero .si-bg .si-bg-left,.si-hero .si-bg .si-bg-right{background-size:cover;background-position:center}
+.si-hero .si-bg .si-bg-left{background-image:url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80')}
+.si-hero .si-bg .si-bg-right{background-image:url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80')}
+.si-hero .si-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,34,53,.55) 0%,rgba(15,34,53,.75) 100%)}
+.si-hero .si-hero-inner{position:relative;z-index:2;max-width:920px;padding:0 24px}
+.si-hero .kicker{color:#F2B894;font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+.si-hero h1{font-family:'Playfair Display',Georgia,serif;font-size:64px;line-height:1.05;margin:0 0 18px;font-weight:600}
+.si-hero .sub{font-size:21px;line-height:1.5;opacity:.92;margin:0 0 32px;max-width:780px;margin-left:auto;margin-right:auto}
+.si-hero .si-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.si-hero .si-btn{display:inline-block;padding:14px 28px;border-radius:50px;font-weight:600;text-decoration:none;transition:transform .12s,box-shadow .12s;font-size:15px}
+.si-hero .si-btn-primary{background:#E8714A;color:#fff;box-shadow:0 8px 20px rgba(232,113,74,.4)}
+.si-hero .si-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(232,113,74,.5)}
+.si-hero .si-btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(4px)}
+.si-hero .si-btn-ghost:hover{background:rgba(255,255,255,.22)}
+
+.si-story{background:linear-gradient(135deg,#E8714A 0%,#D85A33 100%);color:#fff;padding:90px 24px;text-align:center}
+.si-story .si-quote{font-family:'Playfair Display',Georgia,serif;font-size:34px;line-height:1.4;font-style:italic;max-width:920px;margin:0 auto 28px;font-weight:500}
+.si-story .si-attrib{font-size:15px;opacity:.92;letter-spacing:.5px}
+.si-story img{width:96px;height:96px;border-radius:50%;border:4px solid rgba(255,255,255,.4);object-fit:cover;margin-bottom:24px;background:#fff2e8}
+
+.si-section{padding:90px 24px;background:#FDFAF5}
+.si-section.alt{background:#FFFFFF}
+.si-section.navy{background:#1B3D5C;color:#fff}
+.si-section.navy h2,.si-section.navy h3{color:#fff}
+.si-section .container{max-width:1180px;margin:0 auto}
+.si-section .kicker{color:#E8714A;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;text-align:center}
+.si-section h2{font-family:'Playfair Display',Georgia,serif;font-size:42px;line-height:1.15;margin:0 0 14px;text-align:center;color:#1B3D5C}
+.si-section .sub{text-align:center;font-size:18px;color:#5C6B7B;max-width:780px;margin:0 auto 50px;line-height:1.6}
+.si-section.navy h2{color:#fff}
+.si-section.navy .sub{color:#cdd8e3}
+
+.reasons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.reason-card{background:#fff;border:1px solid #EDE4D3;border-radius:14px;padding:32px 26px;transition:transform .15s,box-shadow .15s}
+.reason-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(27,61,92,.12)}
+.reason-card .icon{font-size:38px;line-height:1;margin-bottom:14px}
+.reason-card h3{margin:0 0 10px;font-size:19px;color:#1B3D5C}
+.reason-card p{margin:0;color:#5C6B7B;line-height:1.7;font-size:15px}
+
+.commute-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:start}
+.commute-text p{margin:0 0 14px;color:#3A4A5C;line-height:1.8;font-size:16px}
+.commute-text ul{padding-left:22px;color:#3A4A5C;line-height:1.85}
+.commute-grid{background:#fff;border:1px solid #EDE4D3;border-radius:14px;padding:8px}
+.commute-row{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid #F4ECE0}
+.commute-row:last-child{border-bottom:none}
+.commute-row .town{font-weight:600;color:#1B3D5C}
+.commute-row .time{color:#E8714A;font-weight:700;font-size:17px}
+
+.town-compare-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.town-card{background:#fff;border:1px solid #EDE4D3;border-radius:14px;padding:28px;transition:transform .15s,box-shadow .15s}
+.town-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(27,61,92,.1)}
+.town-card .tname{font-family:'Playfair Display',Georgia,serif;font-size:24px;color:#1B3D5C;margin:0 0 6px}
+.town-card .vibe{color:#E8714A;font-weight:600;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
+.town-card .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:14px}
+.town-card .stat-item{background:#FDFAF5;border-radius:8px;padding:10px 14px}
+.town-card .stat-label{color:#7A8A9C;font-size:11px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px}
+.town-card .stat-value{color:#1B3D5C;font-weight:700;font-size:15px}
+.town-card .best-for{color:#3A4A5C;font-size:14px;padding-top:12px;border-top:1px solid #F4ECE0}
+.town-card .best-for strong{color:#1B3D5C}
+
+.tax-deepdive{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tax-card{background:#fff;border:2px solid #EDE4D3;border-radius:14px;padding:32px 26px}
+.tax-card.savings{border-color:#E8714A;background:linear-gradient(180deg,#FFF6F1 0%,#fff 100%)}
+.tax-card h3{margin:0 0 18px;font-size:18px;color:#1B3D5C}
+.tax-card.savings h3{color:#E8714A}
+.tax-card ul{margin:0;padding-left:20px;color:#3A4A5C;line-height:1.85;font-size:15px}
+.tax-disclaimer{margin-top:30px;color:#7A8A9C;font-size:13px;font-style:italic;text-align:center;line-height:1.7}
+
+.schools-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.schools-col{background:#fff;border:1px solid #EDE4D3;border-radius:14px;padding:32px 28px}
+.schools-col h3{margin:0 0 18px;color:#1B3D5C;font-size:20px}
+.schools-col ul{margin:0;padding-left:22px;color:#3A4A5C;line-height:1.85}
+
+.budget-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.budget-card{background:#fff;border:1px solid #EDE4D3;border-radius:14px;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.budget-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(27,61,92,.12)}
+.budget-card .photo{width:100%;height:200px;background-size:cover;background-position:center}
+.budget-card .body{padding:24px 24px 28px}
+.budget-card .price{font-family:'Playfair Display',Georgia,serif;font-size:22px;color:#E8714A;margin:0 0 12px;font-weight:600}
+.budget-card p{margin:0;color:#3A4A5C;line-height:1.75;font-size:15px}
+
+.rental-content{max-width:880px;margin:0 auto}
+.rental-content ul{padding-left:22px;color:#3A4A5C;line-height:1.95;font-size:16px}
+.rental-content ul li{margin-bottom:10px}
+.rental-content .important{background:#FFF6F1;border-left:4px solid #E8714A;padding:18px 22px;margin:24px 0;border-radius:6px;color:#3A4A5C}
+
+.checklist-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.checklist-col h3{margin:0 0 18px;color:#1B3D5C;font-size:20px;padding-bottom:10px;border-bottom:2px solid #E8714A;display:inline-block}
+.checklist-col ul{list-style:none;padding:0;margin:0}
+.checklist-col li{padding:12px 0 12px 36px;position:relative;color:#3A4A5C;line-height:1.6;border-bottom:1px solid #F4ECE0}
+.checklist-col li:last-child{border-bottom:none}
+.checklist-col li::before{content:"✓";position:absolute;left:8px;top:12px;width:22px;height:22px;background:#E8714A;color:#fff;border-radius:50%;text-align:center;line-height:22px;font-weight:700;font-size:13px}
+
+.si-faq{max-width:880px;margin:0 auto}
+.si-faq .faq-item{background:#fff;border:1px solid #EDE4D3;border-radius:12px;margin-bottom:14px;overflow:hidden}
+.si-faq .faq-item summary{padding:22px 28px;cursor:pointer;font-weight:600;color:#1B3D5C;font-size:17px;display:flex;justify-content:space-between;align-items:center;list-style:none}
+.si-faq .faq-item summary::-webkit-details-marker{display:none}
+.si-faq .faq-item summary::after{content:"+";font-size:24px;color:#E8714A;font-weight:400;transition:transform .2s}
+.si-faq .faq-item[open] summary::after{content:"−"}
+.si-faq .faq-item summary:hover{background:#FDFAF5}
+.si-faq .faq-item .answer{padding:0 28px 24px;color:#3A4A5C;line-height:1.75;font-size:15px}
+
+.si-contact-cta{background:linear-gradient(135deg,#E8714A 0%,#D85A33 100%);color:#fff;padding:90px 24px;text-align:center}
+.si-contact-cta h2{font-family:'Playfair Display',Georgia,serif;font-size:46px;margin:0 0 14px;color:#fff;line-height:1.1}
+.si-contact-cta .sub{font-size:19px;opacity:.95;margin:0 auto 36px;max-width:680px}
+.si-contact-cta img{width:120px;height:120px;border-radius:50%;border:5px solid rgba(255,255,255,.4);object-fit:cover;margin:0 auto 30px;display:block;background:#fff2e8}
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1080px;margin:0 auto}
+.contact-card-cta{background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:28px 24px;text-align:left;transition:transform .15s,background .15s}
+.contact-card-cta:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.contact-card-cta h3{margin:0 0 8px;color:#fff;font-size:19px}
+.contact-card-cta p{margin:0 0 18px;color:#fff;opacity:.92;font-size:14px;line-height:1.6;min-height:42px}
+.contact-card-cta .btn{display:inline-block;background:#fff;color:#E8714A;padding:10px 22px;border-radius:50px;font-weight:700;text-decoration:none;font-size:14px;transition:transform .12s}
+.contact-card-cta .btn:hover{transform:translateY(-1px)}
+
+.si-breadcrumb{max-width:1180px;margin:0 auto;padding:18px 24px 0;color:#6B7B8B;font-size:13px}
+.si-breadcrumb a{color:#1B3D5C;text-decoration:none}
+.si-breadcrumb a:hover{color:#E8714A}
+.si-breadcrumb .sep{margin:0 8px;opacity:.5}
+
+@media(max-width:900px){
+  .reasons-grid,.budget-cards,.tax-deepdive,.contact-cards{grid-template-columns:1fr}
+  .town-compare-grid{grid-template-columns:1fr}
+  .commute-wrap,.schools-wrap,.checklist-grid{grid-template-columns:1fr;gap:30px}
+  .si-hero h1{font-size:42px}
+  .si-hero .sub{font-size:17px}
+  .si-section h2,.si-contact-cta h2{font-size:32px}
+  .si-story .si-quote{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="brand">Jersey Shore<span>HomeInfo</span></a>
+    <ul>
+      <li class="has-dropdown"><a href="/#towns">Towns</a>
+        <ul class="dropdown">
+          <li><a href="/long-beach-island">Long Beach Island</a></li>
+          <li><a href="/long-beach-township">Long Beach Township</a></li>
+          <li><a href="/ship-bottom">Ship Bottom</a></li>
+          <li><a href="/beach-haven">Beach Haven</a></li>
+          <li><a href="/surf-city">Surf City</a></li>
+          <li><a href="/barnegat-light">Barnegat Light</a></li>
+          <li><a href="/harvey-cedars">Harvey Cedars</a></li>
+          <li><a href="/stafford-township">Stafford Township</a></li>
+          <li><a href="/toms-river">Toms River</a></li>
+          <li><a href="/barnegat">Barnegat</a></li>
+          <li><a href="/waretown">Waretown</a></li>
+          <li><a href="/little-egg-harbor">Little Egg Harbor</a></li>
+          <li><a href="/brick">Brick</a></li>
+        </ul>
+      </li>
+            <li class="has-dropdown dropdown-parent guides-parent"><a href="#">Guides</a>
+              <ul class="dropdown dropdown-guides">
+                <li><a href="/moving-from-staten-island">Moving from Staten Island</a></li>
+              </ul>
+            </li>
+      <li><a href="/search">Search</a></li>
+      <li><a href="/#sell">Sell</a></li>
+      <li><a href="/#agent">About Matt</a></li>
+      <li><a href="/#valuation" class="nav-cta">Free Valuation</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- MOBILE FULL-SCREEN NAV OVERLAY -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-top">
+    <a href="/" class="brand">Jersey Shore<span>HomeInfo</span></a>
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+  </div>
+  <ul>
+    <li class="m-towns" id="mTowns">
+      <button class="m-towns-toggle" aria-expanded="false">Towns</button>
+      <ul class="m-sub">
+        <li><a href="/long-beach-island" data-mclose>Long Beach Island</a></li>
+        <li><a href="/stafford-township" data-mclose>Stafford Township</a></li>
+        <li><a href="/toms-river" data-mclose>Toms River</a></li>
+        <li><a href="/barnegat" data-mclose>Barnegat</a></li>
+        <li><a href="/waretown" data-mclose>Waretown</a></li>
+        <li><a href="/little-egg-harbor" data-mclose>Little Egg Harbor</a></li>
+        <li><a href="/brick" data-mclose>Brick</a></li>
+      </ul>
+    </li>
+    <li><a href="/search" data-mclose>Search</a></li>
+    <li><a href="/#sell" data-mclose>Sell</a></li>
+    <li><a href="/#agent" data-mclose>About Matt</a></li>
+  </ul>
+  <a href="/#valuation" class="m-cta" data-mclose>Free Valuation</a>
+</div>
+
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-content">
+    <span class="eyebrow">Ocean County &middot; Long Beach Island &middot; Jersey Shore</span>
+    <h1>Find your place by the ocean.</h1>
+    <p class="lead">From Long Beach Island sunsets to year-round homes in Stafford Township, Toms River and Barnegat &mdash; explore Jersey Shore real estate with a true local expert.</p>
+    <form class="search-bar" onsubmit="event.preventDefault();window.location.href='/search';">
+      <input type="text" placeholder="Search by town, ZIP or address &mdash; e.g. Ship Bottom NJ" aria-label="Search homes">
+      <button type="submit">Search Homes</button>
+    </form>
+    <div class="hero-tags">
+      <span>&#9733; Local LBI Specialist</span>
+      <span>&#9733; Weichert Realtors</span>
+      <span>&#9733; Free Home Valuation</span>
+    </div>
+  </div>
+</header>
+<nav class="si-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span class="sep">/</span> <span>Moving from Staten Island to the Jersey Shore</span></nav>
+
+<main>
+
+<!-- SECTION 1 — HERO -->
+<section class="si-hero">
+  <div class="si-bg"><div class="si-bg-left"></div><div class="si-bg-right"></div></div>
+  <div class="si-hero-inner">
+    <div class="kicker">A Guide From Someone Who Made the Move</div>
+    <h1>Moving From Staten Island to the Jersey Shore</h1>
+    <div class="sub">More space. Lower taxes. Beach access year round. And only 1 hour from home.</div>
+    <div class="si-cta-row">
+      <a href="/#towns" class="si-btn si-btn-primary">Explore Shore Towns</a>
+      <a href="tel:9175245676" class="si-btn si-btn-ghost">Talk to Matt</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — PERSONAL STORY BAND -->
+<section class="si-story">
+  <img src="/images/matt-dunn.jpg" alt="Matt Dunn, Realtor">
+  <div class="si-quote">"I grew up on Staten Island. I know the traffic, the taxes, the feeling of wanting more space but not wanting to leave everything behind. In 2017 I made the move to Ocean Acres in Manahawkin —  10 minutes from <a href="/long-beach-island" style="color:#fff;text-decoration:underline">Long Beach Island</a> — and it changed everything. This guide is everything I wish I had when I was making that decision."</div>
+  <div class="si-attrib">— Matt Dunn, Ocean Acres Resident since 2017 · NJ License #2442118</div>
+</section>
+
+<!-- SECTION 3 — WHY PEOPLE LEAVE STATEN ISLAND -->
+<section class="si-section">
+  <div class="container">
+    <div class="kicker">Why The Move Makes Sense</div>
+    <h2>Why Staten Islanders Are Making the Move</h2>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="icon">🚗</div>
+        <h3>Traffic &amp; Commute</h3>
+        <p>The Goethals, the Outerbridge, the Staten Island Expressway — the daily grind wears on you. Ocean County offers a completely different pace without completely cutting ties with the city.</p>
+      </div>
+      <div class="reason-card">
+        <div class="icon">🏠</div>
+        <h3>More Space for Your Money</h3>
+        <p>The same budget that buys a small semi-detached on Staten Island buys a spacious colonial in Ocean Acres or a waterfront home in Beach Haven West. Your dollar goes dramatically further.</p>
+      </div>
+      <div class="reason-card">
+        <div class="icon">💰</div>
+        <h3>Lower Property Taxes</h3>
+        <p>Staten Island property taxes average $8,000–$12,000+ per year. Ocean County towns like <a href="/stafford-township">Stafford Township</a> average $6,000–$8,000 — and you get more home for it.</p>
+      </div>
+      <div class="reason-card">
+        <div class="icon">🏖️</div>
+        <h3>Beach Access Year Round</h3>
+        <p>Imagine being 10 minutes from the beach — not 2 hours. LBI, Barnegat Bay, the ocean — it's your backyard not your vacation destination.</p>
+      </div>
+      <div class="reason-card">
+        <div class="icon">🏫</div>
+        <h3>Excellent Schools</h3>
+        <p>Southern Regional, Stafford Township schools, Toms River Regional — Ocean County has strong public school options comparable to what you're used to on Staten Island.</p>
+      </div>
+      <div class="reason-card">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>Community Feel</h3>
+        <p>Ocean County feels like Staten Island did 30 years ago — neighbors know each other, communities are tight knit, and there's a genuine small-town feel without being in the middle of nowhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — THE COMMUTE REALITY -->
+<section class="si-section alt">
+  <div class="container">
+    <div class="kicker">The Commute Question</div>
+    <h2>Yes — You Can Still Get Back to Staten Island</h2>
+    <div class="sub">One of the biggest fears about moving. Here's the honest truth.</div>
+    <div class="commute-wrap">
+      <div class="commute-text">
+        <p>The <strong>Garden State Parkway</strong> is your best friend — a direct shot north straight from Ocean County to the bridges. Most Ocean County towns are 55–70 minutes from Staten Island on a normal day, and off-peak times can be 45–50 minutes door to door.</p>
+        <p>NJ Transit bus options exist from the <a href="/toms-river">Toms River</a> area for those who'd rather not drive. Many families make the trip back weekly for family visits, holidays and special occasions — it's a very manageable distance.</p>
+        <p>Remote work has made the commute irrelevant for many buyers. Even commuting 2–3 days per week to NYC or Staten Island is very doable from most Ocean County towns. Matt himself makes the trip back to Staten Island regularly and the routine becomes second nature.</p>
+        <ul>
+          <li>Direct shot north via the Parkway — no toll mazes</li>
+          <li>Off-peak windows save 15–20 minutes each way</li>
+          <li>Hybrid work makes the math even better</li>
+          <li>Weekend trips back are common and easy</li>
+        </ul>
+      </div>
+      <div class="commute-grid">
+        <div class="commute-row"><span class="town">Ocean Acres / Manahawkin</span><span class="time">55 min</span></div>
+        <div class="commute-row"><span class="town"><a href="/toms-river" style="color:inherit;text-decoration:none">Toms River</a></span><span class="time">50 min</span></div>
+        <div class="commute-row"><span class="town"><a href="/brick" style="color:inherit;text-decoration:none">Brick</a></span><span class="time">45 min</span></div>
+        <div class="commute-row"><span class="town"><a href="/barnegat" style="color:inherit;text-decoration:none">Barnegat</a></span><span class="time">60 min</span></div>
+        <div class="commute-row"><span class="town"><a href="/ship-bottom" style="color:inherit;text-decoration:none">Ship Bottom (LBI)</a></span><span class="time">65 min</span></div>
+        <div class="commute-row"><span class="town"><a href="/beach-haven" style="color:inherit;text-decoration:none">Beach Haven (LBI)</a></span><span class="time">75 min</span></div>
+        <div class="commute-row"><span class="town"><a href="/little-egg-harbor" style="color:inherit;text-decoration:none">Little Egg Harbor</a></span><span class="time">65 min</span></div>
+        <div class="commute-row"><span class="town"><a href="/waretown" style="color:inherit;text-decoration:none">Waretown</a></span><span class="time">55 min</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — TOWN COMPARISON -->
+<section class="si-section">
+  <div class="container">
+    <div class="kicker">Find Your Fit</div>
+    <h2>Which Jersey Shore Town is Right for You?</h2>
+    <div class="sub">Every town has a different feel, price point and lifestyle. Here's how they compare.</div>
+    <div class="town-compare-grid">
+      <div class="town-card">
+        <h3 class="tname"><a href="/stafford-township" style="color:inherit;text-decoration:none">Stafford Township</a></h3>
+        <div class="vibe">Suburban, quiet</div>
+        <div class="stats">
+          <div class="stat-item"><div class="stat-label">Median Price</div><div class="stat-value">$549K</div></div>
+          <div class="stat-item"><div class="stat-label">Taxes/yr</div><div class="stat-value">~$7,200</div></div>
+          <div class="stat-item"><div class="stat-label">To Staten Island</div><div class="stat-value">55 min</div></div>
+          <div class="stat-item"><div class="stat-label">Best For</div><div class="stat-value">Families</div></div>
+        </div>
+        <div class="best-for"><strong>Best for:</strong> Families and first-time movers who want a real Staten Island-style neighborhood.</div>
+      </div>
+      <div class="town-card">
+        <h3 class="tname"><a href="/toms-river" style="color:inherit;text-decoration:none">Toms River</a></h3>
+        <div class="vibe">Largest town, full amenities</div>
+        <div class="stats">
+          <div class="stat-item"><div class="stat-label">Median Price</div><div class="stat-value">$485K</div></div>
+          <div class="stat-item"><div class="stat-label">Taxes/yr</div><div class="stat-value">~$7,800</div></div>
+          <div class="stat-item"><div class="stat-label">To Staten Island</div><div class="stat-value">50 min</div></div>
+          <div class="stat-item"><div class="stat-label">Best For</div><div class="stat-value">Commuters</div></div>
+        </div>
+        <div class="best-for"><strong>Best for:</strong> Commuters and families who want everything close by.</div>
+      </div>
+      <div class="town-card">
+        <h3 class="tname"><a href="/brick" style="color:inherit;text-decoration:none">Brick</a></h3>
+        <div class="vibe">North, convenient</div>
+        <div class="stats">
+          <div class="stat-item"><div class="stat-label">Median Price</div><div class="stat-value">$510K</div></div>
+          <div class="stat-item"><div class="stat-label">Taxes/yr</div><div class="stat-value">~$8,200</div></div>
+          <div class="stat-item"><div class="stat-label">To Staten Island</div><div class="stat-value">45 min</div></div>
+          <div class="stat-item"><div class="stat-label">Best For</div><div class="stat-value">Couples</div></div>
+        </div>
+        <div class="best-for"><strong>Best for:</strong> Commuters and couples who want the shortest drive back to SI.</div>
+      </div>
+      <div class="town-card">
+        <h3 class="tname"><a href="/barnegat" style="color:inherit;text-decoration:none">Barnegat</a></h3>
+        <div class="vibe">Quiet, bayfront</div>
+        <div class="stats">
+          <div class="stat-item"><div class="stat-label">Median Price</div><div class="stat-value">$465K</div></div>
+          <div class="stat-item"><div class="stat-label">Taxes/yr</div><div class="stat-value">~$6,800</div></div>
+          <div class="stat-item"><div class="stat-label">To Staten Island</div><div class="stat-value">60 min</div></div>
+          <div class="stat-item"><div class="stat-label">Best For</div><div class="stat-value">Retirees</div></div>
+        </div>
+        <div class="best-for"><strong>Best for:</strong> Retirees and nature lovers craving water and quiet.</div>
+      </div>
+      <div class="town-card">
+        <h3 class="tname"><a href="/ship-bottom" style="color:inherit;text-decoration:none">Ship Bottom (LBI)</a></h3>
+        <div class="vibe">Gateway to the island</div>
+        <div class="stats">
+          <div class="stat-item"><div class="stat-label">Median Price</div><div class="stat-value">$1.4M</div></div>
+          <div class="stat-item"><div class="stat-label">Taxes/yr</div><div class="stat-value">~$8,500</div></div>
+          <div class="stat-item"><div class="stat-label">To Staten Island</div><div class="stat-value">65 min</div></div>
+          <div class="stat-item"><div class="stat-label">Best For</div><div class="stat-value">Island Life</div></div>
+        </div>
+        <div class="best-for"><strong>Best for:</strong> Full LBI lifestyle with the easiest on/off the island.</div>
+      </div>
+      <div class="town-card">
+        <h3 class="tname"><a href="/beach-haven" style="color:inherit;text-decoration:none">Beach Haven (LBI)</a></h3>
+        <div class="vibe">Vibrant, Victorian</div>
+        <div class="stats">
+          <div class="stat-item"><div class="stat-label">Median Price</div><div class="stat-value">$1.7M</div></div>
+          <div class="stat-item"><div class="stat-label">Taxes/yr</div><div class="stat-value">~$9,200</div></div>
+          <div class="stat-item"><div class="stat-label">To Staten Island</div><div class="stat-value">75 min</div></div>
+          <div class="stat-item"><div class="stat-label">Best For</div><div class="stat-value">Rental Income</div></div>
+        </div>
+        <div class="best-for"><strong>Best for:</strong> Luxury buyers and serious vacation-rental investors.</div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:40px;font-size:17px;color:#3A4A5C;line-height:1.7">Not sure which town fits your lifestyle? <strong>Call Matt directly</strong> — he made the move himself and can help you find your perfect fit. <a href="tel:9175245676" style="color:#E8714A;font-weight:600">917-524-5676</a></p>
+  </div>
+</section>
+
+<!-- SECTION 6 — TAXES DEEP DIVE -->
+<section class="si-section navy">
+  <div class="container">
+    <div class="kicker" style="color:#F2B894">By The Numbers</div>
+    <h2>The Tax Advantage — It's Real</h2>
+    <div class="sub">A side-by-side look at the property tax picture.</div>
+    <div class="tax-deepdive">
+      <div class="tax-card" style="background:#22476A;color:#fff;border-color:#3A5F82">
+        <h3 style="color:#F2B894">Staten Island Average</h3>
+        <ul style="color:#cdd8e3">
+          <li>Property tax: $8,000–$12,000/yr</li>
+          <li>NYC income tax: yes (on top of NY State)</li>
+          <li>Cost of living index: high</li>
+          <li>Average home size: smaller</li>
+        </ul>
+      </div>
+      <div class="tax-card" style="background:#22476A;color:#fff;border-color:#3A5F82">
+        <h3 style="color:#F2B894">Ocean County Average</h3>
+        <ul style="color:#cdd8e3">
+          <li>Property tax: $6,000–$8,500/yr</li>
+          <li>NJ income tax: lower than NYC + NY State combined</li>
+          <li>Cost of living index: moderate</li>
+          <li>Average home size: larger</li>
+        </ul>
+      </div>
+      <div class="tax-card savings">
+        <h3>What You Save</h3>
+        <ul>
+          <li>Avg property tax savings: <strong>$2,000–$4,000/yr</strong></li>
+          <li>Over 10 years: <strong>$20,000–$40,000</strong> in tax savings</li>
+          <li>Plus significantly more home for your money</li>
+          <li>Plus beach access included</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tax-disclaimer" style="color:#94a8bc">Tax figures are estimates based on current averages. Consult a tax professional for advice specific to your situation.</p>
+  </div>
+</section>
+
+<!-- SECTION 7 — SCHOOLS COMPARISON -->
+<section class="si-section alt">
+  <div class="container">
+    <div class="kicker">For the Family</div>
+    <h2>How Do the Schools Compare?</h2>
+    <div class="sub">Education is often the deciding factor. Here's the honest comparison.</div>
+    <div class="schools-wrap">
+      <div class="schools-col">
+        <h3>Staten Island Schools — Context</h3>
+        <ul>
+          <li>SI has a mix of public, parochial and private schools.</li>
+          <li>Many families use parochial schools to avoid crowded publics.</li>
+          <li>Competition for spots in the strongest public schools can be intense.</li>
+          <li>Travel time within the borough adds up.</li>
+          <li>Strong sense of community at established schools.</li>
+        </ul>
+      </div>
+      <div class="schools-col">
+        <h3>Ocean County School Highlights</h3>
+        <ul>
+          <li><strong>Southern Regional High School</strong> — serves LBI and the Stafford area, strong academics and athletics.</li>
+          <li><strong>Toms River Regional</strong> — one of the largest districts in NJ with deep program options.</li>
+          <li><strong>Stafford Township School District</strong> — K–8 with strong ratings.</li>
+          <li>Many Ocean County schools have lower student-to-teacher ratios.</li>
+          <li>Strong sports programs and extracurriculars.</li>
+          <li>Less crowded than NYC area schools.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8 — WHAT YOUR BUDGET BUYS -->
+<section class="si-section">
+  <div class="container">
+    <div class="kicker">Real Examples</div>
+    <h2>What Does Your Budget Actually Buy Down Here?</h2>
+    <div class="sub">Three real price points, three very different lifestyles.</div>
+    <div class="budget-cards">
+      <div class="budget-card">
+        <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80')"></div>
+        <div class="body">
+          <div class="price">$500,000 – $600,000</div>
+          <p>In this range you're looking at a spacious 3–4 bedroom colonial in Ocean Acres or <a href="/toms-river">Toms River</a>. Think 1,800–2,200 sqft, garage, nice yard and a quiet neighborhood. This same budget barely gets you a small semi-detached on Staten Island.</p>
+        </div>
+      </div>
+      <div class="budget-card">
+        <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=80')"></div>
+        <div class="body">
+          <div class="price">$700,000 – $900,000</div>
+          <p>Move up to a larger 4–5 bedroom home in a premium neighborhood, or start looking at entry-level waterfront properties in Beach Haven West or <a href="/barnegat">Barnegat</a>. You have real options at this price point.</p>
+        </div>
+      </div>
+      <div class="budget-card">
+        <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80')"></div>
+        <div class="body">
+          <div class="price">$1,000,000+</div>
+          <p>At $1M+ you're looking at <a href="/long-beach-island">LBI</a>. Shore cottages in <a href="/ship-bottom">Ship Bottom</a>, full-size homes in Surf City and <a href="/beach-haven">Beach Haven</a>. The island becomes accessible and the rental income potential is significant.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9 — RENTAL INCOME POTENTIAL -->
+<section class="si-section alt">
+  <div class="container">
+    <div class="kicker">Smart Money</div>
+    <h2>Can Your Shore Home Pay for Itself?</h2>
+    <div class="sub">LBI's rental market is one of the strongest stories on the East Coast.</div>
+    <div class="rental-content">
+      <ul>
+        <li>The <a href="/long-beach-island">LBI</a> summer rental market is one of the strongest on the East Coast.</li>
+        <li>Many LBI homeowners rent their homes for 8–12 weeks per summer.</li>
+        <li>Weekly rental rates: <a href="/ship-bottom">Ship Bottom</a> $3,000–$6,000/week, <a href="/beach-haven">Beach Haven</a> $4,000–$8,000/week.</li>
+        <li>10 weeks of summer rental income: <strong>$30,000–$80,000+</strong> per year.</li>
+        <li>This can cover a significant portion or even all of your mortgage.</li>
+        <li>Year-round rental options are also available on the mainland in <a href="/toms-river">Toms River</a>, <a href="/brick">Brick</a> and <a href="/stafford-township">Stafford</a>.</li>
+        <li>Matt can connect you with local rental management companies who handle bookings, cleaning and maintenance.</li>
+      </ul>
+      <div class="important"><strong>Important:</strong> Always check local rental regulations and tax implications before counting on rental income. Each municipality has its own rules.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10 — MOVING CHECKLIST -->
+<section class="si-section">
+  <div class="container">
+    <div class="kicker">Step By Step</div>
+    <h2>Your Moving from Staten Island Checklist</h2>
+    <div class="sub">Bookmark this page — you'll come back to it.</div>
+    <div class="checklist-grid">
+      <div class="checklist-col">
+        <h3>Before You Move</h3>
+        <ul>
+          <li>Research Ocean County towns and visit on a weekday to see real life.</li>
+          <li>Get pre-approved for a mortgage so you can move quickly when you find the right home.</li>
+          <li>Contact Matt Dunn for a free buyer consultation — no pressure, just local insight.</li>
+          <li>Research NJ driver's license and vehicle registration transfer requirements.</li>
+          <li>Research NJ income tax implications vs. NY/NYC tax.</li>
+          <li>Visit prospective neighborhoods at different times of day and on weekends.</li>
+          <li>Check flood zone status of any property you consider.</li>
+          <li>Research homeowners and flood insurance costs early — they vary widely.</li>
+        </ul>
+      </div>
+      <div class="checklist-col">
+        <h3>After You Move</h3>
+        <ul>
+          <li>Transfer NJ driver's license within 60 days of establishing residency.</li>
+          <li>Register your vehicle in NJ within 60 days.</li>
+          <li>Register to vote in Ocean County.</li>
+          <li>Update address with USPS, banks, insurance and your employer.</li>
+          <li>Research local services — doctors, dentists, contractors and pediatricians.</li>
+          <li>Get your beach badge for the season — each town sells its own.</li>
+          <li>Introduce yourself to the neighbors — Ocean County people are friendly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 11 — FAQ -->
+<section class="si-section alt">
+  <div class="container">
+    <div class="kicker">Honest Answers</div>
+    <h2>Staten Island to Jersey Shore — Your Questions Answered</h2>
+    <div class="sub">The questions buyers actually ask me.</div>
+    <div class="si-faq">
+      <details class="faq-item" open><summary>How far is Staten Island from Ocean County NJ?</summary><div class="answer">Most Ocean County towns are 45 to 65 minutes from Staten Island via the Garden State Parkway. <a href="/brick">Brick</a> is the closest at around 45 minutes. <a href="/beach-haven">Beach Haven</a> on LBI is the furthest at approximately 75 minutes. The commute is very manageable — many Ocean County residents make the trip back to Staten Island weekly to visit family.</div></details>
+      <details class="faq-item"><summary>Is Ocean County NJ a good place to move from Staten Island?</summary><div class="answer">Absolutely — and many Staten Islanders have already made the move. Ocean County offers more space, lower property taxes, excellent schools and beach access year round. Matt Dunn, a Staten Island native himself, made the move to Ocean Acres in Manahawkin in 2017 and considers it one of the best decisions he's made.</div></details>
+      <details class="faq-item"><summary>What is the best Ocean County town for Staten Island transplants?</summary><div class="answer"><a href="/stafford-township">Stafford Township</a> — specifically the Ocean Acres neighborhood — is extremely popular with Staten Island transplants. It has a suburban feel similar to what many Staten Islanders are used to, good schools, spacious homes and is only 55 minutes from Staten Island. <a href="/toms-river">Toms River</a> and <a href="/brick">Brick</a> are also popular for their proximity to the Parkway.</div></details>
+      <details class="faq-item"><summary>How much cheaper are homes in Ocean County vs Staten Island?</summary><div class="answer">Significantly cheaper on the mainland. A $550,000 budget that buys a modest home on Staten Island can buy a spacious 4-bedroom colonial in Ocean Acres or Toms River. Property taxes are also generally lower in Ocean County compared to Staten Island.</div></details>
+      <details class="faq-item"><summary>Can I still commute to New York from Ocean County?</summary><div class="answer">Yes — many Ocean County residents commute to NYC and Staten Island regularly. Remote work has made this easier — even 2–3 days per week in the office is very manageable from most Ocean County towns. The Garden State Parkway provides a direct route north.</div></details>
+      <details class="faq-item"><summary>What is the school system like in Ocean County NJ?</summary><div class="answer">Ocean County has strong public schools. Southern Regional High School serves the LBI and Stafford area and is well regarded for academics and athletics. Toms River Regional is one of the largest districts in NJ with strong programs. Class sizes tend to be smaller than NYC area schools.</div></details>
+      <details class="faq-item"><summary>Is the Jersey Shore good for year round living or just summers?</summary><div class="answer">Both — and increasingly more year round residents are choosing Ocean County. The mainland towns like Stafford Township, Toms River and Brick are thriving year round communities. Even LBI has a growing year round population. The off season is peaceful, beautiful and very livable.</div></details>
+      <details class="faq-item"><summary>What are property taxes like in Ocean County compared to Staten Island?</summary><div class="answer">Generally lower. Staten Island property taxes average $8,000–$12,000+ per year. Ocean County towns average $6,000–$8,500 depending on the municipality and home value. You typically get more home for your tax dollar in Ocean County.</div></details>
+      <details class="faq-item"><summary>How do I start the process of moving from Staten Island to Ocean County?</summary><div class="answer">The best first step is a conversation with a local expert. Matt Dunn — a Staten Island native living in Ocean Acres since 2017 — offers free buyer consultations with zero pressure. Call or text <a href="tel:9175245676">917-524-5676</a> or fill out the contact form on this page.</div></details>
+      <details class="faq-item"><summary>What is the rental income potential for LBI homes?</summary><div class="answer">Strong — LBI is one of the best summer rental markets on the East Coast. Homes in <a href="/ship-bottom">Ship Bottom</a> and <a href="/beach-haven">Beach Haven</a> can generate $3,000–$8,000 per week during summer. Many homeowners cover a significant portion of their mortgage through summer rentals alone.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 12 — CONTACT MATT CTA -->
+<section class="si-contact-cta">
+  <img src="/images/matt-dunn.jpg" alt="Matt Dunn, Realtor">
+  <h2>Ready to Make the Move?</h2>
+  <div class="sub">I made the same move from Staten Island in 2017. Let me help you do it right.</div>
+  <div class="contact-cards">
+    <div class="contact-card-cta">
+      <h3>Call or Text</h3>
+      <p>917-524-5676 — I actually pick up.</p>
+      <a href="tel:9175245676" class="btn">Call Now</a>
+    </div>
+    <div class="contact-card-cta">
+      <h3>Email</h3>
+      <p>mdunn@weichert.com</p>
+      <a href="mailto:mdunn@weichert.com" class="btn">Send Email</a>
+    </div>
+    <div class="contact-card-cta">
+      <h3>Free Consultation</h3>
+      <p>No pressure, no obligation — just honest local advice from someone who's been there.</p>
+      <a href="/#valuation" class="btn">Get Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- LIFESTYLE GRID -->
+<section class="section lifestyle">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Jersey Shore Lifestyle</span>
+      <h2>Sand between your toes, year round.</h2>
+      <p>Beach mornings, bay sunsets, boardwalk evenings &mdash; this is what daily life looks like across Ocean County and LBI.</p>
+    </div>
+    <div class="lifestyle-grid">
+      <figure><img src="/images/coastal-home.jpg" alt="Jersey Shore beachfront home"><figcaption>Jersey Shore Coastal Homes</figcaption></figure>
+      <figure><img src="/images/jersey-shore-beach.jpg" alt="Jersey Shore beach with calm ocean"><figcaption>Jersey Shore Beaches</figcaption></figure>
+      <figure><img src="/images/nj-neighborhood.jpg" alt="Quiet tree-lined NJ neighborhood street"><figcaption>Quiet NJ Neighborhoods</figcaption></figure>
+      <figure><img src="/images/waterfront-aerial.jpg" alt="Aerial view of waterfront homes"><figcaption>Waterfront Living</figcaption></figure>
+      <figure><img src="/images/sunset-neighborhood.jpg" alt="Sunset over a family neighborhood"><figcaption>Family Homes</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- TOWNS -->
+<section class="section towns" id="towns">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Explore the Shore</span>
+      <h2>Towns we know inside and out.</h2>
+      <p>From the barrier island to the mainland, each town has its own personality. Tap a card to see homes for sale.</p>
+    </div>
+    <div class="town-grid">
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">LBI</span><img src="/images/hero-barnegat-lighthouse.jpg" alt="Long Beach Island"></div>
+        <div class="body"><h3>Long Beach Island</h3><div class="meta">18 miles of barrier beach &middot; oceanfront living</div><div class="price">$2.0M <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Mainland</span><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80" alt="Stafford Township"></div>
+        <div class="body"><h3>Stafford Township</h3><div class="meta">Gateway to LBI &middot; top-rated schools</div><div class="price">$520K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Family</span><img src="/images/toms-river-town.jpg" alt="Toms River"></div>
+        <div class="body"><h3>Toms River</h3><div class="meta">Largest town in Ocean County</div><div class="price">$485K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Value</span><img src="/images/barnegat-boardwalk.jpg" alt="Barnegat boardwalk"></div>
+        <div class="body"><h3>Barnegat</h3><div class="meta">Bayfront living &middot; low taxes</div><div class="price">$465K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Quiet</span><img src="/images/waretown-apartments.jpg" alt="Waretown"></div>
+        <div class="body"><h3>Waretown</h3><div class="meta">Wooded retreats &middot; bay access</div><div class="price">$435K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">Coastal</span><img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?auto=format&fit=crop&w=900&q=80" alt="Little Egg Harbor"></div>
+        <div class="body"><h3>Little Egg Harbor</h3><div class="meta">Lagoon homes &middot; minutes to LBI</div><div class="price">$445K <span>median</span></div></div>
+      </div>
+      <div class="town-card">
+        <div class="img-wrap"><span class="badge">North</span><img src="/images/brick-waterfront.jpg" alt="Brick waterfront"></div>
+        <div class="body"><h3>Brick</h3><div class="meta">Metedeconk River &middot; commuter friendly</div><div class="price">$510K <span>median</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUY/SELL PANELS -->
+<section class="section action-panels" id="sell">
+  <div class="container">
+    <div class="panels-grid">
+      <div class="panel buy" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80')">
+        <div class="panel-content">
+          <span class="eyebrow" style="color:var(--seafoam)">Buying</span>
+          <h3>Find your Shore home</h3>
+          <p>Whether it's a year-round residence in Stafford or a beach getaway on LBI, we'll help you find the right home in the right town &mdash; without the guesswork.</p>
+          <a href="#listings" class="btn btn-secondary">Browse Homes</a>
+        </div>
+      </div>
+      <div class="panel sell" style="background-image:url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80')">
+        <div class="panel-content">
+          <span class="eyebrow" style="color:#fff">Selling</span>
+          <h3>What's your home worth?</h3>
+          <p>The market shifted &mdash; pricing it right matters more than ever. Get a free, no-obligation valuation from your local Jersey Shore specialist.</p>
+          <a href="#valuation" class="btn btn-secondary">Free Valuation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section stats">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Spring 2026 Market Snapshot</span>
+      <h2>Ocean County &amp; LBI by the numbers.</h2>
+      <p>The data behind today's Jersey Shore market &mdash; updated monthly.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-item"><div class="stat-num">$2.0M</div><div class="stat-label">LBI Median Sale Price</div><div class="stat-trend">&#9650; 11.4% YoY</div></div>
+      <div class="stat-item"><div class="stat-num">$520K</div><div class="stat-label">Stafford Township Median</div><div class="stat-trend">&#9650; 7.1% YoY</div></div>
+      <div class="stat-item"><div class="stat-num">28</div><div class="stat-label">Days on Market</div><div class="stat-trend">&#9660; 14% YoY</div></div>
+      <div class="stat-item"><div class="stat-num">97%</div><div class="stat-label">Sale-to-List Ratio</div><div class="stat-trend">&#9650; Strong Seller's Market</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section class="section listings" id="listings">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Featured Listings</span>
+      <h2>Currently on the market.</h2>
+      <p>A handpicked selection of standout homes across Ocean County and LBI from our office listings.</p>
+    </div>
+    <div class="listing-grid">
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">Entry Level</span><img src="https://cdn2.photos.sparkplatform.com/mo/20260424124205278899000000.jpg" alt="111 Pin Oak Ln Little Egg Harbor home"></div>
+          <div class="body">
+            <div class="price">$180,000</div>
+            <div class="addr">111 Pin Oak Ln &middot; Little Egg Harbor, NJ</div>
+            <div class="specs"><span><strong>2</strong> beds</span><span><strong>1.1</strong> baths</span><span><strong>1,057</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">Just Listed</span><img src="https://cdn0.photos.sparkplatform.com/mo/20260502124246370345000000.jpg" alt="933 Delta Ln Manahawkin home"></div>
+          <div class="body">
+            <div class="price">$544,500</div>
+            <div class="addr">933 Delta Ln &middot; Manahawkin (Stafford), NJ</div>
+            <div class="specs"><span><strong>4</strong> beds</span><span><strong>2.1</strong> baths</span><span><strong>1,656</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">Family</span><img src="https://cdn0.photos.sparkplatform.com/mo/20260206215112223006000000.jpg" alt="18 Raccoon Ln Barnegat home"></div>
+          <div class="body">
+            <div class="price">$645,000</div>
+            <div class="addr">18 Raccoon Ln &middot; Barnegat (Seacrest), NJ</div>
+            <div class="specs"><span><strong>3</strong> beds</span><span><strong>3</strong> baths</span><span><strong>2,434</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">North Shore</span><img src="https://cdn2.photos.sparkplatform.com/mo/20260324030247695223000000.jpg" alt="439 Adamston Rd Brick home"></div>
+          <div class="body">
+            <div class="price">$699,900</div>
+            <div class="addr">439 Adamston Rd &middot; Brick, NJ</div>
+            <div class="specs"><span><strong>3</strong> beds</span><span><strong>2</strong> baths</span><span><strong>1,815</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">LBI</span><img src="https://cdn1.photos.sparkplatform.com/mo/20260319081641506782000000.jpg" alt="108 E 27th St Ship Bottom LBI home"></div>
+          <div class="body">
+            <div class="price">$1,800,000</div>
+            <div class="addr">108 E 27th St &middot; Ship Bottom, LBI, NJ</div>
+            <div class="specs"><span><strong>3</strong> beds</span><span><strong>2.1</strong> baths</span><span><strong>1,364</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+      <article class="listing">
+        <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" style="display:block;color:inherit">
+          <div class="img-wrap"><span class="status">Luxury</span><img src="https://cdn0.photos.sparkplatform.com/mo/20260507131905181975000000.jpg" alt="42 W Cape Cod Ln Long Beach Township home"></div>
+          <div class="body">
+            <div class="price">$2,100,000</div>
+            <div class="addr">42 W Cape Cod Ln &middot; Long Beach Twp, LBI, NJ</div>
+            <div class="specs"><span><strong>4</strong> beds</span><span><strong>2.1</strong> baths</span><span><strong>2,329</strong> sqft</span></div>
+          </div>
+        </a>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:50px"><a href="mailto:mdunn@weichert.com" class="btn btn-navy">Request Full MLS Access</a></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Jersey Shore real estate, answered.</h2>
+      <p>The questions buyers and sellers ask us most often.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">Is the Jersey Shore a good place to live year round?</div><div class="faq-a"><p>Yes. Communities like Stafford Township, Toms River and Barnegat are thriving year round towns with excellent schools, restaurants and amenities beyond the summer season.</p></div></div>
+      <div class="faq-item"><div class="faq-q">How far is Ocean County from Staten Island?</div><div class="faq-a"><p>Most Ocean County towns are 45 minutes to 1 hour from Staten Island via the Garden State Parkway.</p></div></div>
+      <div class="faq-item"><div class="faq-q">What is the median home price on LBI in 2026?</div><div class="faq-a"><p>The median home price on Long Beach Island is approximately $2,000,000 in Spring 2026, up 11.4% year over year.</p></div></div>
+      <div class="faq-item"><div class="faq-q">What are the best towns in Ocean County for families?</div><div class="faq-a"><p>Stafford Township, Toms River and Barnegat consistently rank among the best family friendly towns in Ocean County for schools, safety and community.</p></div></div>
+      <div class="faq-item"><div class="faq-q">How much are property taxes in Ocean County NJ?</div><div class="faq-a"><p>Property taxes in Ocean County are significantly lower than North Jersey. Stafford Township averages around $6,000 to $8,000 annually depending on home value.</p></div></div>
+      <div class="faq-item"><div class="faq-q">Is now a good time to sell in Ocean County?</div><div class="faq-a"><p>Yes. Inventory is historically low, prices are up 11% year over year and qualified buyers are actively searching. Spring 2026 is a strong seller's market.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT -->
+<section class="section agent" id="agent">
+  <div class="container">
+    <div class="agent-wrap">
+      <div class="agent-img" aria-label="Matt Dunn, Weichert Realtors"></div>
+      <div>
+        <span class="eyebrow">Your Local Specialist</span>
+        <h2>Meet Matt Dunn.</h2>
+                <div class="agent-title">Staten Island Born &middot; Ocean Acres Resident &middot; Jersey Shore Specialist</div>
+        <p>Born and raised on Staten Island, Matt made the move to Ocean Acres in Manahawkin &mdash; right in the heart of Stafford Township &mdash; where he’s been rooted since 2017. He knows firsthand what it feels like to leave the city behind and discover the quality of life the Jersey Shore offers. That experience gives him a perspective no lifelong local can replicate &mdash; he understands exactly what buyers from Staten Island, Brooklyn and North Jersey are looking for because he made the same move himself.</p>
+        <p>Whether you’re searching for a year-round home in Ocean Acres, a waterfront retreat on LBI or your first shore investment &mdash; Matt brings honest local knowledge, direct communication and an agent who actually picks up the phone.</p>
+<div class="agent-contact">
+          <a href="tel:9175245676">&#9742; 917-524-5676</a>
+          <a href="mailto:mdunn@weichert.com">&#9993; mdunn@weichert.com</a>
+          <a href="https://www.instagram.com/lbishorehomes" target="_blank" rel="noopener">@lbishorehomes</a>
+          <a href="https://www.facebook.com/profile.php?id=61559525730592" target="_blank" rel="noopener" aria-label="Facebook">&#9786; Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUATION FORM -->
+<section class="section valuation" id="valuation">
+  <div class="container">
+    <div class="valuation-wrap">
+      <div class="valuation-text">
+        <span class="eyebrow">Free Home Valuation</span>
+        <h2>What's your Jersey Shore home worth today?</h2>
+        <p>Get a no-obligation, expert market analysis tailored to your home and your block &mdash; not an algorithm guess. We'll send your full report within 24 hours.</p>
+        <p>&#10003; True local comps from Ocean County &amp; LBI<br>
+           &#10003; Current buyer demand for your street<br>
+           &#10003; Smart pricing strategy to maximize your sale</p>
+      </div>
+      <div class="valuation-form">
+        <h3>Request Your Valuation</h3>
+        <p class="sub">Get your free, expert market analysis &mdash; no obligation.</p>
+        <a href="https://matthew-dunn.weichert.com/seller/valuation/" target="_blank" rel="noopener" class="btn btn-primary" style="display:block;text-align:center;text-decoration:none;margin-top:12px">Get My Free Valuation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="brand">Jersey Shore<span>HomeInfo</span></a>
+        <p>Your trusted Jersey Shore real estate resource. Local expertise across Ocean County and Long Beach Island.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/lbishorehomes" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/profile.php?id=61559525730592" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="https://matthew-dunn.weichert.com" target="_blank" rel="noopener" aria-label="Weichert">W</a>
+        </div>
+      </div>
+      <div>
+        <h4>Towns</h4>
+        <ul>
+          <li><a href="/long-beach-island">Long Beach Island</a></li>
+          <li><a href="/long-beach-township">Long Beach Township</a></li>
+          <li><a href="/ship-bottom">Ship Bottom</a></li>
+          <li><a href="/beach-haven">Beach Haven</a></li>
+          <li><a href="/surf-city">Surf City</a></li>
+          <li><a href="/barnegat-light">Barnegat Light</a></li>
+          <li><a href="/harvey-cedars">Harvey Cedars</a></li>
+          <li><a href="/stafford-township">Stafford Township</a></li>
+          <li><a href="/toms-river">Toms River</a></li>
+          <li><a href="/barnegat">Barnegat</a></li>
+          <li><a href="/waretown">Waretown</a></li>
+          <li><a href="/little-egg-harbor">Little Egg Harbor</a></li>
+          <li><a href="/brick">Brick</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/search">Search Homes</a></li>
+          <li><a href="#sell">Sell Your Home</a></li>
+          <li><a href="#valuation">Free Valuation</a></li>
+          <li><a href="#agent">About Matt</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Matt Dunn, REALTOR&reg;</li>
+          <li>Weichert Realtors</li>
+          <li>326 W Ninth St<br>Ship Bottom, NJ 08008</li>
+          <li><a href="tel:9175245676">917-524-5676</a></li>
+          <li><a href="mailto:mdunn@weichert.com">mdunn@weichert.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom footer-legal">
+      <div class="mls-disclaimer">All listing information is believed to be accurate but is not guaranteed and should be independently verified.</div>
+      <div class="footer-legal-links">
+        <a href="/privacy-policy">Privacy Policy</a><span class="sep">|</span>
+        <a href="/terms-of-service">Terms of Service</a><span class="sep">|</span>
+        <a href="/fair-housing">Fair Housing</a><span class="sep">|</span>
+        <span>NJ License #2442118</span><span class="sep">|</span>
+        <span>Equal Housing Opportunity <span class="eho-badge">⊕ EHO</span></span>
+      </div>
+      <div style="margin-top:14px;opacity:.7">&copy; 2026 JerseyShoreHomeInfo.com &middot; Matt Dunn &middot; Weichert Realtors &middot; Each office independently owned and operated</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav toggle
+  var mNav=document.getElementById('mobileNav');var mTownsEl=document.getElementById('mTowns');function openMNav(){mNav.classList.add('open');mNav.setAttribute('aria-hidden','false');document.body.classList.add('nav-open');}function closeMNav(){mNav.classList.remove('open');mNav.setAttribute('aria-hidden','true');document.body.classList.remove('nav-open');}document.getElementById('navToggle').addEventListener('click',openMNav);document.getElementById('mobileNavClose').addEventListener('click',closeMNav);mNav.addEventListener('click',function(e){if(e.target===mNav)closeMNav();});mTownsEl.querySelector('.m-towns-toggle').addEventListener('click',function(){var open=mTownsEl.classList.toggle('open');this.setAttribute('aria-expanded',open?'true':'false');});mNav.querySelectorAll('[data-mclose]').forEach(function(a){a.addEventListener('click',closeMNav);});
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click',()=>item.classList.toggle('open'));
+  });
+</script>
+
+<!-- LocalBusiness / RealEstateAgent Schema -->
+
+
+<!-- FAQ Schema -->
+
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Moving from Staten Island to the Jersey Shore — Complete Relocation Guide 2026",
+  "description":"A comprehensive guide to moving from Staten Island to Ocean County NJ and the Jersey Shore. Written by Matt Dunn, a Staten Island native who made the move to Ocean Acres in 2017.",
+  "author":{
+    "@type":"Person",
+    "name":"Matt Dunn",
+    "jobTitle":"Real Estate Agent",
+    "telephone":"917-524-5676",
+    "address":{"@type":"PostalAddress","addressLocality":"Ship Bottom","addressRegion":"NJ"}
+  },
+  "publisher":{"@type":"Organization","name":"JerseyShoreHomeInfo.com"},
+  "datePublished":"2026-05-20",
+  "dateModified":"2026-05-20",
+  "url":"https://www.jerseyshorehomeinfo.com/moving-from-staten-island",
+  "image":"https://www.jerseyshorehomeinfo.com/images/matt-dunn.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.jerseyshorehomeinfo.com"},
+    {"@type":"ListItem","position":2,"name":"Moving from Staten Island to the Jersey Shore","item":"https://www.jerseyshorehomeinfo.com/moving-from-staten-island"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How far is Staten Island from Ocean County NJ?","acceptedAnswer":{"@type":"Answer","text":"Most Ocean County towns are 45 to 65 minutes from Staten Island via the Garden State Parkway. Brick is the closest at around 45 minutes. Beach Haven on LBI is the furthest at approximately 75 minutes. The commute is very manageable — many Ocean County residents make the trip back to Staten Island weekly to visit family."}},
+    {"@type":"Question","name":"Is Ocean County NJ a good place to move from Staten Island?","acceptedAnswer":{"@type":"Answer","text":"Absolutely — and many Staten Islanders have already made the move. Ocean County offers more space, lower property taxes, excellent schools and beach access year round. Matt Dunn, a Staten Island native himself, made the move to Ocean Acres in Manahawkin in 2017 and considers it one of the best decisions he's made."}},
+    {"@type":"Question","name":"What is the best Ocean County town for Staten Island transplants?","acceptedAnswer":{"@type":"Answer","text":"Stafford Township — specifically the Ocean Acres neighborhood — is extremely popular with Staten Island transplants. It has a suburban feel similar to what many Staten Islanders are used to, good schools, spacious homes and is only 55 minutes from Staten Island. Toms River and Brick are also popular for their proximity to the Parkway."}},
+    {"@type":"Question","name":"How much cheaper are homes in Ocean County vs Staten Island?","acceptedAnswer":{"@type":"Answer","text":"Significantly cheaper on the mainland. A $550,000 budget that buys a modest home on Staten Island can buy a spacious 4 bedroom colonial in Ocean Acres or Toms River. Property taxes are also generally lower in Ocean County compared to Staten Island."}},
+    {"@type":"Question","name":"Can I still commute to New York from Ocean County?","acceptedAnswer":{"@type":"Answer","text":"Yes — many Ocean County residents commute to NYC and Staten Island regularly. Remote work has made this easier — even 2-3 days per week in the office is very manageable from most Ocean County towns. The Garden State Parkway provides a direct route north."}},
+    {"@type":"Question","name":"What is the school system like in Ocean County NJ?","acceptedAnswer":{"@type":"Answer","text":"Ocean County has strong public schools. Southern Regional High School serves the LBI and Stafford area and is well regarded for academics and athletics. Toms River Regional is one of the largest districts in NJ with strong programs. Class sizes tend to be smaller than NYC area schools."}},
+    {"@type":"Question","name":"Is the Jersey Shore good for year round living or just summers?","acceptedAnswer":{"@type":"Answer","text":"Both — and increasingly more year round residents are choosing Ocean County. The mainland towns like Stafford Township, Toms River and Brick are thriving year round communities. Even LBI has a growing year round population. The off season is peaceful, beautiful and very livable."}},
+    {"@type":"Question","name":"What are property taxes like in Ocean County compared to Staten Island?","acceptedAnswer":{"@type":"Answer","text":"Generally lower. Staten Island property taxes average $8,000-$12,000+ per year. Ocean County towns average $6,000-$8,500 depending on the municipality and home value. You typically get more home for your tax dollar in Ocean County."}},
+    {"@type":"Question","name":"How do I start the process of moving from Staten Island to Ocean County?","acceptedAnswer":{"@type":"Answer","text":"The best first step is a conversation with a local expert. Matt Dunn — a Staten Island native living in Ocean Acres since 2017 — offers free buyer consultations with zero pressure. Call or text 917-524-5676 or fill out the contact form on this page."}},
+    {"@type":"Question","name":"What is the rental income potential for LBI homes?","acceptedAnswer":{"@type":"Answer","text":"Strong — LBI is one of the best summer rental markets on the East Coast. Homes in Ship Bottom and Beach Haven can generate $3,000-$8,000 per week during summer. Many homeowners cover a significant portion of their mortgage through summer rentals alone."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"RealEstateAgent",
+  "name":"Matt Dunn — JerseyShoreHomeInfo.com",
+  "image":"https://www.jerseyshorehomeinfo.com/images/matt-dunn.jpg",
+  "telephone":"+19175245676",
+  "email":"mdunn@weichert.com",
+  "url":"https://www.jerseyshorehomeinfo.com",
+  "address":{"@type":"PostalAddress","streetAddress":"326 W Ninth St","addressLocality":"Ship Bottom","addressRegion":"NJ","postalCode":"08008","addressCountry":"US"},
+  "areaServed":["Long Beach Island","Ocean County","Stafford Township","Toms River","Brick","Staten Island NY transplants"],
+  "memberOf":{"@type":"Organization","name":"Weichert Realtors"}
+}
+</script>
+</body>
+</html>
