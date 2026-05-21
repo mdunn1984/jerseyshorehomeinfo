@@ -134,7 +134,6 @@ img{max-width:100%;display:block}
 @media(max-width:880px){
   .nav ul{display:none}
   .nav-toggle{display:block}
-  .nav.open ul{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--warm-white);padding:20px;gap:18px;border-bottom:1px solid var(--sandy-linen)}
 }
 
 /* HERO */
@@ -282,6 +281,51 @@ img{max-width:100%;display:block}
 .nav .dropdown a{padding:6px 0;color:#5a6b7a}
 }
 
+
+/* MOBILE: full-screen nav overlay + responsive layout (<=768px) */
+.mobile-nav{position:fixed;inset:0;background:rgba(15,41,64,.98);color:#fff;z-index:1000;display:flex;flex-direction:column;transform:translateY(-100%);transition:transform .35s ease;overflow-y:auto;visibility:hidden}
+.mobile-nav.open{transform:translateY(0);visibility:visible}
+.mobile-nav-top{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.1)}
+.mobile-nav-top .brand{color:#fff;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700}
+.mobile-nav-top .brand span{color:var(--coral)}
+.mobile-nav-close{background:none;border:0;color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;padding:8px 12px}
+.mobile-nav ul{list-style:none;padding:8px 0;margin:0}
+.mobile-nav li{border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-nav a,.mobile-nav .m-towns-toggle{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding:14px 24px;color:#fff;font-size:1.05rem;font-weight:500;text-decoration:none;background:none;border:0;width:100%;text-align:left;font-family:inherit;cursor:pointer}
+.mobile-nav .m-towns-toggle::after{content:'+';font-size:1.6rem;color:var(--coral);font-weight:400;transition:transform .25s}
+.mobile-nav .m-towns.open .m-towns-toggle::after{transform:rotate(45deg)}
+.mobile-nav .m-sub{max-height:0;overflow:hidden;transition:max-height .3s ease;background:rgba(255,255,255,.04);list-style:none;padding:0}
+.mobile-nav .m-towns.open .m-sub{max-height:600px}
+.mobile-nav .m-sub a{min-height:48px;padding:12px 40px;font-size:1rem;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.05)}
+.mobile-nav .m-cta{margin:24px;display:block;text-align:center;background:var(--coral);color:#fff;padding:16px 22px;border-radius:30px;font-weight:600;min-height:48px;font-size:1rem}
+@media(max-width:768px){
+  .nav ul{display:none !important}
+  .hero h1{font-size:40px;line-height:1.1}
+  .hero p.lead{font-size:1.05rem}
+  .search-bar{flex-direction:column;border-radius:18px;padding:10px;gap:10px;background:#fff}
+  .search-bar input{width:100%;padding:14px 18px;border-radius:12px;background:var(--warm-white)}
+  .search-bar button{width:100%;border-radius:12px;min-height:48px}
+  .stat-grid{grid-template-columns:repeat(2,1fr) !important}
+  .lifestyle-grid{grid-template-columns:1fr !important;grid-template-rows:auto !important;gap:14px}
+  .lifestyle-grid figure{height:220px !important}
+  .lifestyle-grid figure:nth-child(1){grid-row:auto !important;grid-column:auto !important;height:240px !important}
+  .town-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .town-card .img-wrap{height:120px}
+  .town-card .body{padding:14px}
+  .town-card h3{font-size:1rem}
+  .town-card .price{font-size:.95rem}
+  .panels-grid{grid-template-columns:1fr !important}
+  .market-grid,.market .stat-grid{grid-template-columns:repeat(2,1fr) !important}
+  .listing-grid{grid-template-columns:1fr !important}
+  .faq-list{max-width:100%}
+  .agent-wrap{grid-template-columns:1fr !important;gap:30px}
+  .agent-img{aspect-ratio:1/1;max-width:320px;margin:0 auto}
+  .valuation-wrap{grid-template-columns:1fr !important}
+  .valuation-form{padding:24px}
+  .valuation-form .row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr !important;gap:32px}
+  body.nav-open{overflow:hidden}
+}
 </style>
 </head>
 <body>
@@ -310,6 +354,33 @@ img{max-width:100%;display:block}
     <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
   </div>
 </nav>
+
+<!-- MOBILE FULL-SCREEN NAV OVERLAY -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-top">
+    <a href="/" class="brand">Jersey Shore<span>HomeInfo</span></a>
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+  </div>
+  <ul>
+    <li class="m-towns" id="mTowns">
+      <button class="m-towns-toggle" aria-expanded="false">Towns</button>
+      <ul class="m-sub">
+        <li><a href="/long-beach-island" data-mclose>Long Beach Island</a></li>
+        <li><a href="/stafford-township" data-mclose>Stafford Township</a></li>
+        <li><a href="/toms-river" data-mclose>Toms River</a></li>
+        <li><a href="/barnegat" data-mclose>Barnegat</a></li>
+        <li><a href="/waretown" data-mclose>Waretown</a></li>
+        <li><a href="/little-egg-harbor" data-mclose>Little Egg Harbor</a></li>
+        <li><a href="/brick" data-mclose>Brick</a></li>
+      </ul>
+    </li>
+    <li><a href="/search" data-mclose>Search</a></li>
+    <li><a href="/#sell" data-mclose>Sell</a></li>
+    <li><a href="/#agent" data-mclose>About Matt</a></li>
+  </ul>
+  <a href="/#valuation" class="m-cta" data-mclose>Free Valuation</a>
+</div>
+
 
 <!-- HERO -->
 <header class="hero">
@@ -435,7 +506,7 @@ img{max-width:100%;display:block}
     <div class="section-head">
       <span class="eyebrow">Featured Listings</span>
       <h2>Currently on the market.</h2>
-      <p>A snapshot of standout homes across Ocean County. Updated daily from the MLS.</p>
+      <p>A handpicked selection of standout homes across Ocean County and LBI from our office listings.</p>
     </div>
     <div class="listing-grid">
       <article class="listing">
@@ -530,10 +601,10 @@ img{max-width:100%;display:block}
       <div>
         <span class="eyebrow">Your Local Specialist</span>
         <h2>Meet Matt Dunn.</h2>
-        <div class="agent-title">REALTOR&reg; &middot; Weichert Realtors, Ship Bottom</div>
-        <p>Matt is a Jersey Shore native who's helped families buy, sell and rent across LBI, Stafford Township, Toms River, Barnegat and the surrounding mainland for over a decade. Whether you're moving down full-time or finding your summer place, you'll get straight answers, real local knowledge and an agent who actually picks up the phone.</p>
-        <p>From first-time buyers in Barnegat to oceanfront sellers in Loveladies &mdash; the goal is the same: get you the right home, at the right price, with zero stress.</p>
-        <div class="agent-contact">
+                <div class="agent-title">Staten Island Born &middot; Ocean Acres Resident &middot; Jersey Shore Specialist</div>
+        <p>Born and raised on Staten Island, Matt made the move to Ocean Acres in Manahawkin &mdash; right in the heart of Stafford Township &mdash; where he’s been rooted since 2017. He knows firsthand what it feels like to leave the city behind and discover the quality of life the Jersey Shore offers. That experience gives him a perspective no lifelong local can replicate &mdash; he understands exactly what buyers from Staten Island, Brooklyn and North Jersey are looking for because he made the same move himself.</p>
+        <p>Whether you’re searching for a year-round home in Ocean Acres, a waterfront retreat on LBI or your first shore investment &mdash; Matt brings honest local knowledge, direct communication and an agent who actually picks up the phone.</p>
+<div class="agent-contact">
           <a href="tel:9175245676">&#9742; 917-524-5676</a>
           <a href="mailto:mdunn@weichert.com">&#9993; mdunn@weichert.com</a>
           <a href="https://www.instagram.com/lbishorehomes" target="_blank" rel="noopener">@lbishorehomes</a>
@@ -619,7 +690,7 @@ img{max-width:100%;display:block}
 
 <script>
   // Nav toggle
-  document.getElementById('navToggle').addEventListener('click',()=>{document.getElementById('nav').classList.toggle('open')});
+  var mNav=document.getElementById('mobileNav');var mTownsEl=document.getElementById('mTowns');function openMNav(){mNav.classList.add('open');mNav.setAttribute('aria-hidden','false');document.body.classList.add('nav-open');}function closeMNav(){mNav.classList.remove('open');mNav.setAttribute('aria-hidden','true');document.body.classList.remove('nav-open');}document.getElementById('navToggle').addEventListener('click',openMNav);document.getElementById('mobileNavClose').addEventListener('click',closeMNav);mNav.addEventListener('click',function(e){if(e.target===mNav)closeMNav();});mTownsEl.querySelector('.m-towns-toggle').addEventListener('click',function(){var open=mTownsEl.classList.toggle('open');this.setAttribute('aria-expanded',open?'true':'false');});mNav.querySelectorAll('[data-mclose]').forEach(function(a){a.addEventListener('click',closeMNav);});
   // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(item=>{
     item.querySelector('.faq-q').addEventListener('click',()=>item.classList.toggle('open'));
