@@ -8,6 +8,16 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Phase 1 foundation cleanup
+
+Site-wide launch-readiness cleanup of low-risk defects across all 19 HTML pages. See `PHASE_1_AUDIT.md` for the full audit.
+
+- **Encoding / mojibake:** Repaired double-encoded UTF-8 sequences (garbled smart quotes, em dashes, and the Equal Housing Opportunity badge glyph) across 8 pages. No wording changed; only corrupted bytes restored.
+- **Dead links:** Replaced every footer brand `href="#"` with `/` (homepage) and every Guides nav dropdown `href="#"` with `/moving-from-staten-island`. After the fixes, zero `href="#"` links remain across all 19 pages.
+- **Broken Matt Dunn headshot references:** Fixed broken `/images/matt-dunn.jpg` references to the existing `/images/matt-dunn-headshot.jpg` — two `<img>` tags on `moving-from-staten-island.html` and one JSON-LD structured-data `image` field on `terms-of-service.html`.
+- **Legal pages completed:** During the recovery audit, the three legal pages (`privacy-policy.html`, `terms-of-service.html`, `fair-housing.html`) were found to still contain the footer-brand and Guides `href="#"` dead links because they use a different nav markup that the first cleanup pass missed. These were fixed during recovery.
+- **Deferred (out of scope):** Missing `og-image.jpg` social-share image (needs design) and PHOTO PLACEHOLDER slots on 7 pages (need photography) remain open by design.
+
 ### Documentation system established
 
 - Created the /docs folder as the project's single source of truth.
