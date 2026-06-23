@@ -8,6 +8,15 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Lead Generation Engine and Product Backlog (Sprint 3)
+
+Established the project's lead-generation system and ROI-ranked product backlog. Documentation only; no site code was changed this sprint.
+
+- **LEAD_GENERATION_ENGINE.md created:** the conversion blueprint defining how every page turns visitors into qualified leads. Covers purpose, business goals, seven conversion journeys (buyer, seller, commercial, land, investment, luxury, relocation), primary and secondary CTAs, phone/email/consultation/valuation strategies, trust triggers, lead-magnet opportunities, future CRM and AI qualification, measurement and success metrics, and future expansion.
+- **PRODUCT_BACKLOG.md created:** the project command center listing every planned and proposed feature across 20 categories (51 items), each scored for Business Value, Lead Generation Value, SEO, AEO, and Difficulty, with dependencies, estimated sprint, status, and priority. Items are ranked by a lead-generation-weighted ROI score so future work is chosen by business impact, with a Top 25 ROI shortlist, a Top 10 quick-wins list, and a sprint-by-sprint implementation order.
+- **References updated:** DASHBOARD.md and ROADMAP.md now point to the Lead Generation Engine and Product Backlog as the conversion blueprint and the ROI-ranked queue that drives future development.
+- **Scope honored:** no HTML, CSS, JavaScript, images, Netlify, sitemap, or robots changes; documentation only.
+
 ### Discovery Center IDX retirement (search.html)
 
 Aligned the Discovery Center (search.html) with the homepage by retiring the FlexMLS IDX integration after the subscription was canceled. The page is now a decision-first discovery hub rather than a live listings portal.
