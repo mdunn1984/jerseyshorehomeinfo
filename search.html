@@ -98,36 +98,7 @@ img{max-width:100%;display:block}
 .filter-bar select{width:100%;padding:14px 16px;border:1px solid var(--sandy-linen);border-radius:12px;font-family:inherit;font-size:.95rem;color:var(--navy);background:var(--warm-white);outline:none;appearance:none;background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231B3D5C' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:36px;cursor:pointer;font-weight:500}
 .filter-bar select:focus{border-color:var(--horizon)}
 .filter-bar .btn{padding:14px 28px;white-space:nowrap}
-@media(max-width:880px){.filter-bar{grid-template-columns:1fr 1fr;padding:14px}.filter-bar .btn{grid-column:1/3}}
-
-.mls-banner{max-width:1100px;margin:24px auto 0;background:linear-gradient(135deg,var(--coral),#d35e38);color:#fff;padding:18px 26px;border-radius:14px;font-size:.95rem;font-weight:500;display:flex;align-items:center;gap:12px;box-shadow:0 10px 30px rgba(232,113,74,.3);text-align:left}
-.mls-banner strong{font-weight:700}
-@media(max-width:600px){.mls-banner{flex-direction:column;align-items:flex-start;text-align:left}}
-
-/* LISTINGS */
-.listings{background:var(--sandy-linen)}
-.listing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
-.listing{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .3s;position:relative}
-.listing:hover{transform:translateY(-4px)}
-.listing .img-wrap{position:relative;height:240px}
-.listing .img-wrap img{width:100%;height:100%;object-fit:cover}
-.listing .status{position:absolute;top:14px;left:14px;background:var(--seaglass);color:var(--navy);font-size:.7rem;font-weight:700;letter-spacing:1px;padding:5px 12px;border-radius:20px;text-transform:uppercase}
-.listing .heart{position:absolute;top:14px;right:14px;width:36px;height:36px;background:rgba(255,255,255,.95);border-radius:50%;display:flex;align-items:center;justify-content:center;border:0;cursor:pointer;font-size:1.05rem;color:var(--driftwood);transition:color .2s,transform .2s;box-shadow:0 2px 6px rgba(0,0,0,.15)}
-.listing .heart:hover,.listing .heart.saved{color:var(--coral);transform:scale(1.1)}
-.listing .body{padding:22px}
-.listing .price{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--navy);font-weight:700}
-.listing .addr{color:var(--driftwood);font-size:.9rem;margin:6px 0 14px}
-.listing .specs{display:flex;flex-wrap:wrap;gap:8px;font-size:.78rem;color:#5a6b7a;border-top:1px solid var(--sandy-linen);padding-top:14px}
-.listing .specs span{background:var(--warm-white);padding:5px 10px;border-radius:14px;font-weight:500}
-.listing .card-link{display:block;color:inherit}
-.listing .card-link:hover{color:inherit}
-
-.listings-cta{text-align:center;margin-top:50px}
-
-/* EMBED */
-.embed-section{background:var(--warm-white)}
-.embed-wrap{max-width:1240px;margin:0 auto}
-.embed-note{text-align:center;margin-top:24px;color:#5a6b7a;font-size:.95rem}
+@media(max-width:880px){.filter-bar{grid-template-columns:1fr 1fr;padding:14px}.filter-bar .btn{grid-column:1/3}}/* EMBED */.embed-note{text-align:center;margin-top:24px;color:#5a6b7a;font-size:.95rem}
 
 /* FOOTER */
 .footer{background:#0f2940;color:rgba(255,255,255,.8);padding:70px 0 30px}
@@ -457,26 +428,60 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
-<section class="section embed-section" id="listings">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">When You Are Ready to Browse</span>
-      <h2>Browse available listings</h2>
-      <p>Prefer to look at homes directly? Search active listings through the FlexMLS feed below. For the full picture and homes that fit your goals, start a conversation with Matt.</p>
-    </div>
-    <div class="embed-wrap">
-      <iframe
-        src='//link.flexmls.com/1z9724jngwm1,17'
-        frameborder='0'
-        width='100%'
-        height='900'
-        title='Search Jersey Shore Homes For Sale &mdash; Ocean County and Monmouth County NJ MLS'
-        style='border-radius:12px; border:1px solid #EDE4D3; box-shadow:0 8px 40px rgba(0,0,0,0.08); display:block;'>
-      </iframe>
-    </div>
-    <p class="embed-note">Listing search powered by FlexMLS. All listing information is believed accurate but is not guaranteed and should be independently verified.</p>
-  </div>
-</section>
+<section class="section" id="listings" style="background:var(--sandy-linen)">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">From Discovery to Action</span>
+          <h2>Ready to take the next step?</h2>
+          <p>Jersey Shore Home Info is not trying to be Zillow. The goal here is to help you choose the right town, the right property path, and a smart local strategy. When you are ready for current listings, private opportunities, or pricing guidance, the next step is a direct conversation with Matt.</p>
+        </div>
+        <div class="cards-grid">
+        <div class="dcard">
+          <span class="ic">&#128172;</span>
+          <h3>Talk with Matt</h3>
+          <p>Have a question or want pricing guidance and current opportunities? Start a direct conversation with Matt.</p>
+          <a href="#matt" class="go">Talk with Matt</a>
+        </div>
+        <div class="dcard">
+          <span class="ic">&#127965;</span>
+          <h3>Explore Ocean County towns</h3>
+          <p>Compare towns, neighborhoods, and lifestyles across Ocean County before you decide where to look.</p>
+          <a href="#areas" class="go">Browse by area</a>
+        </div>
+        <div class="dcard">
+          <span class="ic">&#127958;</span>
+          <h3>Explore Long Beach Island</h3>
+          <p>Get to know the LBI towns, from family beaches to quiet enclaves, and find the right fit.</p>
+          <a href="/long-beach-island" class="go">Discover LBI</a>
+        </div>
+        <div class="dcard">
+          <span class="ic">&#128739;</span>
+          <h3>Moving from Staten Island?</h3>
+          <p>See how the move to the Jersey Shore works, from commute to community, with a relocation guide built for you.</p>
+          <a href="/moving-from-staten-island" class="go">Read the relocation guide</a>
+        </div>
+        <div class="dcard">
+          <span class="ic">&#128202;</span>
+          <h3>Request a local market read</h3>
+          <p>Want to understand pricing and trends in your town? Ask Matt for a current, local market read.</p>
+          <a href="#market" class="go">Get a market read</a>
+        </div>
+        <div class="dcard">
+          <span class="ic">&#128273;</span>
+          <h3>Start a buyer conversation</h3>
+          <p>Ready to buy with a clear strategy? Walk through the buyer path and connect with Matt.</p>
+          <a href="#buyer" class="go">Start as a buyer</a>
+        </div>
+        <div class="dcard">
+          <span class="ic">&#127969;</span>
+          <h3>Discuss selling your home</h3>
+          <p>Thinking about selling? Review the seller path and talk through your goals and timing.</p>
+          <a href="#seller" class="go">Start as a seller</a>
+        </div>
+        </div>
+        <p class="embed-note">All real estate information is believed to be accurate but is not guaranteed and should be independently verified.</p>
+      </div>
+    </section>
 
 <section class="section matt-section" id="matt">
   <div class="container">
@@ -519,8 +524,8 @@ img{max-width:100%;display:block}
         <div class="faq-a"><p>It is the starting point for Jersey Shore real estate. Instead of jumping straight into listings, you explore towns, property types, guides, and real estate paths so you can make a better decision before you search.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span>Can I still search active listings here?</span><span class="chev" aria-hidden="true">+</span></button>
-        <div class="faq-a"><p>Yes. You can browse available listings through the FlexMLS search on this page. We simply recommend choosing the right town and property goal first, then searching with purpose.</p></div>
+        <button class="faq-q" aria-expanded="false"><span>Can I see current listings here?</span><span class="chev" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>This site is a discovery hub, not a live listings portal, so it does not display an MLS feed. When you are ready to see current listings, private opportunities, or pricing for a specific town, reach out to Matt directly and he will pull what fits your goals.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><span>How does Matt help buyers and sellers?</span><span class="chev" aria-hidden="true">+</span></button>
@@ -656,7 +661,7 @@ img{max-width:100%;display:block}
 {"@context":"https://schema.org","@type":"WebPage","name":"Jersey Shore Real Estate Discovery Center","description":"Explore Jersey Shore real estate by town, property type, and goal. Discover Ocean County and Long Beach Island communities, relocation and buyer guides, and connect with local REALTOR Matt Dunn.","url":"https://www.jerseyshorehomeinfo.com/search","isPartOf":{"@type":"WebSite","name":"Jersey Shore Home Info","url":"https://www.jerseyshorehomeinfo.com"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Jersey Shore Discovery Center?","acceptedAnswer":{"@type":"Answer","text":"It is the starting point for Jersey Shore real estate. Instead of jumping straight into listings, you explore towns, property types, guides, and real estate paths so you can make a better decision before you search."}},{"@type":"Question","name":"Can I still search active listings here?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can browse available listings through the FlexMLS search on this page. We simply recommend choosing the right town and property goal first, then searching with purpose."}},{"@type":"Question","name":"How does Matt help buyers and sellers?","acceptedAnswer":{"@type":"Answer","text":"For buyers, Matt helps you compare towns and neighborhoods, understand local trade-offs, and tour with confidence. For sellers, he provides a free, locally accurate valuation and a clear pricing strategy based on what is actually selling."}},{"@type":"Question","name":"Do you handle commercial, land, and investment property?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dedicated pages for commercial, land, and investment are in development. Until they launch, the fastest path is to contact Matt directly, since he works in these markets now."}},{"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Ocean County and Long Beach Island are the primary focus, with in-depth town guides for communities like Stafford Township, Toms River, Barnegat, and the LBI towns. Monmouth County is a growing secondary focus."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Jersey Shore Discovery Center?","acceptedAnswer":{"@type":"Answer","text":"It is the starting point for Jersey Shore real estate. Instead of jumping straight into listings, you explore towns, property types, guides, and real estate paths so you can make a better decision before you search."}},{"@type":"Question","name":"Can I see current listings here?","acceptedAnswer":{"@type":"Answer","text":"This site is a discovery hub, not a live listings portal, so it does not display an MLS feed. When you are ready to see current listings, private opportunities, or pricing for a specific town, reach out to Matt directly and he will pull what fits your goals."}},{"@type":"Question","name":"How does Matt help buyers and sellers?","acceptedAnswer":{"@type":"Answer","text":"For buyers, Matt helps you compare towns and neighborhoods, understand local trade-offs, and tour with confidence. For sellers, he provides a free, locally accurate valuation and a clear pricing strategy based on what is actually selling."}},{"@type":"Question","name":"Do you handle commercial, land, and investment property?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dedicated pages for commercial, land, and investment are in development. Until they launch, the fastest path is to contact Matt directly, since he works in these markets now."}},{"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Ocean County and Long Beach Island are the primary focus, with in-depth town guides for communities like Stafford Township, Toms River, Barnegat, and the LBI towns. Monmouth County is a growing secondary focus."}}]}
 </script>
 <script>
 document.querySelectorAll('.faq-q').forEach(function(b){
