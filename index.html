@@ -328,6 +328,28 @@ img{max-width:100%;display:block}
   .footer-grid{grid-template-columns:1fr !important;gap:32px}
   body.nav-open{overflow:hidden}
 }
+
+/* UNIFIED LEAD FORM */
+.lead-form-wrap{margin-top:28px;padding:24px;background:var(--warm-white);border:1px solid var(--sandy-linen);border-radius:14px;box-shadow:var(--shadow);max-width:620px}
+.lead-form-title{margin:0 0 6px;color:var(--navy);font-size:1.25rem}
+.lead-form-sub{margin:0 0 18px;color:var(--navy);opacity:.8;font-size:.95rem;line-height:1.5}
+.lead-form .lead-row{display:flex;gap:14px;flex-wrap:wrap}
+.lead-form .lead-field{display:flex;flex-direction:column;flex:1 1 240px;margin-bottom:14px}
+.lead-label{font-size:.85rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+.lead-req{color:var(--coral)}
+.lead-form input,.lead-form select,.lead-form textarea{font:inherit;color:var(--navy);padding:10px 12px;border:1px solid var(--driftwood);border-radius:8px;background:#fff;width:100%}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:2px solid var(--horizon);outline-offset:1px;border-color:var(--horizon)}
+.lead-form textarea{resize:vertical;min-height:96px}
+.lead-form .lead-invalid{border-color:var(--coral)}
+.lead-consent{font-size:.8rem;color:var(--navy);opacity:.75;line-height:1.5;margin:6px 0 16px}
+.lead-submit{margin-top:4px}
+.lead-submit[disabled]{opacity:.6;cursor:not-allowed}
+.lead-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lead-status{margin-top:14px;padding:12px 14px;border-radius:8px;font-size:.92rem;line-height:1.5}
+.lead-status.is-success{background:var(--seafoam);color:var(--navy)}
+.lead-status.is-error{background:#fce8e2;color:#8a2c12}
+@media (max-width:560px){.lead-form .lead-row{flex-direction:column;gap:0}}
+
 </style>
 <style>
 .footer-legal{max-width:1180px;margin:0 auto;padding:20px 24px 0;text-align:center;color:#a8b8c8;font-size:13px;line-height:1.7}
@@ -619,6 +641,53 @@ img{max-width:100%;display:block}
           <a href="https://www.instagram.com/lbishorehomes" target="_blank" rel="noopener">@lbishorehomes</a>
           <a href="https://www.facebook.com/profile.php?id=61559525730592" target="_blank" rel="noopener" aria-label="Facebook">&#9786; Facebook</a>
         </div>
+        <div class="lead-form-wrap" id="contact">
+          <h3 class="lead-form-title">Send Matt a message</h3>
+          <p class="lead-form-sub">Tell Matt what you're working on and he'll get back to you personally. Prefer to talk now? Call or email above.</p>
+          <form class="lead-form" data-lead-form data-lead-source="homepage-contact" novalidate>
+            <p class="lead-hp" aria-hidden="true">
+              <label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+            </p>
+            <div class="lead-row">
+              <label class="lead-field">
+                <span class="lead-label">Name <span class="lead-req" aria-hidden="true">*</span></span>
+                <input type="text" name="name" autocomplete="name" required>
+              </label>
+              <label class="lead-field">
+                <span class="lead-label">Email <span class="lead-req" aria-hidden="true">*</span></span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+            </div>
+            <div class="lead-row">
+              <label class="lead-field">
+                <span class="lead-label">Phone</span>
+                <input type="tel" name="phone" autocomplete="tel">
+              </label>
+              <label class="lead-field">
+                <span class="lead-label">I'm interested in</span>
+                <select name="leadType">
+                  <option value="general">General question</option>
+                  <option value="buyer">Buying a home</option>
+                  <option value="seller">Selling a home</option>
+                  <option value="valuation">Home valuation</option>
+                  <option value="relocation">Relocating to the area</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="land">Land or lots</option>
+                  <option value="investment">Investment property</option>
+                  <option value="luxury">Waterfront or luxury</option>
+                  <option value="consultation">Schedule a consultation</option>
+                </select>
+              </label>
+            </div>
+            <label class="lead-field">
+              <span class="lead-label">How can Matt help? <span class="lead-req" aria-hidden="true">*</span></span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <p class="lead-consent">By sending this message you agree to be contacted by Matt Dunn about your inquiry. Your information is never sold or shared.</p>
+            <button type="submit" class="btn btn-primary lead-submit">Send message</button>
+            <p class="lead-status" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -860,6 +929,95 @@ img{max-width:100%;display:block}
     "url": "https://www.weichert.com"
   }
 }
+</script>
+<script>
+/* UNIFIED LEAD CAPTURE CONTROLLER
+   Reusable: binds every [data-lead-form] on the page to one pipeline.
+   Standardized field names, validation, success/error states, and GA4 events.
+   Future forms only need the data-lead-form markup; no per-page logic. */
+(function(){
+  "use strict";
+  var ENDPOINT = "/.netlify/functions/lead";
+  function track(name, params){
+    try{ if(typeof gtag === "function"){ gtag("event", name, params || {}); } }catch(e){}
+  }
+  function isEmail(v){ return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); }
+  function setStatus(form, type, msg){
+    var s = form.querySelector(".lead-status");
+    if(!s) return;
+    s.hidden = false;
+    s.className = "lead-status " + (type === "success" ? "is-success" : "is-error");
+    s.textContent = msg;
+  }
+  function validate(form){
+    var bad = [];
+    ["name","email","message"].forEach(function(n){
+      var el = form.elements[n];
+      if(!el) return;
+      var v = (el.value || "").trim();
+      var ok = v && (n !== "email" || isEmail(v));
+      el.classList.toggle("lead-invalid", !ok);
+      if(!ok) bad.push(n);
+    });
+    return bad;
+  }
+  function bind(form){
+    var source = form.getAttribute("data-lead-source") || "unknown";
+    track("lead_form_view", { lead_source: source });
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var bad = validate(form);
+      if(bad.length){
+        setStatus(form, "error", "Please complete the highlighted fields.");
+        track("lead_form_invalid", { lead_source: source, fields: bad.join(",") });
+        var f = form.elements[bad[0]]; if(f) f.focus();
+        return;
+      }
+      var typeEl = form.elements["leadType"];
+      var leadType = typeEl ? typeEl.value : "general";
+      var payload = {
+        name: form.elements["name"].value.trim(),
+        email: form.elements["email"].value.trim(),
+        phone: form.elements["phone"] ? form.elements["phone"].value.trim() : "",
+        message: form.elements["message"].value.trim(),
+        leadType: leadType,
+        leadSource: source,
+        leadIntent: form.getAttribute("data-lead-intent") || leadType,
+        company: form.elements["company"] ? form.elements["company"].value : "",
+        pageUrl: location.pathname
+      };
+      var btn = form.querySelector(".lead-submit");
+      if(btn){ btn.disabled = true; btn.textContent = "Sending..."; }
+      track("lead_form_submit", { lead_source: source, lead_type: leadType });
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      }).then(function(r){ return r.json().catch(function(){ return { ok: r.ok }; }); })
+        .then(function(res){
+          if(res && res.ok){
+            setStatus(form, "success", "Thanks. Your message is on its way to Matt. He'll be in touch soon.");
+            track("generate_lead", { lead_source: source, lead_type: leadType, lead_priority: (res.leadPriority || "") });
+            form.reset();
+          } else {
+            setStatus(form, "error", "Something went wrong. Please call or email Matt directly.");
+            track("lead_form_error", { lead_source: source });
+          }
+        }).catch(function(){
+          setStatus(form, "error", "Something went wrong. Please call or email Matt directly.");
+          track("lead_form_error", { lead_source: source });
+        }).then(function(){
+          if(btn){ btn.disabled = false; btn.textContent = "Send message"; }
+        });
+    });
+  }
+  function init(){
+    var forms = document.querySelectorAll("[data-lead-form]");
+    for(var i=0;i<forms.length;i++){ bind(forms[i]); }
+  }
+  if(document.readyState === "loading"){ document.addEventListener("DOMContentLoaded", init); }
+  else { init(); }
+})();
 </script>
 </body>
 </html>
