@@ -350,6 +350,30 @@ img{max-width:100%;display:block}
 .lead-status.is-error{background:#fce8e2;color:#8a2c12}
 @media (max-width:560px){.lead-form .lead-row{flex-direction:column;gap:0}}
 
+
+/* TRUST BAND */
+.trust-band{margin:22px 0;padding:20px;background:var(--sandy-linen);border-radius:14px}
+.trust-creds{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.trust-creds li{display:flex;align-items:center;gap:7px;font-size:.85rem;font-weight:600;color:var(--navy)}
+.trust-ic{color:var(--gold);font-size:.7rem}
+.trust-why{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.trust-why li{font-size:.92rem;line-height:1.55;color:var(--navy)}
+.trust-why strong{color:var(--coral)}
+@media (min-width:640px){.trust-why{grid-template-columns:1fr 1fr}}
+
+/* TESTIMONIALS FRAMEWORK */
+.testimonials{background:var(--warm-white)}
+.testimonials-intro{max-width:720px;color:var(--navy);opacity:.85;line-height:1.6;margin:0 0 26px}
+.testimonials-intro a{color:var(--horizon);font-weight:600}
+.testimonials-grid{display:grid;gap:20px;grid-template-columns:1fr}
+.t-card{padding:24px;border-radius:14px;background:#fff;border:1px solid var(--sandy-linen);box-shadow:var(--shadow)}
+.t-placeholder{border-style:dashed;border-color:var(--driftwood);background:var(--warm-white)}
+.t-mark{font-family:Georgia,serif;font-size:2.4rem;line-height:1;color:var(--gold);margin:0 0 4px}
+.t-body{color:var(--navy);opacity:.7;font-style:italic;line-height:1.6;margin:0 0 14px}
+.t-attr{font-size:.8rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--driftwood);margin:0}
+.testimonials-note{margin-top:22px;font-size:.82rem;color:var(--driftwood);text-align:center}
+@media (min-width:760px){.testimonials-grid{grid-template-columns:repeat(3,1fr)}}
+
 </style>
 <style>
 .footer-legal{max-width:1180px;margin:0 auto;padding:20px 24px 0;text-align:center;color:#a8b8c8;font-size:13px;line-height:1.7}
@@ -635,6 +659,20 @@ img{max-width:100%;display:block}
                 <div class="agent-title">Staten Island Born &middot; Ocean Acres Resident &middot; Jersey Shore Specialist</div>
         <p>Born and raised on Staten Island, Matt made the move to Ocean Acres in Manahawkin &mdash; right in the heart of Stafford Township &mdash; where he’s been rooted since 2017. He knows firsthand what it feels like to leave the city behind and discover the quality of life the Jersey Shore offers. That experience gives him a perspective no lifelong local can replicate &mdash; he understands exactly what buyers from Staten Island, Brooklyn and North Jersey are looking for because he made the same move himself.</p>
         <p>Whether you’re searching for a year-round home in Ocean Acres, a waterfront retreat on LBI or your first shore investment &mdash; Matt brings honest local knowledge, direct communication and an agent who actually picks up the phone.</p>
+        <div class="trust-band" aria-label="Credentials and local expertise">
+          <ul class="trust-creds">
+            <li><span class="trust-ic" aria-hidden="true">&#9670;</span> REALTOR&#174;, Weichert Realtors</li>
+            <li><span class="trust-ic" aria-hidden="true">&#9670;</span> NJ License #2442118</li>
+            <li><span class="trust-ic" aria-hidden="true">&#9670;</span> Ocean County &amp; Long Beach Island</li>
+            <li><span class="trust-ic" aria-hidden="true">&#9670;</span> Ship Bottom, NJ office</li>
+          </ul>
+          <ul class="trust-why">
+            <li><strong>Local, not lifelong-or-bust.</strong> Matt lives in Ocean Acres (Manahawkin) and works the same towns he writes about, from LBI to mainland Ocean County.</li>
+            <li><strong>He made the move himself.</strong> Having relocated from Staten Island, he knows what buyers from the city and North Jersey are actually weighing.</li>
+            <li><strong>Honest and direct.</strong> Real tradeoffs on price, inventory, and timing, plus an agent who picks up the phone.</li>
+            <li><strong>Discovery first.</strong> Helpful before transactional: a no-pressure conversation about the right town and the right next step.</li>
+          </ul>
+        </div>
 <div class="agent-contact">
           <a href="tel:9175245676">&#9742; 917-524-5676</a>
           <a href="mailto:mdunn@weichert.com">&#9993; mdunn@weichert.com</a>
@@ -690,6 +728,36 @@ img{max-width:100%;display:block}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS FRAMEWORK -- placeholder section. Replace the placeholder cards below
+     with real, verified client testimonials (with permission) when available. Do NOT
+     add invented or unattributed reviews. -->
+<section class="section testimonials" id="testimonials" aria-label="Client experiences">
+  <div class="container">
+    <span class="eyebrow">In Their Words</span>
+    <h2>What working with Matt is like.</h2>
+    <p class="testimonials-intro">Verified client experiences will appear here. We only publish real testimonials shared with permission &mdash; no invented or anonymous reviews. Worked with Matt? <a href="#contact">Share your experience</a> and help future buyers and sellers.</p>
+    <div class="testimonials-grid" role="list">
+      <article class="t-card t-placeholder" role="listitem">
+        <p class="t-mark" aria-hidden="true">&#8220;</p>
+        <p class="t-body">Placeholder &mdash; a buyer testimonial about relocating to the Shore will appear here once approved.</p>
+        <p class="t-attr">Future verified buyer review</p>
+      </article>
+      <article class="t-card t-placeholder" role="listitem">
+        <p class="t-mark" aria-hidden="true">&#8220;</p>
+        <p class="t-body">Placeholder &mdash; a seller testimonial about pricing and local strategy will appear here once approved.</p>
+        <p class="t-attr">Future verified seller review</p>
+      </article>
+      <article class="t-card t-placeholder" role="listitem">
+        <p class="t-mark" aria-hidden="true">&#8220;</p>
+        <p class="t-body">Placeholder &mdash; a relocation testimonial from a Staten Island or NYC-metro client will appear here once approved.</p>
+        <p class="t-attr">Future verified relocation review</p>
+      </article>
+    </div>
+    <p class="testimonials-note">Section reserved for future content &mdash; placeholders shown until real client testimonials are collected.</p>
   </div>
 </section>
 
