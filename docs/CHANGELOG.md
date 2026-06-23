@@ -8,6 +8,14 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Stafford Township — Gold Standard track (Phase A1 + planning)
+
+Work toward making `stafford-township.html` the flagship "Gold Standard" town page.
+
+- **Phase A1 — Structural Perfection (`stafford-township.html`):** Removed a stray em-dash that preceded `<!DOCTYPE html>` (no-wording-change byte fix). Added a visible FAQ section (`id="faq"`) whose three Q&As match the existing `FAQPage` JSON-LD verbatim, with an accessible keyboard-operable toggle (`aria-expanded`), resolving the previously orphaned schema, the dead `#faq` links, and the `SpeakableSpecification` target. Repointed the footer `#sell` and `#valuation` links to their cross-page destinations (`/#sell`, `/#valuation`). Post-commit verification: single H1, zero dead on-page anchors, balanced tags (sections/scripts/divs), zero mojibake, and the compliance footer (License #2442118, EHO, Fair Housing, disclaimer) intact. Committed as `feat: Stafford Gold Standard Phase A1 – structural perfection`.
+- **Gold Standard planning:** Added `GOLD_STANDARD_PAGE.md`, the certification standard for every town page — purpose, the full flagship section architecture, technical/content/photography/trust/conversion standards, a 100-point certification checklist, and a Stafford pass/fail/deferred audit. Stafford is **not yet Gold Standard Certified**; remaining items (photography, statistic verification, content expansion, trust assets, lead capture) are documented and deferred to their own scoped phases.
+- Updated `DASHBOARD.md` to add a flagship Gold Standard status block for Stafford and reflect Phase A1 completion.
+
 ### Phase 1 foundation cleanup
 
 Site-wide launch-readiness cleanup of low-risk defects across all 19 HTML pages. See `PHASE_1_AUDIT.md` for the full audit.
