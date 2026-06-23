@@ -1,6 +1,6 @@
 # Dashboard — Current Status
 
-Last updated: this commit (FlexMLS IDX fully retired from both the homepage and the Discovery Center, which is now a decision-first discovery hub; Homepage evolved to a discovery-first authority page; Town Engine architecture established; Gold Standard certification in place; Stafford Phase A1 complete).
+Last updated: this commit (Lead Generation Engine and Product Backlog established as the conversion blueprint and ROI-ranked command center for all future work; FlexMLS IDX fully retired from both the homepage and the Discovery Center; Homepage evolved to a discovery-first authority page; Town Engine architecture established; Gold Standard certification in place; Stafford Phase A1 complete).
 Status board for Jersey Shore Home Info. Read this first in every session.
 
 ## At a glance
@@ -24,6 +24,7 @@ Status board for Jersey Shore Home Info. Read this first in every session.
 - DONE — Legal pages (privacy-policy, terms-of-service, fair-housing).
 - DONE — Moving-from-Staten-Island relocation guide.
 - DONE — Full SEO/AEO optimization pass across all pages.
+- DONE — Lead Generation Engine and Product Backlog established (Sprint 3, documentation only): LEAD_GENERATION_ENGINE.md defines how every page converts visitors into leads, and PRODUCT_BACKLOG.md is the ROI-ranked command center for all future features. See CHANGELOG.md.
 
 ## Flagship page — Gold Standard (Stafford Township)
 
@@ -55,6 +56,7 @@ Stafford Township is the designated flagship / "Gold Standard" town page. Progre
 1. Establish documentation foundation (this commit).
 2. Resolve Phase 1 site blockers (photos, encoding, trust assets) and drive Stafford toward Gold Standard certification (see GOLD_STANDARD_PAGE.md).
 3. Keep CHANGELOG.md and this dashboard updated as work proceeds.
+4. Select and execute future work from PRODUCT_BACKLOG.md by ROI, guided by LEAD_GENERATION_ENGINE.md, instead of guesswork.
 
 ## How to update this file
 
