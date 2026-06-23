@@ -8,6 +8,17 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Unified Lead Capture Foundation (Sprint 4)
+
+Built the shared lead-capture system so every important CTA can feed one consistent pipeline. Implementation sprint: foundation only (no CRM, no automation, no third-party integrations).
+
+- **Reusable lead form component (index.html):** added an accessible on-site contact form in the homepage contact area with standardized field names (name, email, phone, message, leadType), a hidden honeypot, client-side validation, and consistent success/error states. Drives lead type/source via data-* attributes so future pages reuse the same markup. Adds a real `#contact` anchor target.
+- **Shared lead controller:** one delegated script binds every `[data-lead-form]` on a page — no per-page logic, no duplicated validation. Posts a normalized lead to the shared endpoint and reports status.
+- **Shared backend (netlify/functions/lead.js):** single entry point that validates, normalizes, honeypot-filters, and priority-scores every lead, returning a consistent JSON result. CRM/email/automation intentionally deferred; the one future integration point is documented in-code.
+- **Standardized analytics:** GA4 form events (lead_form_view, lead_form_submit, generate_lead, lead_form_invalid, lead_form_error) with lead_source/lead_type/lead_priority. Added consistent CTA click tracking (phone_click, email_click, outbound_weichert) to search.html, which previously fired no events — analytics is now consistent across pages.
+- **Documentation:** LEAD_GENERATION_ENGINE.md gained a Unified Lead Capture Architecture section (CTA inventory, lead model, reusable component, backend, analytics, privacy/spam, future CRM readiness).
+- Compliance preserved: Weichert Realtors, NJ License #2442118, Equal Housing Opportunity, and the accuracy disclaimer remain intact; one H1 per page; no FlexMLS/IDX or iframes reintroduced.
+
 ### Lead Generation Engine and Product Backlog (Sprint 3)
 
 Established the project's lead-generation system and ROI-ranked product backlog. Documentation only; no site code was changed this sprint.
