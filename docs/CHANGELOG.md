@@ -8,6 +8,16 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Search rebuilt as Discovery Center
+
+Repositioned search.html from a listings-first page into the Jersey Shore Discovery Center, the front door for choosing the right town, property type, and real estate path before browsing listings.
+
+- **New structure:** hero with Talk With Matt and Explore Towns CTAs, quick discovery cards, Browse by Area (Ocean County, Long Beach Island, Monmouth County), Browse by Property Goal, buyer and seller paths, relocation feature, high-value verticals (commercial, land, investment, luxury and waterfront), market intelligence preview, retained FlexMLS listing search, Matt contact section, and a visible FAQ.
+- **IDX:** preserved the existing FlexMLS embed as a secondary tool; removed the redundant custom filter bar and static placeholder listing cards. No real-time or updated-daily claims.
+- **Verticals:** commercial, land, investment, and luxury or waterfront labeled Coming soon and routed to Matt contact rather than dead links.
+- **SEO and AEO:** unique title and meta description, single H1, twelve H2 sections, BreadcrumbList, WebPage, RealEstateAgent, Person, and FAQPage schema. FAQ schema matches the visible FAQ exactly.
+- **Integrity:** zero href="#", zero broken image references, zero mojibake, compliance footer preserved (Weichert, NJ License #2442118, Fair Housing, Equal Housing Opportunity, listing disclaimer). All internal links point to existing pages or homepage anchors.
+
 ### Stafford Township — Gold Standard track (Phase A1 + planning)
 
 Work toward making `stafford-township.html` the flagship "Gold Standard" town page.
