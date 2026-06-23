@@ -104,7 +104,52 @@ Instrumentation is a prerequisite, not an afterthought. The site currently lacks
 
 The engine grows along three axes. Coverage: extend dedicated, converting content to every journey, including commercial, land, investment, and luxury verticals and additional relocation origins, so no audience routes to a generic fallback. Depth: add lead magnets, scheduling, and richer trust assets (photography, video, testimonials, market reports) that lift conversion across journeys. Intelligence: layer analytics, CRM, and AI qualification so leads are measured, nurtured, and pre-qualified automatically. Every expansion item lives in PRODUCT_BACKLOG.md, ranked by ROI, so growth is driven by business impact rather than guesswork.
 
-## 11. Related Documents
+## 11. Unified Lead Capture Architecture
+
+The shared system that turns every CTA into one consistent, measurable pipeline. Implemented as a reusable foundation (Sprint 4) so future forms plug in without new logic.
+
+### CTA Inventory (current)
+
+The site converts through three direct paths plus one on-site form:
+
+- Phone — tel:9175245676, present in nav, contact area, and footer on every page. Tracked as phone_click.
+- Email — mdunn@weichert.com, present in the contact area and footer. Tracked as email_click.
+- Valuation — routes to the Weichert seller valuation tool (off-site). Tracked as free_valuation_click / outbound_weichert.
+- On-site contact form — the unified lead form (homepage contact area). Feeds the shared endpoint.
+- Discovery and journey CTAs (buyer, seller, commercial, land, investment, relocation, luxury, consultation, questions) currently route to phone, email, or the contact form; each is a future plug-in point for the form with a preset lead type.
+
+### Lead Model
+
+Every lead, regardless of source, normalizes to one object:
+
+- name, email, phone, message — contact and inquiry.
+- leadType — buyer, seller, valuation, commercial, land, investment, relocation, luxury, consultation, question, or general.
+- leadSource — where the form was rendered (e.g. homepage-contact); set per form via data-lead-source.
+- leadIntent — optional finer intent; defaults to leadType.
+- leadPriority — derived server-side: valuation, seller, consultation, and luxury are high; buyer, relocation, commercial, land, and investment are medium; question and general are low.
+- pageUrl, receivedAt — context and timestamp.
+
+### Reusable Form Component
+
+Any page adds a lead form with the same markup pattern: a form carrying data-lead-form and data-lead-source, the standardized field names above, a hidden honeypot field (company), and a status region (role=status, aria-live=polite). One shared controller binds every [data-lead-form] on the page, so there is no per-page logic and no duplicated validation. Standardized states: client-side validation (name, email, message required; email format checked), an accessible error state that highlights invalid fields, and a success state that confirms the message and resets the form.
+
+### Backend
+
+A single Netlify function (netlify/functions/lead.js) is the one entry point for all leads. It validates and normalizes the payload, applies honeypot spam protection, derives lead priority, and returns a consistent JSON result. CRM delivery, email, and automation are intentionally not built; the function documents the single integration point where a future CRM or email provider is wired in, so every form continues to flow through one pipeline.
+
+### Analytics
+
+GA4 (G-ZCWZNKR60S) is live on every page. The form fires a consistent event sequence: lead_form_view on render, lead_form_submit on a valid attempt, generate_lead on success (with lead_source, lead_type, lead_priority), and lead_form_invalid / lead_form_error on failures. CTA clicks fire phone_click, email_click, and outbound_weichert consistently across pages. generate_lead is the primary conversion event for future conversion tracking.
+
+### Privacy and Spam
+
+The form collects only what is needed to respond (name, email, optional phone, message, interest). A visible consent line states the information is used to contact the visitor and is never sold or shared. Spam is filtered with a hidden honeypot rather than a third-party tracker, keeping the privacy-preserving posture intact. No secrets are stored in the front end.
+
+### Future CRM Readiness
+
+Because every lead is already normalized to one model and flows through one endpoint, adding a CRM is a single, contained change: wire the integration at the marked point in the Netlify function. New forms (town pages, valuation flow, journey CTAs) inherit capture, validation, analytics, and routing automatically by reusing the component.
+
+## 12. Related Documents
 
 - PRODUCT_BACKLOG.md - the ranked, ROI-driven queue of work that builds and strengthens this engine.
 - BUSINESS_PLAN.md - the business context, audiences, and revenue model behind the engine.
