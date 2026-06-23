@@ -8,6 +8,16 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Stafford Photography Production Plan (Sprint 6A)
+
+Established the production-ready photography plan to take Stafford Township to Gold Standard. Planning only — no HTML, CSS, JS, or image files changed.
+
+- **New doc (docs/STAFFORD_PHOTOGRAPHY_PLAN.md):** a full image manifest of 17 specified shots, each documented across 24 fields (purpose, page location, orientation, resolution, desktop/mobile crop, time of day, season, GPS waypoint, camera angle, drone/ground, primary/backup subject, alt text, SEO file name, caption, related schema, priority, launch-required flag, and replacement notes).
+- **Placeholder coverage:** all 9 existing photo-slot placeholders on stafford-township.html are mapped to specific shots (hero, lake, waterfront home, bay sunset, school, community center, youth sports, wildlife refuge, retail corridor); the incorrect neighboring-town hero framing is corrected in the spec.
+- **Gold Standard gaps:** 8 additional shots cover categories not yet slotted (neighborhoods, healthcare, dining/coffee, marinas/boat ramps, events, drone establishing, seasonal/off-season, and an optional local-context headshot).
+- **One-day shoot logistics:** an optimized west-to-east route in eight geographic clusters, a ~7:40 sunrise-to-sunset time estimate, an equipment list, weather/FAA/refuge considerations, and backup locations for every primary shot.
+- **No code or asset changes; lead foundation and compliance untouched.**
+
 ### Trust and Authority Foundation (Sprint 5)
 
 Increased visitor confidence by strengthening truthful trust signals and adding clearly-marked frameworks for future trust assets. No fake testimonials, invented credentials, or fabricated statistics. People-focused, not technology-focused.
