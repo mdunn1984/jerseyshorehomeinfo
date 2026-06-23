@@ -673,5 +673,26 @@ document.querySelectorAll('.faq-q').forEach(function(b){
   });
 });
 </script>
+<script>
+/* STANDARDIZED CTA ANALYTICS (shared lead-capture layer) */
+(function(){
+  "use strict";
+  function track(name, params){
+    try{ if(typeof gtag === "function"){ gtag("event", name, params || {}); } }catch(e){}
+  }
+  document.addEventListener("click", function(e){
+    var a = e.target.closest ? e.target.closest("a[href]") : null;
+    if(!a) return;
+    var href = a.getAttribute("href") || "";
+    if(href.indexOf("tel:") === 0){
+      track("phone_click", { link_text: (a.textContent||"").trim().slice(0,60) });
+    } else if(href.indexOf("mailto:") === 0){
+      track("email_click", { link_text: (a.textContent||"").trim().slice(0,60) });
+    } else if(/weichert\.com/.test(href)){
+      track("outbound_weichert", { link_url: href });
+    }
+  });
+})();
+</script>
 </body>
 </html>
