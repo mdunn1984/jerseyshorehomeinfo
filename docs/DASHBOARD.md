@@ -36,7 +36,7 @@ Stafford Township is the designated flagship / "Gold Standard" town page. Progre
 - DONE — Phase A1 (Structural Perfection): removed a stray pre-doctype character, added a visible FAQ section matched 1:1 to the FAQPage JSON-LD with an accessible toggle, and fixed dead on-page anchors (footer #sell/#valuation now point cross-page). Verified: single H1, zero dead on-page anchors, balanced tags, zero mojibake, compliance footer intact.
 - DONE — Gold Standard planning: created GOLD_STANDARD_PAGE.md (the certification standard) and audited Stafford against it.
 - DONE — Town Engine architecture: established the reusable page-production system (TOWN_PAGE_ENGINE.md, COMPONENT_SPECIFICATIONS.md, CONTENT_MODEL.md, TOWN_BUILD_CHECKLIST.md, TOWN_WORKFLOW.md). Town pages are now produced from a defined blueprint, data model, component library, checklist, and workflow.
-- TODO — Photography phase: replace all PHOTO PLACEHOLDER slots and the incorrect hero image with real, town-correct imagery.
+- WIP — Photography phase: production plan complete (see STAFFORD_PHOTOGRAPHY_PLAN.md — 17 specified shots, one-day route, equipment + weather). Next: capture the imagery and replace all PHOTO PLACEHOLDER slots and the incorrect hero image with real, town-correct photography.
 - TODO — Statistics phase: verify, source, and date every figure; resolve the LBI drive-time contradiction.
 - TODO — Content expansion: add the missing flagship sections (Neighborhoods, Coffee, Transportation, Utilities, Flood, Insurance, etc.).
 - TODO — Trust + conversion: real headshot, Weichert branding, testimonials, and an on-page lead-capture form.
