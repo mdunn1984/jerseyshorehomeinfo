@@ -8,6 +8,17 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Trust and Authority Foundation (Sprint 5)
+
+Increased visitor confidence by strengthening truthful trust signals and adding clearly-marked frameworks for future trust assets. No fake testimonials, invented credentials, or fabricated statistics. People-focused, not technology-focused.
+
+- **Homepage trust band (index.html):** added a credentials-and-"Why Matt" band inside the agent section, directly above the contact links and lead form. Shows verified credentials (REALTOR&#174;, Weichert Realtors; NJ License #2442118; Ocean County &amp; Long Beach Island; Ship Bottom, NJ office) plus four honest "why work with Matt" points drawn from the existing bio (local resident in Ocean Acres, made the Staten Island move himself, honest/direct, discovery-first).
+- **Inner-page trust strips (search.html, stafford-township.html):** added a compact credentials strip near each page's Matt section so brokerage and license appear close to the CTA on every reviewed page. Consistent presentation across the site.
+- **Testimonials framework (index.html):** new, clearly-marked placeholder section between the agent and valuation sections. Explains that only real, permission-based testimonials will be published (no invented or anonymous reviews), invites past clients to share via the contact form, and shows dashed placeholder cards labeled as future verified buyer/seller/relocation reviews. No fake content.
+- **Verified, not invented:** the real agent headshot already on the homepage was left in place (no headshot placeholder added). Monmouth County is referenced only as the existing copy already states (a growing secondary market); no new service areas, years-of-experience claims, or statistics were fabricated.
+- **Preserved:** the Sprint 4 unified lead form, controller, endpoint, and GA4 events are untouched; compliance intact on every page (Weichert Realtors, NJ License #2442118, Equal Housing Opportunity, accuracy disclaimer, each office independently owned and operated); one H1 per page; no FlexMLS/IDX or iframes; Stafford's existing photo placeholders preserved.
+- **Lead delivery (documented, not changed):** the lead endpoint (netlify/functions/lead.js) still only validates, normalizes, and logs each lead server-side. To deliver every lead immediately to Matt and a future CRM, an email/notification step and a CRM forward must be wired at the documented integration point (see DASHBOARD.md and LEAD_GENERATION_ENGINE.md). No third-party integration was added because none is configured.
+
 ### Unified Lead Capture Foundation (Sprint 4)
 
 Built the shared lead-capture system so every important CTA can feed one consistent pipeline. Implementation sprint: foundation only (no CRM, no automation, no third-party integrations).
