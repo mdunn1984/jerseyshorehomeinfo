@@ -8,6 +8,19 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Homepage evolution, Sprint 2A (IDX retirement)
+
+Evolved the homepage from a search-first page into a discovery-first authority page, and retired the FlexMLS IDX integration after the subscription was canceled.
+
+- **IDX retired:** Removed the homepage FlexMLS embed (disabled Link ID 1z97256e44mg) entirely, including the iframe, wrapper, the "Currently on the Market" listings section, the disabled-link error experience, and the related MLS messaging. No hidden iframes or dead integrations were left in the code.
+- **Discovery-first replacement:** Replaced the listings section with an "Explore Ocean County communities" section offering six pathways to existing pages only: the Discovery Center, Ocean County towns, Long Beach Island, the Moving from Staten Island guide, Talk with Matt, and a buyer consultation.
+- **Discovery Center integration:** Renamed the "Search" navigation item (desktop and mobile) to "Discovery Center" and added Discovery Center pathways throughout the homepage flow.
+- **Positioning:** Shifted the hero, title, and meta toward "make smarter real estate decisions" rather than "search for homes," presenting Jersey Shore Home Info as a local authority platform.
+- **Statistics:** Removed the unverified "Spring 2026 Market Snapshot" figures (LBI median, Stafford median, days on market, sale-to-list ratio with year-over-year precision) and replaced them with an honest "Local Market Read" section that routes visitors to Matt for a current, town-specific briefing. No data was invented.
+- **CTA and link hygiene:** Repointed the previously dead "Browse Homes" anchor to the Discovery Center, softened the hero search bar copy, and added the missing FAQ section anchor so all in-page links resolve.
+- **Compliance preserved:** Weichert Realtors, NJ License #2442118, Fair Housing, Equal Housing Opportunity, and the listing disclaimer remain intact. One H1, valid structured data, no FlexMLS references remain.
+- **Note:** The Discovery Center page (search.html) still references a now-retired FlexMLS embed in its markup; cleaning that up is deferred to a future sprint per Sprint 2A scope.
+
 ### Search rebuilt as Discovery Center
 
 Repositioned search.html from a listings-first page into the Jersey Shore Discovery Center, the front door for choosing the right town, property type, and real estate path before browsing listings.
