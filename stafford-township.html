@@ -1,4 +1,4 @@
-—<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -484,6 +484,29 @@ img{max-width:100%;display:block}
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Good To Know</span>
+      <h2>Stafford Township FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What is Stafford Township, NJ known for?</div>
+        <div class="faq-a"><p>Stafford Township is a suburban township in Ocean County, New Jersey, commonly known by its principal community name Manahawkin. Located 10 minutes from Long Beach Island via Route 72, Stafford Township is one of the most popular destinations for families and commuters relocating from North Jersey and Staten Island.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">How is the real estate market in Stafford Township?</div>
+        <div class="faq-a"><p>The Stafford Township real estate market includes a range of price points and home types. Contact Matt Dunn at Weichert Realtors for current local market conditions, recent sales and active listings.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Who can help me buy or sell a home in Stafford Township?</div>
+        <div class="faq-a"><p>Matt Dunn at Weichert Realtors specializes in Ocean County and Long Beach Island real estate. Call 917-524-5676 or email mdunn@weichert.com to discuss buying or selling in Stafford Township.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- AGENT -->
 <section class="section agent" id="agent">
   <div class="container">
@@ -548,8 +571,8 @@ img{max-width:100%;display:block}
         <h4>Explore</h4>
         <ul>
           <li><a href="/search">Search Homes</a></li>
-          <li><a href="#sell">Sell Your Home</a></li>
-          <li><a href="#valuation">Free Valuation</a></li>
+          <li><a href="/#sell">Sell Your Home</a></li>
+          <li><a href="/#valuation">Free Valuation</a></li>
           <li><a href="#agent">About Matt</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
@@ -585,6 +608,19 @@ img{max-width:100%;display:block}
   document.querySelectorAll('.has-dropdown > a').forEach(a=>{
     a.addEventListener('click',e=>{if(window.innerWidth<=880){e.preventDefault();a.parentElement.classList.toggle('open');}});
   });
+</script>
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  function toggle(){
+    var item=q.parentElement;
+    var isOpen=item.classList.toggle('open');
+    q.setAttribute('aria-expanded', isOpen?'true':'false');
+  }
+  q.addEventListener('click', toggle);
+  q.addEventListener('keydown', function(e){
+    if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); }
+  });
+});
 </script>
 <script type="application/ld+json">
 {
