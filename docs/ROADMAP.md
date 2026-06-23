@@ -18,6 +18,7 @@ Goal: make every page production-ready and trustworthy.
 - WIP — Documentation system established (this /docs folder).
 - DONE — Gold Standard certification standard established (GOLD_STANDARD_PAGE.md): the flagship per-page bar and 100-point checklist.
 - DONE — Town Engine architecture established (TOWN_PAGE_ENGINE.md, COMPONENT_SPECIFICATIONS.md, CONTENT_MODEL.md, TOWN_BUILD_CHECKLIST.md, TOWN_WORKFLOW.md): the reusable system for producing Gold Standard town pages at scale.
+- DONE — Lead Generation Engine and Product Backlog established (LEAD_GENERATION_ENGINE.md and PRODUCT_BACKLOG.md): the conversion blueprint for every page and the ROI-ranked command center that drives future development.
 - TODO — Replace all "PHOTO PLACEHOLDER" markers with real, locally relevant images.
 - TODO — Fix character-encoding (mojibake) issues across pages; enforce clean UTF-8 punctuation.
 - TODO — Add trust assets: agent headshot, Weichert branding, credentials, and reviews/testimonials.
@@ -25,11 +26,12 @@ Goal: make every page production-ready and trustworthy.
 
 ## Phase 2 — Conversion and content depth (NOT STARTED)
 
-- TODO — Strengthen calls to action and lead-capture flows (valuation, contact).
+- TODO — Strengthen calls to action and lead-capture flows (valuation, contact), implementing the conversion paths defined in LEAD_GENERATION_ENGINE.md.
 - TODO — Expand town pages with deeper, verified local data.
 - TODO — Produce town pages through the Town Engine (TOWN_WORKFLOW.md) and certify each via TOWN_BUILD_CHECKLIST.md.
 - TODO — Add more guides (buying, selling, relocation by origin).
-- TODO — Define and instrument success metrics (see BUSINESS_PLAN.md).
+- TODO — Define and instrument success metrics (see BUSINESS_PLAN.md and LEAD_GENERATION_ENGINE.md).
+- TODO — Work the ranked queue in PRODUCT_BACKLOG.md, selecting features by ROI rather than guesswork.
 
 ## Phase 3 — Growth and optimization (NOT STARTED)
 
@@ -52,6 +54,8 @@ Phase 1. The single highest-priority next task after documentation is resolving 
 ## Related documents
 
 - DASHBOARD.md — live status.
+- LEAD_GENERATION_ENGINE.md — how every page converts visitors into leads.
+- PRODUCT_BACKLOG.md — the ROI-ranked backlog that drives future work.
 - PAGE_STANDARDS.md — the bar each page must meet.
 - NON_NEGOTIABLES.md — rules that constrain how work is done.
 - CHANGELOG.md — record of completed changes.
