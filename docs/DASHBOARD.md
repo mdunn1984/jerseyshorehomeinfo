@@ -1,6 +1,6 @@
 # Dashboard — Current Status
 
-Last updated: this commit (Lead Generation Engine and Product Backlog established as the conversion blueprint and ROI-ranked command center for all future work; FlexMLS IDX fully retired from both the homepage and the Discovery Center; Homepage evolved to a discovery-first authority page; Town Engine architecture established; Gold Standard certification in place; Stafford Phase A1 complete).
+Last updated: this commit (Unified Lead Capture foundation built (Sprint 4): reusable on-site lead form, shared validation/analytics/success-error states, a single Netlify function endpoint, and standardized GA4 conversion events — the foundation every future form plugs into; Lead Generation Engine and Product Backlog established; FlexMLS IDX fully retired from homepage and Discovery Center; Homepage evolved to a discovery-first authority page; Town Engine architecture established; Gold Standard certification in place; Stafford Phase A1 complete).
 Status board for Jersey Shore Home Info. Read this first in every session.
 
 ## At a glance
@@ -25,6 +25,7 @@ Status board for Jersey Shore Home Info. Read this first in every session.
 - DONE — Moving-from-Staten-Island relocation guide.
 - DONE — Full SEO/AEO optimization pass across all pages.
 - DONE — Lead Generation Engine and Product Backlog established (Sprint 3, documentation only): LEAD_GENERATION_ENGINE.md defines how every page converts visitors into leads, and PRODUCT_BACKLOG.md is the ROI-ranked command center for all future features. See CHANGELOG.md.
+- DONE — Unified Lead Capture foundation built (Sprint 4, implementation): reusable on-site lead form on the homepage with standardized field names, validation, and success/error states; one shared controller binding every [data-lead-form]; a single Netlify function (netlify/functions/lead.js) as the one lead endpoint with honeypot spam protection and priority scoring; standardized GA4 form/CTA events with consistent tracking added to search.html. CRM/automation intentionally deferred. See CHANGELOG.md and LEAD_GENERATION_ENGINE.md.
 
 ## Flagship page — Gold Standard (Stafford Township)
 
