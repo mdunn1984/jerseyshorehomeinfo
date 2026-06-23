@@ -1,6 +1,6 @@
 # Dashboard — Current Status
 
-Last updated: this commit (documentation system established).
+Last updated: this commit (Gold Standard certification established; Stafford Phase A1 complete).
 Status board for Jersey Shore Home Info. Read this first in every session.
 
 ## At a glance
@@ -25,6 +25,18 @@ Status board for Jersey Shore Home Info. Read this first in every session.
 - DONE — Moving-from-Staten-Island relocation guide.
 - DONE — Full SEO/AEO optimization pass across all pages.
 
+## Flagship page — Gold Standard (Stafford Township)
+
+Stafford Township is the designated flagship / "Gold Standard" town page. Progress:
+
+- DONE — Phase A1 (Structural Perfection): removed a stray pre-doctype character, added a visible FAQ section matched 1:1 to the FAQPage JSON-LD with an accessible toggle, and fixed dead on-page anchors (footer #sell/#valuation now point cross-page). Verified: single H1, zero dead on-page anchors, balanced tags, zero mojibake, compliance footer intact.
+- DONE — Gold Standard planning: created GOLD_STANDARD_PAGE.md (the certification standard) and audited Stafford against it.
+- TODO — Photography phase: replace all PHOTO PLACEHOLDER slots and the incorrect hero image with real, town-correct imagery.
+- TODO — Statistics phase: verify, source, and date every figure; resolve the LBI drive-time contradiction.
+- TODO — Content expansion: add the missing flagship sections (Neighborhoods, Coffee, Transportation, Utilities, Flood, Insurance, etc.).
+- TODO — Trust + conversion: real headshot, Weichert branding, testimonials, and an on-page lead-capture form.
+- NOT CERTIFIED — Stafford is not yet Gold Standard Certified. See GOLD_STANDARD_PAGE.md section 9 for the full pass/fail/deferred audit and the 100-point checklist.
+
 ## Phase 1 blockers (open)
 
 - BLOCKED/TODO — Photo placeholders: town pages still show "PHOTO PLACEHOLDER" markers instead of real images.
@@ -40,7 +52,7 @@ Status board for Jersey Shore Home Info. Read this first in every session.
 ## Current priorities (in order)
 
 1. Establish documentation foundation (this commit).
-2. Resolve Phase 1 site blockers (photos, encoding, trust assets).
+2. Resolve Phase 1 site blockers (photos, encoding, trust assets) and drive Stafford toward Gold Standard certification (see GOLD_STANDARD_PAGE.md).
 3. Keep CHANGELOG.md and this dashboard updated as work proceeds.
 
 ## How to update this file
