@@ -40,11 +40,13 @@ Every page contained two href="#" dead links:
 - Footer brand logo: the footer "Jersey Shore Home Info" logo linked to href="#". Repointed to the homepage (/).
 - Guides nav dropdown parent: the "Guides" top-nav item linked to href="#". Repointed to /moving-from-staten-island, the only existing guide and the dropdown's sole child. The dropdown submenu is unchanged.
 
-After the fix, zero href="#" remain in any page.
+After the initial fix pass, the town and content pages were clean. During the recovery audit, the three legal pages (privacy-policy.html, terms-of-service.html, fair-housing.html) were found to still contain both href="#" dead links: their navigation uses a different markup (<li class="dropdown guides">) than the town pages, so the first pass missed them. These were repointed during recovery using the same mapping (footer brand to /, Guides to /moving-from-staten-island). After the recovery fixes, zero href="#" links remain across all 19 pages.
 
 ## 3. Broken image reference (FIXED)
 
 - moving-from-staten-island.html referenced /images/matt-dunn.jpg, which does not exist. The correct local asset is matt-dunn-headshot.jpg (used on all other pages). Updated the reference to the existing local file.
+
+During the recovery audit, a second broken reference to /images/matt-dunn.jpg was found in the JSON-LD structured-data "image" field on terms-of-service.html (not an <img> tag, so the original scan missed it). It was also updated to matt-dunn-headshot.jpg during recovery.
 
 ## 4. Missing image: og-image.jpg (DEFERRED — design)
 
