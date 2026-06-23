@@ -8,6 +8,18 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Discovery Center IDX retirement (search.html)
+
+Aligned the Discovery Center (search.html) with the homepage by retiring the FlexMLS IDX integration after the subscription was canceled. The page is now a decision-first discovery hub rather than a live listings portal.
+
+- **IDX retired:** Removed the FlexMLS embed from search.html entirely, including the iframe, the embed wrapper, the "Browse available listings" section, and all "powered by FlexMLS" / live MLS messaging. No hidden iframes or dead integrations were left in the code.
+- **Discovery-first replacement:** Replaced the embed section with a "Ready to take the next step?" section offering seven next-step pathways to existing pages and anchors: Talk with Matt, Explore Ocean County towns, Explore Long Beach Island, Moving from Staten Island, Request a local market read, Start a buyer conversation, and Discuss selling your home.
+- **Honest positioning:** Added copy clarifying the site is a discovery hub, not a Zillow-style listings portal, and that current listings, private opportunities, and pricing come from a direct conversation with Matt. Removed any implication of real-time or live MLS access.
+- **FAQ updated:** Rewrote the "Can I still search active listings here?" question and answer (visible text and FAQPage schema kept in sync) to reflect that the page no longer displays an MLS feed.
+- **CSS cleanup:** Removed the now-orphaned page-specific styles tied to the retired embed (.mls-banner, the listing-card block, .embed-section, .embed-wrap). Preserved .embed-note and the footer .mls-disclaimer.
+- **Compliance preserved:** Weichert Realtors, NJ License #2442118, Fair Housing, Equal Housing Opportunity, and the "believed accurate but not guaranteed" disclaimer all remain intact.
+- **Verification:** Zero FlexMLS references, zero iframes, zero IDX references, zero href="#", one H1, valid JSON-LD (RealEstateAgent, Person, BreadcrumbList, WebPage, FAQPage), and FAQ schema matching the visible FAQ. Commit: 7d0cfe4.
+
 ### Homepage evolution, Sprint 2A (IDX retirement)
 
 Evolved the homepage from a search-first page into a discovery-first authority page, and retired the FlexMLS IDX integration after the subscription was canceled.
