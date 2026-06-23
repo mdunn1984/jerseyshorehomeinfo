@@ -26,6 +26,17 @@ Start here, then read in this order:
 - NON_NEGOTIABLES.md — rules that override everything else.
 - CHANGELOG.md — running log of meaningful changes.
 
+## Town Engine (page production system)
+
+The system for producing Gold Standard town pages consistently and at scale. Read GOLD_STANDARD_PAGE.md first (the bar), then the Engine docs.
+
+- GOLD_STANDARD_PAGE.md - certification standard and 100-point checklist for a flagship town page.
+- TOWN_PAGE_ENGINE.md - master blueprint: architecture, goals, information architecture, and section order.
+- COMPONENT_SPECIFICATIONS.md - reusable component contracts for each page section.
+- CONTENT_MODEL.md - the town data model (every field a town page can contain).
+- TOWN_BUILD_CHECKLIST.md - the 100-point production acceptance gate.
+- TOWN_WORKFLOW.md - the production workflow from research to continuous improvement.
+
 ## Ground truth (from repository audit)
 
 - Repository: mdunn1984/jerseyshorehomeinfo
