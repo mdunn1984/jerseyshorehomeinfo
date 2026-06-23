@@ -1,6 +1,6 @@
 # Dashboard — Current Status
 
-Last updated: this commit (Town Engine architecture established; Gold Standard certification in place; Stafford Phase A1 complete).
+Last updated: this commit (Search rebuilt as the Discovery Center; Town Engine architecture established; Gold Standard certification in place; Stafford Phase A1 complete).
 Status board for Jersey Shore Home Info. Read this first in every session.
 
 ## At a glance
@@ -20,7 +20,7 @@ Status board for Jersey Shore Home Info. Read this first in every session.
 
 - DONE — Core town pages built (LBI towns, Stafford, Toms River, Barnegat, Waretown, Little Egg Harbor, Brick).
 - DONE — Homepage (index.html) with office listings IDX.
-- DONE — Search page (search.html) with FBS SmartFrame MLS search.
+- DONE — Search page (search.html) rebuilt as the Jersey Shore Discovery Center: town/area/goal discovery, buyer/seller/relocation paths, high-value verticals, retained FlexMLS listing search, and a visible FAQ. See CHANGELOG.md.
 - DONE — Legal pages (privacy-policy, terms-of-service, fair-housing).
 - DONE — Moving-from-Staten-Island relocation guide.
 - DONE — Full SEO/AEO optimization pass across all pages.
