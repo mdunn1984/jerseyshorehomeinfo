@@ -1,6 +1,6 @@
 # Dashboard — Current Status
 
-Last updated: this commit (Homepage evolved to a discovery-first authority page and FlexMLS IDX retired; Search rebuilt as the Discovery Center; Town Engine architecture established; Gold Standard certification in place; Stafford Phase A1 complete).
+Last updated: this commit (FlexMLS IDX fully retired from both the homepage and the Discovery Center, which is now a decision-first discovery hub; Homepage evolved to a discovery-first authority page; Town Engine architecture established; Gold Standard certification in place; Stafford Phase A1 complete).
 Status board for Jersey Shore Home Info. Read this first in every session.
 
 ## At a glance
@@ -20,7 +20,7 @@ Status board for Jersey Shore Home Info. Read this first in every session.
 
 - DONE — Core town pages built (LBI towns, Stafford, Toms River, Barnegat, Waretown, Little Egg Harbor, Brick).
 - DONE — Homepage (index.html) evolved into a discovery-first authority page (Sprint 2A): FlexMLS IDX retired and removed, listings section replaced with an "Explore Ocean County communities" discovery section, Discovery Center integrated into the nav, positioning shifted toward smarter decisions, and unverified market statistics removed. See CHANGELOG.md.
-- DONE — Search page (search.html) rebuilt as the Jersey Shore Discovery Center: town/area/goal discovery, buyer/seller/relocation paths, high-value verticals, retained FlexMLS listing search, and a visible FAQ. See CHANGELOG.md.
+- DONE — Search page (search.html) rebuilt as the Jersey Shore Discovery Center and aligned with the homepage: FlexMLS IDX retired and removed, the listing-search embed replaced with a "Ready to take the next step?" CTA section, plus town/area/goal discovery, buyer/seller/relocation paths, high-value verticals, and a visible FAQ. See CHANGELOG.md.
 - DONE — Legal pages (privacy-policy, terms-of-service, fair-housing).
 - DONE — Moving-from-Staten-Island relocation guide.
 - DONE — Full SEO/AEO optimization pass across all pages.
