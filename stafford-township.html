@@ -325,6 +325,20 @@ img{max-width:100%;display:block}
 .town-cta h2{color:#fff;margin-bottom:14px}
 .town-cta p{color:rgba(255,255,255,.9);max-width:580px;margin:0 auto 28px;font-size:1.05rem}
 .town-cta .cta-buttons{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+/* Neighborhoods section (Gold Standard implementation) */
+.hood-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;margin:40px 0 30px}
+.hood-card{background:#fff;border:1px solid var(--sandy-linen);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.hood-photo{position:relative;aspect-ratio:16/9;background:#ccc;overflow:hidden}
+.hood-card h3{color:var(--navy);font-size:1.5rem;margin:22px 26px 6px}
+.hood-row{padding:6px 26px}
+.hood-row .hood-label{display:block;text-transform:uppercase;letter-spacing:1.5px;font-size:.72rem;color:var(--coral);font-weight:700;margin-bottom:2px}
+.hood-row p{color:#3d4a57;font-size:1rem;line-height:1.55;margin:0}
+.hood-cta{display:flex;gap:12px;flex-wrap:wrap;padding:20px 26px 26px;margin-top:auto}
+.btn-sm{padding:10px 20px;font-size:.85rem}
+.hood-cta .btn-secondary{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.hood-cta .btn-secondary:hover{background:var(--navy);color:#fff}
+@media(max-width:640px){.hood-grid{grid-template-columns:1fr}.hood-card h3{margin:18px 20px 6px}.hood-row{padding:6px 20px}.hood-cta{padding:18px 20px 22px}}
+
 
 </style>
 <style>
@@ -416,6 +430,99 @@ img{max-width:100%;display:block}
       <figure><div class="photo-slot"><!-- PHOTO: A typical Stafford colonial in Beach Haven West with a boat at the dock --><span>Photo placeholder &mdash; A typical Stafford colonial in Beach Haven West with a boat at the dock</span></div></figure>
       <figure><div class="photo-slot"><!-- PHOTO: Manahawkin Bay sunset from the Causeway bridge --><span>Photo placeholder &mdash; Manahawkin Bay sunset from the Causeway bridge</span></div></figure>
     </div>
+  </div>
+</section>
+<section class="town-section alt" id="neighborhoods">
+  <div class="container">
+    <span class="section-eyebrow">Stafford Township Neighborhoods</span>
+    <h2>Find the right Stafford neighborhood for how you want to live.</h2>
+    <p class="body">Stafford Township is not one place — it is a collection of distinct communities, each with its own character, housing style, and reasons people choose it. Whether you are after an inland, settled neighborhood, a lagoon-front home with a dock, or newer construction within walking distance of shopping, the right fit depends on how you want to spend your days. Below is a local, no-pressure guide to the township's major areas. For families relocating from the city, the <a href="/moving-from-staten-island">moving from Staten Island</a> guide pairs well with these profiles, and you can browse every active listing in the <a href="/search?town=Stafford%20Township">Stafford Township home search</a>.</p>
+    <div class="hood-grid">
+      <article class="hood-card" id="ocean-acres">
+        <div class="hood-photo"><div class="photo-slot"><!-- PHOTO: Ocean Acres residential street with mature trees and single-family homes --><span>Photo placeholder — Ocean Acres residential street with mature trees and single-family homes</span></div></div>
+        <h3>Ocean Acres</h3>
+        <div class="hood-row"><span class="hood-label">Overview</span><p>Ocean Acres is one of Stafford Township's largest and most recognizable residential areas, a sprawling network of established streets west of Route 72. It grew over decades into a mix of original ranches and cape-style homes alongside larger updated and newer-construction houses.</p></div>
+        <div class="hood-row"><span class="hood-label">Housing style</span><p>Predominantly single-family detached homes, ranging from compact starter ranches to expanded colonials and newer custom builds. Lot sizes vary by street and section.</p></div>
+        <div class="hood-row"><span class="hood-label">Who it suits</span><p>First-time buyers, growing families, and anyone who wants an inland, non-flood-prone feel with quick highway access.</p></div>
+        <div class="hood-row"><span class="hood-label">Lifestyle</span><p>A true year-round, settled-neighborhood atmosphere with sidewalks, cul-de-sacs, and a community of long-term residents. Convenient to township shopping and the Route 72 corridor.</p></div>
+        <div class="hood-row"><span class="hood-label">Nearby amenities</span><p>Minutes from Manahawkin's retail corridor, grocery stores, and the Route 72 on-ramps toward both the Garden State Parkway and the LBI Causeway.</p></div>
+        <div class="hood-row"><span class="hood-label">Schools served</span><p>Served by the Stafford Township School District for elementary and middle grades, feeding into Southern Regional for high school.</p></div>
+        <div class="hood-row"><span class="hood-label">For buyers</span><p>A practical entry point into Stafford with broad inventory and a range of price points. Because homes here were built across many eras, condition and updates vary widely from street to street, so a careful walkthrough matters.</p></div>
+        <div class="hood-row"><span class="hood-label">For sellers</span><p>Wide buyer appeal and steady year-round demand. Presentation and updates are the main levers, since buyers compare directly against neighboring homes of similar vintage.</p></div>
+        <div class="hood-cta">
+          <a href="/search?town=Stafford%20Township" class="btn btn-primary btn-sm">See Ocean Acres listings</a>
+          <a href="/#valuation" class="btn btn-secondary btn-sm">What is my home worth?</a>
+        </div>
+      </article>
+      <article class="hood-card" id="manahawkin">
+        <div class="hood-photo"><div class="photo-slot"><!-- PHOTO: Manahawkin town center near the Route 72 commercial corridor --><span>Photo placeholder — Manahawkin town center near the Route 72 commercial corridor</span></div></div>
+        <h3>Manahawkin</h3>
+        <div class="hood-row"><span class="hood-label">Overview</span><p>Manahawkin is the principal community name most people associate with Stafford Township, and it functions as the township's commercial and civic heart. Many addresses across Stafford carry a Manahawkin mailing designation.</p></div>
+        <div class="hood-row"><span class="hood-label">Housing style</span><p>A varied mix of established single-family homes, some older homes near the historic center, and pockets of newer development. Styles range from modest ranches to two-story colonials.</p></div>
+        <div class="hood-row"><span class="hood-label">Who it suits</span><p>Buyers who want to be central to everything — shopping, services, schools, and the quickest route to the island.</p></div>
+        <div class="hood-row"><span class="hood-label">Lifestyle</span><p>The most convenient location in the township for daily errands, dining, and healthcare, with a settled, year-round feel.</p></div>
+        <div class="hood-row"><span class="hood-label">Nearby amenities</span><p>Home to the township's main retail corridor, supermarkets, restaurants, medical offices, and Manahawkin Lake. The LBI Causeway begins here.</p></div>
+        <div class="hood-row"><span class="hood-label">Schools served</span><p>Served by the Stafford Township School District, feeding into Southern Regional High School.</p></div>
+        <div class="hood-row"><span class="hood-label">Water access</span><p>Manahawkin Lake offers a freshwater focal point with a walking path, and the bay is a short drive east.</p></div>
+        <div class="hood-row"><span class="hood-label">For buyers</span><p>Central location is the headline benefit. Inventory spans many home ages, so verify systems, updates, and any improvements before committing.</p></div>
+        <div class="hood-row"><span class="hood-label">For sellers</span><p>Central convenience is an easy story to tell buyers. Highlight walkability and proximity to services to stand out.</p></div>
+        <div class="hood-cta">
+          <a href="/search?town=Stafford%20Township" class="btn btn-primary btn-sm">See Manahawkin listings</a>
+          <a href="/#valuation" class="btn btn-secondary btn-sm">What is my home worth?</a>
+        </div>
+      </article>
+      <article class="hood-card" id="beach-haven-west">
+        <div class="hood-photo"><div class="photo-slot"><!-- PHOTO: Beach Haven West lagoon with a private boat dock and bayfront home --><span>Photo placeholder — Beach Haven West lagoon with a private boat dock and bayfront home</span></div></div>
+        <h3>Beach Haven West</h3>
+        <div class="hood-row"><span class="hood-label">Overview</span><p>Beach Haven West is Stafford's signature waterfront community, a planned network of lagoons engineered so that many homes have their own bulkhead and dock with navigable access toward Barnegat Bay.</p></div>
+        <div class="hood-row"><span class="hood-label">Housing style</span><p>A blend of original single-level waterfront homes, renovated properties, and newer raised or rebuilt homes designed for waterfront living. Many have boat slips at the back yard.</p></div>
+        <div class="hood-row"><span class="hood-label">Who it suits</span><p>Boaters, water-lovers, and second-home buyers who want bay access without being on the island itself.</p></div>
+        <div class="hood-row"><span class="hood-label">Lifestyle</span><p>A boating-and-water lifestyle on the mainland, with quick access by car to both Manahawkin's shopping and the LBI beaches.</p></div>
+        <div class="hood-row"><span class="hood-label">Nearby amenities</span><p>Close to the Causeway, marinas, bayside dining, and the township's services. The defining amenity is direct lagoon-to-bay water access.</p></div>
+        <div class="hood-row"><span class="hood-label">Schools served</span><p>Served by the Stafford Township School District, feeding into Southern Regional High School.</p></div>
+        <div class="hood-row"><span class="hood-label">Water access</span><p>The central feature — most properties sit on a lagoon with a bulkhead and dock, offering boat access toward open bay. Lagoons differ in how quickly they reach open water, which is worth discussing for any specific property.</p></div>
+        <div class="hood-row"><span class="hood-label">For buyers</span><p>Confirm the specifics for each property: bulkhead condition, dock, lagoon depth and route to open bay, and current elevation and insurance posture. These factors vary house to house and should be verified rather than assumed.</p></div>
+        <div class="hood-row"><span class="hood-label">For sellers</span><p>Waterfront access is the premium selling point. Documentation of bulkhead condition, dock, and any elevation or flood-mitigation improvements helps buyers move with confidence.</p></div>
+        <div class="hood-cta">
+          <a href="/search?town=Stafford%20Township" class="btn btn-primary btn-sm">See Beach Haven West listings</a>
+          <a href="/#valuation" class="btn btn-secondary btn-sm">What is my home worth?</a>
+        </div>
+      </article>
+      <article class="hood-card" id="cedar-run">
+        <div class="hood-photo"><div class="photo-slot"><!-- PHOTO: Quiet Cedar Run road bordered by pine and woodland --><span>Photo placeholder — Quiet Cedar Run road bordered by pine and woodland</span></div></div>
+        <h3>Cedar Run</h3>
+        <div class="hood-row"><span class="hood-label">Overview</span><p>Cedar Run is one of Stafford's smaller, quieter sections along the southern stretch of the township, with an established, low-key character.</p></div>
+        <div class="hood-row"><span class="hood-label">Housing style</span><p>A mix of older established homes and scattered newer builds on a range of lot sizes, generally more spread out than the dense planned communities.</p></div>
+        <div class="hood-row"><span class="hood-label">Who it suits</span><p>Buyers who want a quieter, more tucked-away setting while staying within Stafford and its school district.</p></div>
+        <div class="hood-row"><span class="hood-label">Lifestyle</span><p>Calm and residential, with an easygoing pace and convenient access to the Route 9 and Route 72 corridors.</p></div>
+        <div class="hood-row"><span class="hood-label">Nearby amenities</span><p>A short drive to Manahawkin's shopping and services, with nearby access to natural and open spaces.</p></div>
+        <div class="hood-row"><span class="hood-label">Schools served</span><p>Served by the Stafford Township School District, feeding into Southern Regional High School.</p></div>
+        <div class="hood-row"><span class="hood-label">For buyers</span><p>A good fit for buyers prioritizing quiet over walkability. Because homes vary in age and style, evaluate each property individually.</p></div>
+        <div class="hood-row"><span class="hood-label">For sellers</span><p>Lean into the quiet, settled appeal and the value of staying within the Stafford school district.</p></div>
+        <div class="hood-cta">
+          <a href="/search?town=Stafford%20Township" class="btn btn-primary btn-sm">See Cedar Run listings</a>
+          <a href="/#valuation" class="btn btn-secondary btn-sm">What is my home worth?</a>
+        </div>
+      </article>
+      <article class="hood-card" id="mill-creek">
+        <div class="hood-photo"><div class="photo-slot"><!-- PHOTO: Stafford Park area near retail and newer mixed-use development --><span>Photo placeholder — Stafford Park area near retail and newer mixed-use development</span></div></div>
+        <h3>Stafford Park &amp; Mill Creek Area</h3>
+        <div class="hood-row"><span class="hood-label">Overview</span><p>The Stafford Park and Mill Creek area represents the more recently developed, amenity-adjacent side of the township, anchored by the Stafford Park retail and mixed-use development.</p></div>
+        <div class="hood-row"><span class="hood-label">Housing style</span><p>Includes newer construction and planned-community style homes near retail, along with established homes in the surrounding Mill Creek sections.</p></div>
+        <div class="hood-row"><span class="hood-label">Who it suits</span><p>Buyers who value walk-to-shopping convenience and newer housing stock close to major retail.</p></div>
+        <div class="hood-row"><span class="hood-label">Lifestyle</span><p>A convenience-forward setting where shopping, dining, and services are minutes — sometimes walking distance — away.</p></div>
+        <div class="hood-row"><span class="hood-label">Nearby amenities</span><p>Anchored by Stafford Park's shops and restaurants, with quick Route 72 access in both directions.</p></div>
+        <div class="hood-row"><span class="hood-label">Schools served</span><p>Served by the Stafford Township School District, feeding into Southern Regional High School.</p></div>
+        <div class="hood-row"><span class="hood-label">Water access</span><p>Mill Creek and nearby bayside areas provide water proximity in parts of this section; confirm specifics by property.</p></div>
+        <div class="hood-row"><span class="hood-label">For buyers</span><p>Newer stock can mean fewer immediate updates, but always verify what is and is not included, and check community details for any planned-development homes.</p></div>
+        <div class="hood-row"><span class="hood-label">For sellers</span><p>Proximity to retail and newer construction are strong differentiators — emphasize convenience and low-maintenance appeal.</p></div>
+        <div class="hood-cta">
+          <a href="/search?town=Stafford%20Township" class="btn btn-primary btn-sm">See Stafford Park &amp; Mill Creek Area listings</a>
+          <a href="/#valuation" class="btn btn-secondary btn-sm">What is my home worth?</a>
+        </div>
+      </article>
+    </div>
+    <p class="body">Nearby <a href="/little-egg-harbor">West Creek and Little Egg Harbor</a> border Stafford to the south and sometimes come up in the same search; they sit just outside the township line and feed into a different school district, so treat them as adjacent options rather than Stafford neighborhoods. Not sure which area fits? <a href="/#agent">Matt Dunn</a> can talk through the trade-offs and recommend neighborhoods based on your commute, budget, and lifestyle — with no pressure. Reach him directly at <a href="tel:9175245676">(917) 524-5676</a>.</p>
   </div>
 </section>
 <section class="town-section alt">
@@ -771,6 +878,80 @@ document.querySelectorAll('.faq-q').forEach(function(q){
     "name": "Weichert Realtors",
     "url": "https://www.weichert.com"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Stafford Township Neighborhoods",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Place",
+        "name": "Ocean Acres, Stafford Township, NJ",
+        "description": "Ocean Acres is one of Stafford Township's largest and most recognizable residential areas, a sprawling network of established streets west of Route 72. It grew over decades into a mix of original ranches and cape-style homes alongside larger updated and newer-construction houses.",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Stafford Township, New Jersey"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Place",
+        "name": "Manahawkin, Stafford Township, NJ",
+        "description": "Manahawkin is the principal community name most people associate with Stafford Township, and it functions as the township's commercial and civic heart. Many addresses across Stafford carry a Manahawkin mailing designation.",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Stafford Township, New Jersey"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Place",
+        "name": "Beach Haven West, Stafford Township, NJ",
+        "description": "Beach Haven West is Stafford's signature waterfront community, a planned network of lagoons engineered so that many homes have their own bulkhead and dock with navigable access toward Barnegat Bay.",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Stafford Township, New Jersey"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Place",
+        "name": "Cedar Run, Stafford Township, NJ",
+        "description": "Cedar Run is one of Stafford's smaller, quieter sections along the southern stretch of the township, with an established, low-key character.",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Stafford Township, New Jersey"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Place",
+        "name": "Stafford Park & Mill Creek Area, Stafford Township, NJ",
+        "description": "The Stafford Park and Mill Creek area represents the more recently developed, amenity-adjacent side of the township, anchored by the Stafford Park retail and mixed-use development.",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Stafford Township, New Jersey"
+        }
+      }
+    }
+  ]
 }
 </script>
 </body>
