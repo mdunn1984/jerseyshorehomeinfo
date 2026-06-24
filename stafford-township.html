@@ -337,6 +337,26 @@ img{max-width:100%;display:block}
 .btn-sm{padding:10px 20px;font-size:.85rem}
 .hood-cta .btn-secondary{background:transparent;color:var(--navy);border:2px solid var(--navy)}
 .hood-cta .btn-secondary:hover{background:var(--navy);color:#fff}
+
+/* Waterfront Living section (Gold Standard implementation) */
+#waterfront h3{color:var(--navy);font-size:1.45rem;margin:34px 0 12px}
+#waterfront h4{color:var(--navy);font-size:1.12rem;margin:0 0 8px}
+.wf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin:16px 0 8px}
+.wf-card{background:#fff;border:1px solid var(--sandy-linen);border-radius:12px;padding:20px 22px;box-shadow:var(--shadow)}
+.wf-card p{color:#3d4a57;font-size:.98rem;line-height:1.55;margin:0}
+.wf-list{margin:10px 0 8px;padding-left:22px}
+.wf-list li{color:#3d4a57;font-size:1.02rem;line-height:1.6;margin-bottom:10px}
+.wf-twocol{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin:18px 0 8px}
+.wf-col{background:var(--warm-white);border:1px solid var(--sandy-linen);border-radius:12px;padding:20px 22px}
+.wf-col ul{margin:0;padding-left:20px}
+.wf-col li{color:#3d4a57;font-size:.98rem;line-height:1.55;margin-bottom:8px}
+.wf-take{background:var(--navy);color:#fff;border-radius:14px;padding:28px 30px;margin:34px 0 10px}
+.wf-take .section-eyebrow{color:var(--gold)}
+.wf-take h3{color:#fff;margin-top:6px}
+.wf-take p.body{color:rgba(255,255,255,.92)}
+.wf-cta{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0 14px}
+.wf-note{font-size:.98rem}
+@media(max-width:640px){.wf-grid,.wf-twocol{grid-template-columns:1fr}.wf-take{padding:22px 20px}}
 @media(max-width:640px){.hood-grid{grid-template-columns:1fr}.hood-card h3{margin:18px 20px 6px}.hood-row{padding:6px 20px}.hood-cta{padding:18px 20px 22px}}
 
 
@@ -525,6 +545,87 @@ img{max-width:100%;display:block}
     <p class="body">Nearby <a href="/little-egg-harbor">West Creek and Little Egg Harbor</a> border Stafford to the south and sometimes come up in the same search; they sit just outside the township line and feed into a different school district, so treat them as adjacent options rather than Stafford neighborhoods. Not sure which area fits? <a href="/#agent">Matt Dunn</a> can talk through the trade-offs and recommend neighborhoods based on your commute, budget, and lifestyle — with no pressure. Reach him directly at <a href="tel:9175245676">(917) 524-5676</a>.</p>
   </div>
 </section>
+<section class="town-section" id="waterfront">
+  <div class="container">
+    <div class="lead-photo"><div class="photo-slot"><!-- PHOTO: Beach Haven West lagoon at golden hour with docked boats and Barnegat Bay beyond --><span>Photo placeholder — Beach Haven West lagoon at golden hour with docked boats and Barnegat Bay beyond</span></div></div>
+    <span class="section-eyebrow">Waterfront Living in Stafford Township</span>
+    <h2>Waterfront living in Stafford — lagoons, the bay, and life on the water.</h2>
+    <p class="body">For many buyers, the whole point of Stafford Township is the water. Sitting at the foot of the Long Beach Island Causeway on the Barnegat Bay side, Stafford gives you a genuine boating-and-bay lifestyle on the mainland — often at a different price point than the island itself, and with the convenience of a year-round town behind you. But waterfront means several different things here, and the differences matter a great deal for how you use the home, what you maintain, and what you pay to own and insure it.</p>
+    <h3 id="waterfront-types">Lagoon, bayfront, water-access, or inland — know the difference</h3>
+    <div class="wf-grid">
+      <div class="wf-card"><h4>Lagoon homes</h4><p>The classic Stafford waterfront. Homes sit on engineered lagoons — most notably in the Beach Haven West network — typically with a bulkhead and a dock in the back yard and a navigable route out toward Barnegat Bay. How quickly a given lagoon reaches open water, and how it sits at low tide, varies street to street and should be confirmed for any specific property.</p></div>
+      <div class="wf-card"><h4>Bayfront homes</h4><p>Properties fronting directly on open water such as Manahawkin Bay. These offer the widest views and the most direct access, and they are the most exposed to wind and weather. They tend to be the most sought-after and the most carefully evaluated for elevation and construction.</p></div>
+      <div class="wf-card"><h4>Water-access communities</h4><p>Homes that are not on the water themselves but include or sit near shared access — a community ramp, dock, or nearby launch. A practical middle path for buyers who want to keep a boat without paying for private frontage.</p></div>
+      <div class="wf-card"><h4>Inland homes</h4><p>No direct water, often on higher ground, generally with a simpler insurance and maintenance picture. Many inland Stafford buyers still boat — they just launch from a public ramp or keep a slip at a marina instead of docking at home.</p></div>
+    </div>
+    <h3 id="waterfront-lifestyle">The on-the-water lifestyle</h3>
+    <p class="body">Day to day, waterfront living in Stafford is about easy access to the bay. Boaters can keep a vessel at their own dock or at a marina and be on Barnegat Bay in minutes. Kayakers and paddleboarders launch straight from the bulkhead or from quiet lagoon ends. The back bays and creeks are popular for fishing and crabbing, and the bay opens the door to the island beaches, waterfront restaurants, and day trips by water. It is a seasonal rhythm — busiest from late spring through early fall — with a quieter, batten-down pace in winter.</p>
+    <h3 id="waterfront-considerations">What waterfront ownership actually involves</h3>
+    <ul class="wf-list">
+      <li><strong>Docks and dock ownership:</strong> Confirm what is permitted and what already exists — a fixed dock, floating dock, or none. Existing structures may carry their own permit and maintenance history worth reviewing.</li>
+      <li><strong>Bulkheads:</strong> The bulkhead is the retaining wall that holds the property line against the water. Its age, material, and condition are among the most important things to evaluate, since replacement is a significant expense.</li>
+      <li><strong>Boat lifts:</strong> Many homes have a lift to keep a boat out of the water. Capacity, age, and working condition vary; verify what conveys with the sale.</li>
+      <li><strong>Water depth and tide:</strong> Depth at the dock and along the route to open bay changes with the tide. A boat that fits a slip at high tide may not clear it at low tide, so depth matters for the size of boat you can realistically keep.</li>
+      <li><strong>Bridge clearance:</strong> The route from some lagoons to open bay can pass under fixed bridges. Clearance can limit boat height, which is worth checking before buying a specific boat-and-home combination.</li>
+      <li><strong>Maintenance expectations:</strong> Salt water and weather are hard on docks, lifts, bulkheads, pilings, and the waterside of the house itself. Budget for ongoing upkeep beyond a typical inland home.</li>
+      <li><strong>Seasonal considerations:</strong> Plan for winterization, haul-out or wrapping of boats, and storm preparation. The water is a wonderful amenity that also asks for seasonal attention.</li>
+    </ul>
+    <h3 id="waterfront-flood">Flood-zone and insurance awareness (general guidance)</h3>
+    <p class="body">Waterfront and near-water homes are more likely to fall in a FEMA-designated flood zone, which can affect both insurance requirements and cost. This is general guidance only — flood-zone designation, base flood elevation, elevation certificates, and the resulting insurance picture are specific to each address and change over time. Always verify the current flood zone and obtain real insurance quotes (including flood coverage, whether through the NFIP or a private carrier, plus wind and homeowners coverage) for any individual property before you rely on a number. Elevation and certain construction features can influence premiums, and a knowledgeable local insurance agent is the right source for figures.</p>
+    <p class="body">Nothing here is a substitute for a current FEMA flood map review, an elevation certificate, and quotes from a licensed insurance professional. Listing and flood information is believed accurate but is not guaranteed and should be independently verified.</p>
+    <h3 id="waterfront-access">Marinas, boat ramps, and bay access</h3>
+    <p class="body">You do not have to own waterfront to enjoy the bay. The Stafford area offers marinas for slips, storage, fuel, and service, along with public and community boat ramps for trailered boats, and several points of access toward Barnegat Bay. Specific marina services, ramp rules, parking, permit requirements, and tide-dependent usability vary by location and season — if a particular marina or ramp matters to your plans, it is worth confirming the current details directly. Explore nearby waterfront communities through the <a href="/search">Discovery Center</a>, including the LBI towns just across the bay, or compare <a href="#neighborhoods">Stafford neighborhoods</a> by how they sit on the water.</p>
+    <div class="wf-twocol">
+      <div class="wf-col"><h4>Who waterfront living is best for</h4><ul>
+        <li>Boaters and anglers who want quick, regular access to Barnegat Bay</li>
+        <li>Buyers who value water views and an outdoor, seasonal lifestyle</li>
+        <li>Second-home and weekend buyers who want bay access without island prices</li>
+        <li>Households comfortable with the added maintenance and insurance of waterfront ownership</li>
+      </ul></div>
+      <div class="wf-col"><h4>Pros</h4><ul>
+        <li>Direct or easy access to the bay and beyond</li>
+        <li>Strong, distinctive lifestyle and view appeal</li>
+        <li>Often more attainable than equivalent island waterfront</li>
+        <li>Desirable, identifiable communities that buyers actively seek</li>
+      </ul></div>
+      <div class="wf-col"><h4>Trade-offs</h4><ul>
+        <li>Higher maintenance for docks, bulkheads, lifts, and the home itself</li>
+        <li>Greater likelihood of flood-zone requirements and higher insurance</li>
+        <li>Tide and bridge clearance can limit boat size and timing</li>
+        <li>More exposure to wind, weather, and storm preparation</li>
+      </ul></div>
+    </div>
+    <h3 id="waterfront-questions">Questions buyers should ask</h3>
+    <ul class="wf-list">
+      <li>What is the current flood zone, base flood elevation, and is there an elevation certificate?</li>
+      <li>What flood, wind, and homeowners insurance quotes apply to this specific address?</li>
+      <li>How old is the bulkhead, and what is its condition and material?</li>
+      <li>What dock, lift, and slip exist, do they convey, and what permits apply?</li>
+      <li>What is the water depth at the dock and the route to open bay at low tide?</li>
+      <li>Are there bridge-clearance limits between this lagoon and the open bay?</li>
+    </ul>
+    <h3 id="waterfront-seller-prep">What sellers should prepare</h3>
+    <ul class="wf-list">
+      <li>Gather bulkhead, dock, and lift documentation, ages, and any recent work.</li>
+      <li>Locate the elevation certificate and any flood-mitigation records.</li>
+      <li>Be ready to describe the route to open bay, typical depth, and tide behavior.</li>
+      <li>Confirm what waterfront equipment conveys and have permits on hand.</li>
+      <li>Present the home with the waterfront clean, accessible, and photographed well.</li>
+    </ul>
+    <div class="wf-take">
+      <span class="section-eyebrow">Matt's Local Take</span>
+      <h3 id="waterfront-local-take">A local agent's perspective on buying waterfront</h3>
+      <p class="body">The biggest mistake I see waterfront buyers make is falling for the view before checking the fundamentals. In Stafford, two homes one street apart can have very different stories on bulkhead condition, water depth, and how fast you actually reach open bay. None of that shows up in a listing photo.</p>
+      <p class="body">My advice is simple: love the lifestyle, but verify the details. Get the elevation certificate, get real insurance quotes for that exact address, look hard at the bulkhead and dock, and think honestly about the maintenance you are signing up for. Buyers who do that homework tend to be the happiest waterfront owners years later. I am glad to walk through any specific property and help you ask the right questions before you fall in love with the wrong dock.</p>
+    </div>
+    <div class="wf-cta">
+      <a href="/search?town=Stafford%20Township" class="btn btn-primary">Browse Stafford waterfront listings</a>
+      <a href="/#valuation" class="btn btn-secondary">What is my waterfront home worth?</a>
+      <a href="/#agent" class="btn btn-navy">Talk to Matt about waterfront</a>
+    </div>
+    <p class="body wf-note">Relocating to the bay from the city? Start with the <a href="/moving-from-staten-island">moving from Staten Island</a> guide, then reach Matt directly at <a href="tel:9175245676">(917) 524-5676</a> for a no-pressure waterfront consultation.</p>
+  </div>
+</section>
 <section class="town-section alt">
   <div class="container">
     <div class="lead-photo"><div class="photo-slot"><!-- PHOTO: Southern Regional High School exterior or campus aerial --><span>Photo placeholder &mdash; Southern Regional High School exterior or campus aerial</span></div></div>
@@ -616,6 +717,19 @@ img{max-width:100%;display:block}
       <div class="faq-item">
         <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Who can help me buy or sell a home in Stafford Township?</div>
         <div class="faq-a"><p>Matt Dunn at Weichert Realtors specializes in Ocean County and Long Beach Island real estate. Call 917-524-5676 or email mdunn@weichert.com to discuss buying or selling in Stafford Township.</p></div>
+      </div>
+    
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Is waterfront property in Stafford Township in a flood zone?</div>
+        <div class="faq-a"><p>Many waterfront and near-water homes in Stafford fall within a FEMA-designated flood zone, but designation, base flood elevation, and the resulting insurance picture are specific to each address and can change over time. Always verify the current flood zone, review any elevation certificate, and obtain real insurance quotes for the individual property. This is general guidance, not a determination for any specific home.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What is the difference between lagoon and bayfront homes in Stafford?</div>
+        <div class="faq-a"><p>Lagoon homes sit on engineered waterways, most notably in Beach Haven West, usually with a bulkhead and dock and a navigable route out to Barnegat Bay. Bayfront homes front directly on open water such as Manahawkin Bay, offering the broadest views and most direct access along with the most weather exposure. How a specific lagoon performs at low tide and how quickly it reaches open bay should be confirmed per property.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What should I check before buying a waterfront home in Stafford?</div>
+        <div class="faq-a"><p>Look beyond the view: confirm the flood zone and insurance quotes for that exact address, the age and condition of the bulkhead, what dock and boat lift exist and whether they convey, the water depth at the dock and along the route to open bay at low tide, and any bridge-clearance limits. A local agent and a licensed insurance professional can help you verify each of these.</p></div>
       </div>
     </div>
   </div>
@@ -844,6 +958,30 @@ document.querySelectorAll('.faq-q').forEach(function(q){
         "@type": "Answer",
         "text": "Matt Dunn at Weichert Realtors specializes in Ocean County and Long Beach Island real estate. Call 917-524-5676 or email mdunn@weichert.com to discuss buying or selling in Stafford Township."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is waterfront property in Stafford Township in a flood zone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many waterfront and near-water homes in Stafford fall within a FEMA-designated flood zone, but designation, base flood elevation, and the resulting insurance picture are specific to each address and can change over time. Always verify the current flood zone, review any elevation certificate, and obtain real insurance quotes for the individual property. This is general guidance, not a determination for any specific home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between lagoon and bayfront homes in Stafford?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lagoon homes sit on engineered waterways, most notably in Beach Haven West, usually with a bulkhead and dock and a navigable route out to Barnegat Bay. Bayfront homes front directly on open water such as Manahawkin Bay, offering the broadest views and most direct access along with the most weather exposure. How a specific lagoon performs at low tide and how quickly it reaches open bay should be confirmed per property."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I check before buying a waterfront home in Stafford?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Look beyond the view: confirm the flood zone and insurance quotes for that exact address, the age and condition of the bulkhead, what dock and boat lift exist and whether they convey, the water depth at the dock and along the route to open bay at low tide, and any bridge-clearance limits. A local agent and a licensed insurance professional can help you verify each of these."
+      }
     }
   ]
 }
@@ -952,6 +1090,37 @@ document.querySelectorAll('.faq-q').forEach(function(q){
       }
     }
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Waterfront Living in Stafford Township, NJ",
+  "about": [
+    {
+      "@type": "Place",
+      "name": "Beach Haven West, Stafford Township, NJ"
+    },
+    {
+      "@type": "BodyOfWater",
+      "name": "Barnegat Bay"
+    },
+    {
+      "@type": "BodyOfWater",
+      "name": "Manahawkin Bay"
+    }
+  ],
+  "articleSection": "Waterfront Living",
+  "description": "A local guide to waterfront living in Stafford Township: lagoon, bayfront, and water-access homes; docks, bulkheads, and boat lifts; tide and bridge-clearance considerations; and general flood-zone and insurance awareness.",
+  "author": {
+    "@type": "Person",
+    "name": "Matt Dunn"
+  },
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Stafford Township, NJ Homes For Sale"
+  }
 }
 </script>
 </body>
