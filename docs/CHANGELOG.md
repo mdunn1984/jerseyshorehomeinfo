@@ -8,6 +8,18 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Stafford Gold Standard Neighborhoods (Sprint 8A)
+
+First real Gold Standard content implementation on stafford-township.html. Added a Neighborhoods section; no other HTML pages touched.
+
+- **New on-page section (#neighborhoods):** profile cards for Ocean Acres, Manahawkin, Beach Haven West, Cedar Run, and the Stafford Park & Mill Creek area, each covering overview, housing style, who it suits, lifestyle, nearby amenities, schools served, water access (where applicable), and buyer/seller considerations.
+- **Truth-first:** evergreen language only — no invented statistics, flood zones, HOA details, school rankings, or fabricated boundaries. Specific figures remain slots to be sourced and dated in later sprints.
+- **Internal linking:** wired to existing real targets only (Stafford home search, moving-from-Staten-Island guide, home valuation, Matt Dunn, and the adjacent Little Egg Harbor/West Creek page). No dead links.
+- **SEO/AEO:** added an ItemList of Place entities (one per neighborhood) as JSON-LD; existing RealEstateAgent, BreadcrumbList, Place, FAQPage, and Person schema preserved.
+- **Conversion:** each card carries listing and valuation CTAs; section closes with a no-pressure neighborhood-recommendation prompt and direct phone link.
+- **Added scoped CSS** for the neighborhood grid/cards; one H1 preserved; lead/CTA and FAQ blocks intact; ~1,570 words added (page ~1,700 to ~3,270).
+- **Commit:** feat: Stafford Gold Standard neighborhood implementation (stafford-township.html 0f0960f).
+
 ### Stafford Content Production Plan (Sprint 7A)
 
 Established the content production plan to expand Stafford Township into the definitive local authority guide. Planning only — no HTML, CSS, JS, photography, or website content changed.
