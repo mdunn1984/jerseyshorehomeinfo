@@ -8,6 +8,19 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Stafford Gold Standard Waterfront (Sprint 8B)
+
+Added the definitive Waterfront Living section to stafford-township.html (after Neighborhoods). No other HTML pages touched.
+
+- **New on-page section (#waterfront):** explains what waterfront living means in Stafford and the difference between lagoon, bayfront, water-access, and inland homes; covers the boating/kayaking/fishing lifestyle; and details dock ownership, bulkheads, boat lifts, water depth/tide, bridge clearance, maintenance, and seasonal considerations.
+- **Flood + insurance as general guidance only:** explicit verify-per-property framing (FEMA flood zone, base flood elevation, elevation certificate, NFIP/private flood, wind/homeowners) — no invented zones, figures, or determinations; restates the believed-accurate-not-guaranteed disclaimer.
+- **Marinas, boat ramps, and Barnegat Bay access** described generically (no fabricated names, services, or rules); who it suits, pros, trade-offs, buyer questions, and seller prep.
+- **Matt's Local Take:** one clearly-labeled, experience-based evergreen subsection — educational guidance, no invented stories or fabricated transactions.
+- **SEO/AEO:** added an Article entity (about Beach Haven West, Barnegat Bay, Manahawkin Bay) and 3 supported waterfront FAQ pairs with visible+schema parity (FAQPage now 6 Q&A). Existing schema preserved (8 JSON-LD blocks total).
+- **Conversion:** buyer, seller/valuation, and waterfront-consultation CTAs plus a direct phone link; internal links to Neighborhoods, Discovery Center, and the moving-from-Staten-Island guide. No dead links.
+- **Integrity:** one H1 preserved; lead/CTA and prior sections intact; scoped CSS added; ~1,950 words added (page ~3,270 to ~5,230). No invented data.
+- **Commit:** feat: Stafford Gold Standard waterfront implementation (stafford-township.html b001fa0).
+
 ### Stafford Gold Standard Neighborhoods (Sprint 8A)
 
 First real Gold Standard content implementation on stafford-township.html. Added a Neighborhoods section; no other HTML pages touched.
