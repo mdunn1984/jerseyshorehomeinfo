@@ -8,6 +8,18 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Stafford Content Production Plan (Sprint 7A)
+
+Established the content production plan to expand Stafford Township into the definitive local authority guide. Planning only — no HTML, CSS, JS, photography, or website content changed.
+
+- **New doc (docs/STAFFORD_CONTENT_PLAN.md):** audits the current ~1,700-word page (10 sections, 3 FAQs, thin contextual linking), scores it ~32/100, and lays out the roadmap to a target of 92—95/100.
+- **Per-section gap analysis:** every existing section scored for missing topics, entities, internal links, FAQs, local expertise, trust signals, and an opportunity rating.
+- **Expansion plan:** 35 production blocks covering neighborhoods, HOAs, schools, parks/trails/boat ramps/marinas/fishing/golf, dining/coffee/breweries, shopping, healthcare/urgent care, libraries/gyms/daycares, senior/55+, luxury/waterfront, commercial/investment, taxes/flood/insurance, and transportation/commute/utilities/internet — each with entities to verify, links, a local-expertise hook, word target, schema, and priority.
+- **Local Knowledge section:** an insider-content originality engine (sunrise/sunset spots, hidden gems, traffic shortcuts, weekend itineraries, and more).
+- **AI/AEO + FAQ bank:** target of 25—35 question-shaped FAQ pairs (buyer/seller/relocation/local) plus a backlog of 100 future content ideas grouped into 10 categories.
+- **Truth-first discipline:** every statistic, ranking, tax/flood/insurance figure, and school detail is a slot to be sourced and dated at implementation; no invented data; compliance and single-H1 preserved.
+- **No code, photography, or content changes; lead foundation and trust elements untouched.**
+
 ### Stafford Photography Production Plan (Sprint 6A)
 
 Established the production-ready photography plan to take Stafford Township to Gold Standard. Planning only — no HTML, CSS, JS, or image files changed.
