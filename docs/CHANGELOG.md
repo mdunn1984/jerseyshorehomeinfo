@@ -8,6 +8,10 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Stafford Photography Scaffold (Sprint 8C)
+
+Prepared stafford-township.html for licensed photography without adding any image files or downloading anything. Replaced all 15 decorative photo placeholders with image-ready markup: each slot now uses an img element pointing at a final SEO-friendly path under /images/stafford/, with descriptive alt text, a visible caption, width and height for layout stability, and an HTML comment naming the pending file. The decorative slot box remains as a graceful fallback so layout stays stable until real files are uploaded — no broken-image icons and no uppercase placeholder text remain. Added scoped CSS for the image and caption layer. Created docs/PHOTO_LICENSES.md with a full thirteen-column manifest; every row is marked Pending human upload / license confirmation. No licenses are claimed, no external images are hotlinked, and no image files were added. Compliance, lead form, and schema preserved (one H1, eight JSON-LD blocks valid).
+
 ### Stafford Gold Standard Waterfront (Sprint 8B)
 
 Added the definitive Waterfront Living section to stafford-township.html (after Neighborhoods). No other HTML pages touched.
