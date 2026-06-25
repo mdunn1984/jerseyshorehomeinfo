@@ -8,6 +8,10 @@ Each entry: a date or milestone heading, followed by concise bullet points descr
 
 ## Unreleased / 2026
 
+### Lead Email Delivery (Sprint 4.1)
+
+Completed the lead delivery layer in netlify/functions/lead.js. Every successful, normalized submission now sends an email to Matt (mdunn@weichert.com) via Resend before the endpoint reports success. Added a sendLeadEmail helper with clean HTML and plain-text templates that include Lead Type, Lead Source, Lead Intent, Lead Priority, Name, Phone, Email, Message, Page URL, and Timestamp (all HTML-escaped). The API key and addresses come only from environment variables (RESEND_API_KEY, LEAD_TO_EMAIL, LEAD_FROM_EMAIL); no secrets are hardcoded. Error handling is fail-loud: if the email send fails, the reason is logged and the function returns a 502 server error rather than silently succeeding. Existing behavior is preserved — normalization, honeypot spam protection, priority scoring, validation (400/422), and the GA4-facing analytics logging are all unchanged, and the send runs only after honeypot and validation pass so spam and invalid submissions never trigger an email and there are no duplicates.
+
 ### Stafford Photography Scaffold (Sprint 8C)
 
 Prepared stafford-township.html for licensed photography without adding any image files or downloading anything. Replaced all 15 decorative photo placeholders with image-ready markup: each slot now uses an img element pointing at a final SEO-friendly path under /images/stafford/, with descriptive alt text, a visible caption, width and height for layout stability, and an HTML comment naming the pending file. The decorative slot box remains as a graceful fallback so layout stays stable until real files are uploaded — no broken-image icons and no uppercase placeholder text remain. Added scoped CSS for the image and caption layer. Created docs/PHOTO_LICENSES.md with a full thirteen-column manifest; every row is marked Pending human upload / license confirmation. No licenses are claimed, no external images are hotlinked, and no image files were added. Compliance, lead form, and schema preserved (one H1, eight JSON-LD blocks valid).
