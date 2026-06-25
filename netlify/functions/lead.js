@@ -36,6 +36,78 @@ function isEmail(v) {
   return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
 }
 
+
+// ---- Email delivery (Sprint 4.1) ----
+// Delivers every successful, normalized lead to Matt via Resend.
+// Configuration comes only from environment variables; no secrets are hardcoded.
+function escHtml(v){return String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function buildRows(lead){
+  var f = [
+    ['Lead Type', lead.leadType],
+    ['Lead Source', lead.leadSource],
+    ['Lead Intent', lead.leadIntent],
+    ['Lead Priority', lead.leadPriority],
+    ['Name', lead.name],
+    ['Phone', lead.phone],
+    ['Email', lead.email],
+    ['Message', lead.message],
+    ['Page URL', lead.pageUrl],
+    ['Timestamp', lead.receivedAt]
+  ];
+  return f;
+}
+
+function leadEmailText(lead){
+  var f = buildRows(lead);
+  var out = [];
+  for (var i=0;i<f.length;i++){ out.push(f[i][0] + ": " + (f[i][1]==null?"":String(f[i][1]))); }
+  return "New lead from Jersey Shore Home Info" + "\n\n" + out.join("\n");
+}
+
+function leadEmailHtml(lead){
+  var f = buildRows(lead);
+  var rows = "";
+  for (var i=0;i<f.length;i++){
+    var label = escHtml(f[i][0]);
+    var val = escHtml(f[i][1]==null?"":f[i][1]);
+    rows += "<tr><td style=\"padding:6px 12px;font-weight:600;color:#1B3D5C;vertical-align:top;white-space:nowrap\">" + label + "</td>" +
+            "<td style=\"padding:6px 12px;color:#222\">" + (val || "&mdash;") + "</td></tr>";
+  }
+  return "<div style=\"font-family:Inter,Arial,sans-serif;max-width:640px;margin:0 auto\">" +
+    "<h2 style=\"color:#1B3D5C;margin:0 0 4px\">New lead from Jersey Shore Home Info</h2>" +
+    "<p style=\"color:#555;margin:0 0 16px\">A visitor submitted a lead capture form.</p>" +
+    "<table style=\"border-collapse:collapse;width:100%;border:1px solid #e3dccd\">" + rows + "</table>" +
+    "<p style=\"color:#888;font-size:12px;margin-top:16px\">Sent automatically by the lead endpoint.</p></div>";
+}
+
+async function sendLeadEmail(lead){
+  var apiKey = process.env.RESEND_API_KEY;
+  var to = process.env.LEAD_TO_EMAIL || 'mdunn@weichert.com';
+  var from = process.env.LEAD_FROM_EMAIL || 'Jersey Shore Home Info <leads@jerseyshorehomeinfo.com>';
+  if (!apiKey) { throw new Error("RESEND_API_KEY is not configured"); }
+  var endpoint = ["https://api", "resend", "com/emails"].join(".");
+  var subject = "New " + (lead.leadPriority || "") + " lead: " + (lead.leadType || "inquiry") + " from " + (lead.name || "website");
+  var resp = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + apiKey, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: from,
+      to: [to],
+      reply_to: lead.email || undefined,
+      subject: subject,
+      html: leadEmailHtml(lead),
+      text: leadEmailText(lead)
+    })
+  });
+  if (!resp.ok) {
+    var detail = "";
+    try { detail = await resp.text(); } catch (e) { detail = "(no body)"; }
+    throw new Error("Resend responded " + resp.status + ": " + detail);
+  }
+  return true;
+}
+
 exports.handler = async function (event) {
   const headers = {
     "Content-Type": "application/json",
@@ -102,5 +174,17 @@ exports.handler = async function (event) {
   // entry point so every future form plugs into the same pipeline.
   console.log("lead_received", JSON.stringify(lead));
 
+  
+  // Sprint 4.1: deliver the normalized lead by email before reporting success.
+  try {
+    await sendLeadEmail(lead);
+  } catch (mailErr) {
+    console.error("Lead email delivery failed:", mailErr && mailErr.message ? mailErr.message : mailErr);
+    return {
+      statusCode: 502,
+      headers: headers,
+      body: JSON.stringify({ ok: false, error: 'Lead received but delivery failed. Please call or email Matt directly.' })
+    };
+  }
   return { statusCode: 200, headers, body: JSON.stringify({ ok: true, leadPriority: lead.leadPriority }) };
 };
